@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="8px" viewBox="0 0 16 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Link icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Web" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-210.000000, -1271.000000)" stroke="#B8B8B8" stroke-width="2">
+            <g id="Case-studies" transform="translate(70.000000, 646.000000)">
+                <g id="item-2" transform="translate(42.000000, 0.000000)">
+                    <g id="Title" transform="translate(98.000000, 588.000000)">
+                        <g id="Link-icon" transform="translate(1.000000, 38.000000)">
+                            <path d="M7,3 L7,3 C7,4.65685425 6.05594885,6 4.89976919,6 L2.10023081,6 C0.940305364,6 0,4.65348288 0,3 L0,3 L0,3 C0,1.34314575 0.944051147,0 2.10023081,0 L4.89976919,0" id="Rectangle-7"></path>
+                            <path d="M7,3 L7,3 C7,1.34314575 7.94405115,0 9.10023081,0 L11.8997692,0 C13.0596946,0 14,1.34651712 14,3 L14,3 L14,3 C14,4.65685425 13.0559489,6 11.8997692,6 L9.10023081,6" id="Rectangle-7-Copy"></path>
+                            <path d="M5,3 L9,3" id="Line" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

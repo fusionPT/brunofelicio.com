@@ -1,0 +1,410 @@
+/* line 5, ../../../.rvm/gems/ruby-2.3.0@global/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../.rvm/gems/ruby-2.3.0@global/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../.rvm/gems/ruby-2.3.0@global/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../.rvm/gems/ruby-2.3.0@global/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../.rvm/gems/ruby-2.3.0@global/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../.rvm/gems/ruby-2.3.0@global/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../.rvm/gems/ruby-2.3.0@global/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../.rvm/gems/ruby-2.3.0@global/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../.rvm/gems/ruby-2.3.0@global/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/*
+
+		Developed by Bruno Felicio
+		Date: 27/01/2017
+
+	*/
+/* line 8, ../sass/partials/_main.scss */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 12, ../sass/partials/_main.scss */
+body,
+html {
+  height: 100%;
+}
+
+/* line 18, ../sass/partials/_main.scss */
+body {
+  font-family: "brandon-grotesque", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-size: 1.375em;
+  color: #848489;
+}
+
+/* line 26, ../sass/partials/_main.scss */
+.main-container {
+  padding: 40px;
+}
+
+/* line 30, ../sass/partials/_main.scss */
+.container {
+  width: 90%;
+  /* 940px/940px */
+  max-width: 940px;
+  margin: auto;
+  overflow: hidden;
+}
+
+/* line 39, ../sass/partials/_main.scss */
+.full-width {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* line 47, ../sass/partials/_main.scss */
+header {
+  max-width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+/* line 53, ../sass/partials/_main.scss */
+header ul {
+  float: right;
+  margin-top: 8px;
+}
+/* line 57, ../sass/partials/_main.scss */
+header li {
+  display: inline-block;
+  margin-left: 40px;
+}
+/* line 61, ../sass/partials/_main.scss */
+header li a {
+  color: #BFC4D7;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1em;
+  transition: all .3s;
+}
+/* line 67, ../sass/partials/_main.scss */
+header li a:hover {
+  color: #4CA8F9;
+}
+/* line 70, ../sass/partials/_main.scss */
+header li a.cta {
+  background: #2D90E8;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  display: block;
+  height: 44px;
+  line-height: 44px;
+  padding: 0 18px 0 18px;
+  color: #fff;
+}
+/* line 79, ../sass/partials/_main.scss */
+header li a.cta:hover {
+  background: #4CA7F9;
+}
+
+/* Hero */
+/* line 92, ../sass/partials/_main.scss */
+h1 {
+  text-indent: -9999px;
+  background: url("../img/bruno-logo-small.svg") no-repeat 0 0;
+  width: 63px;
+  height: 80px;
+  text-align: center;
+  float: left;
+}
+
+/* line 101, ../sass/partials/_main.scss */
+h2 {
+  text-align: center;
+  font-size: 1.875em;
+  color: #38383D;
+  line-height: 1.4;
+  font-weight: 500;
+  padding: 0 0 40px 0;
+}
+
+/* line 110, ../sass/partials/_main.scss */
+h3 {
+  font-size: 1.22em;
+  color: #38383D;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* line 121, ../sass/partials/_main.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 125, ../sass/partials/_main.scss */
+p {
+  line-height: 1.4;
+  color: #38383D;
+}
+
+/* line 130, ../sass/partials/_main.scss */
+.hero {
+  margin: 40px auto 40px;
+  width: 80%;
+  overflow: hidden;
+}
+
+/* line 138, ../sass/partials/_main.scss */
+.pf-item {
+  width: 100%;
+  position: relative;
+}
+/* line 143, ../sass/partials/_main.scss */
+.pf-item .info {
+  padding: 50px 25px;
+  margin: auto;
+  margin-bottom: 50px;
+  overflow: hidden;
+}
+/* line 150, ../sass/partials/_main.scss */
+.pf-item .info ul {
+  float: left;
+  width: 25%;
+  margin-right: 0px;
+}
+/* line 156, ../sass/partials/_main.scss */
+.pf-item .info ul li {
+  font-weight: 600;
+  line-height: 1.4;
+  color: #38383D;
+}
+/* line 162, ../sass/partials/_main.scss */
+.pf-item .info ul a {
+  font-weight: 500;
+  color: #b4b4b4;
+  text-decoration: none;
+  font-size: 1em;
+  background: url("../img/link-icon.svg") no-repeat 0 15px;
+  padding-left: 22px;
+  transition: all .3s;
+}
+/* line 170, ../sass/partials/_main.scss */
+.pf-item .info ul a:hover {
+  color: #2D90E8;
+}
+/* line 177, ../sass/partials/_main.scss */
+.pf-item .info p {
+  line-height: 1.5em;
+  font-size: 1em;
+  float: left;
+  width: 75%;
+}
+/* line 187, ../sass/partials/_main.scss */
+.pf-item img {
+  top: -40px;
+  width: 100%;
+  max-width: 940px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Footer */
+/* line 202, ../sass/partials/_main.scss */
+footer {
+  font-size: 0.88em;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+/* line 207, ../sass/partials/_main.scss */
+footer p.label {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+  color: #848489;
+  opacity: .5;
+  margin-bottom: 15px;
+}
+/* line 216, ../sass/partials/_main.scss */
+footer .email {
+  float: left;
+}
+/* line 219, ../sass/partials/_main.scss */
+footer .email a {
+  color: #848489;
+  text-transform: lowercase;
+}
+/* line 222, ../sass/partials/_main.scss */
+footer .email a:hover {
+  opacity: .5;
+}
+/* line 228, ../sass/partials/_main.scss */
+footer .social {
+  float: right;
+}
+/* line 231, ../sass/partials/_main.scss */
+footer .social li {
+  display: inline-block;
+  margin: 0 0 0 20px;
+}
+/* line 234, ../sass/partials/_main.scss */
+footer .social li:first-child {
+  margin-left: 0;
+}
+/* line 239, ../sass/partials/_main.scss */
+footer .social a {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  text-indent: -9999px;
+}
+/* line 244, ../sass/partials/_main.scss */
+footer .social a.twitter {
+  background: url("../img/twitter.svg") no-repeat;
+}
+/* line 247, ../sass/partials/_main.scss */
+footer .social a.dribbble {
+  background: url("../img/dribbble.svg") no-repeat;
+}
+/* line 250, ../sass/partials/_main.scss */
+footer .social a.instagram {
+  background: url("../img/instagram.svg") no-repeat;
+}
+/* line 253, ../sass/partials/_main.scss */
+footer .social a.linkedin {
+  background: url("../img/linkedin.svg") no-repeat;
+}
+/* line 256, ../sass/partials/_main.scss */
+footer .social a:hover {
+  opacity: .5;
+}
+
+/****** Detail Page *******/
+/* line 268, ../sass/partials/_main.scss */
+.single-work h1 {
+  float: left;
+  background: url("../img/bruno-logo-small.svg") no-repeat 0 0;
+  width: 47px;
+  height: 60px;
+  margin: 0;
+}
+/* line 275, ../sass/partials/_main.scss */
+.single-work .hero {
+  width: 100%;
+  margin: 0;
+}
+/* line 281, ../sass/partials/_main.scss */
+.single-work .top-image {
+  width: 100%;
+  padding: 40px;
+  margin: 40px 0 40px;
+  background: #f3f3f3;
+}
+/* line 290, ../sass/partials/_main.scss */
+.single-work .top-image img {
+  width: 100%;
+  max-width: 940px;
+  vertical-align: bottom;
+  margin: 0 auto;
+  display: block;
+}
+/* line 299, ../sass/partials/_main.scss */
+.single-work .title {
+  text-transform: uppercase;
+  font-size: 0.75em;
+  font-weight: 600;
+  text-align: center;
+  margin: 100px 0 20px;
+  color: #848489;
+  opacity: .5;
+}
+/* line 309, ../sass/partials/_main.scss */
+.single-work .image {
+  padding: 0 0 40px;
+}
+/* line 313, ../sass/partials/_main.scss */
+.single-work .image img {
+  padding-bottom: 40px;
+  max-width: 100%;
+}
+/* line 325, ../sass/partials/_main.scss */
+.single-work .description {
+  overflow: hidden;
+  margin: 40px 0 80px;
+}
+/* line 330, ../sass/partials/_main.scss */
+.single-work .description .about {
+  width: 58.97435897%;
+  float: left;
+}
+/* line 336, ../sass/partials/_main.scss */
+.single-work .description .sidebar {
+  width: 28.20512821%;
+  float: left;
+  margin-left: 12.82051282%;
+  font-size: 0.88em;
+}
+/* line 343, ../sass/partials/_main.scss */
+.single-work .description dl {
+  line-height: 1.4;
+}
+/* line 346, ../sass/partials/_main.scss */
+.single-work .description dl dd {
+  font-weight: 600;
+  color: #38383D;
+  padding-bottom: 5px;
+}
+/* line 352, ../sass/partials/_main.scss */
+.single-work .description dl dt {
+  line-height: 1.4;
+  padding-bottom: 20px;
+  color: #848489;
+}
