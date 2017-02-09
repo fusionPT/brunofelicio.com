@@ -23,7 +23,7 @@
       while ($wp_query->have_posts()) : $wp_query->the_post();
 
       $attachment_id = get_field('image');
-    	$size = get_field('image_size'); // (thumbnail, medium, large, full or custom size)
+    	$size = 'frontpage-image-normal'; // (thumbnail, medium, large, full or custom size)
     	$image = wp_get_attachment_image_src( $attachment_id, $size );
     	// url = $image[0];
     	// width = $image[1];
@@ -32,7 +32,7 @@
       <div class="pf-item">
 
         <div class="image">
-          <a href="<?php the_permalink(); ?>"><img class="<?php the_field('image_class'); ?>" src="<?php echo $image[0]; ?>"></a>
+          <a href="<?php the_permalink(); ?>"><img src="<?php echo $image[0]; ?>"></a>
         </div>
 
         <div class="info">
@@ -47,5 +47,5 @@
     <?php endwhile; ?>
 
       <!-- End of the MAIN LOOP -->
-    </div>  
+    </div>
 <?php get_footer(); ?>

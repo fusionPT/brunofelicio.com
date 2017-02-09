@@ -17,7 +17,7 @@ $image_detail = wp_get_attachment_image_src( $attachment_id_details, $size_detai
             <p class="title">TRAINERPLAN</p>
             <h2>Manage Your Athletes and Workout Plans.</h2>
 
-            <div class="top-image">
+            <div class="top-image" style="background:<?php the_field('bg_color'); ?>">
               <img src="<?php the_field('top_image'); ?>" alt="trainerplan.co">
             </div><!-- top-image -->
 
