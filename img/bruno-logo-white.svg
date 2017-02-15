@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="47px" height="60px" viewBox="0 0 47 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Logo-white</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="01.-Web-UI" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linejoin="round">
+        <g id="Contact" transform="translate(-131.000000, -111.000000)" stroke-width="2" stroke="#FFFFFF">
+            <g id="Logo" transform="translate(132.000000, 112.000000)">
+                <g id="Logo-white">
+                    <path d="M16,24 L16,37 M16,38 C16,38 45,29.4934102 45,19 C45,8.50658975 16,0 16,0 L16,19" id="Oval" stroke-linecap="round"></path>
+                    <path d="M16,38 L16,58 C16,58 45,49.4934102 45,39 C45,36.3209567 43.1097286,33.7714178 40.2943856,31.4598814 M36.5553705,28.8206283 C27.9941995,23.5182667 16,20 16,20" id="Oval-Copy-4" stroke-linecap="round"></path>
+                    <path d="M16,20 C9,18 0,21.1401898 0,29 C0,36.8598102 8,40 16,38" id="Oval-2"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

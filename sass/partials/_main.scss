@@ -1,0 +1,539 @@
+/*
+
+		Developed by Bruno Felicio
+		Date: 27/01/2017
+
+	*/
+
+* {
+	@include box-sizing(border-box);
+}
+
+body,
+html {
+	height: 100%;
+}
+
+
+body {
+	font-family: $font-family;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	-moz-osx-font-smoothing: grayscale;
+	font-size: $base-font-size;
+	color: $font-color;
+}
+
+.main-container {
+	padding: 40px;
+}
+
+.container {
+	width: 100%; /* 940px/940px */
+	max-width: 940px;
+	margin: auto;
+	overflow: hidden;
+}
+
+// Header
+
+.full-width {
+
+	width: 100%;
+	//padding: 30px 40px 30px 40px;
+	overflow: hidden;
+
+}
+
+header {
+	max-width: 100%;
+	margin: auto;
+	overflow: hidden;
+
+
+	ul {
+		float: right;
+		margin-top: 8px;
+	}
+	li {
+		display: inline-block;
+		margin-left: 40px;
+
+		a {
+			color: #BFC4D7;
+			text-decoration: none;
+			font-size: 1em;
+			transition: all .3s;
+			font-weight: 600;
+			&:hover {
+				color: $link-color;
+			}
+			&.cta {
+				background: #2D90E8;
+				box-shadow: 0 1px 2px 0 rgba(0,0,0,0.20);
+				border-radius: 4px;
+				display: block;
+				height: 44px;
+				line-height: 44px;
+				padding: 0 18px 0 18px;
+				color: #fff;
+
+				&:hover {
+					background: #4CA7F9;
+				}
+			}
+		}
+
+	}
+}
+
+/* Hero */
+
+// Logo
+
+h1 {
+	text-indent: -9999px;
+	background: url("../img/bruno-logo-small.svg") no-repeat 0 0;
+	width: 63px;
+	height: 80px;
+	text-align: center;
+	float: left;
+}
+
+h2 {
+	text-align: center;
+	font-size: 42px;
+	color: #38383D;
+	line-height: $line-height;
+	font-weight: 500;
+	padding: 0 0 40px 0;
+
+}
+
+h3 {
+	font-size: 1.22em; // 22px
+	color: $font-color-dark;
+	margin-bottom: 20px;
+	font-weight: 600;
+}
+
+h4 {
+
+}
+
+a {
+	text-decoration: none;
+}
+
+p {
+	line-height: $line-height;
+	color: $font-color-dark;
+	font-weight: 400;
+}
+
+.hero {
+	margin: 80px auto 80px;
+	width: 80%;
+	overflow: hidden;
+}
+
+// Portfolio item
+
+.pf-item {
+
+	width: 100%;
+	position: relative;
+
+	.info {
+		padding: 50px 0px;
+
+		margin: auto;
+		margin-bottom: 50px;
+		overflow: hidden;
+		//background: pink;
+		ul{
+			float: left;
+			width: 25%;
+			margin-right: 0px;
+			//background: salmon;
+
+			li {
+				font-weight: 700;
+				line-height: $line-height;
+				font-size: 1em;
+				color: #38383D;
+			}
+
+			a {
+
+				color: #b4b4b4;
+				text-decoration: none;
+				font-size: 0.88em;
+				background: url("../img/link-icon.svg") no-repeat 0 10px;
+				padding-left: 22px;
+				transition: all .3s;
+				font-weight: 600;
+
+				&:hover {
+					color: #2D90E8;
+					background: url("../img/link-icon-hover.svg") no-repeat 0 10px;
+				}
+			}
+
+		}
+
+		p {
+			line-height: 1.5em;
+			color: $font-color;
+			font-size: 1em;
+			float: left;
+			width: 75%;
+			//background: olive;
+		}
+	}
+
+	img {
+
+		top: -40px;
+		width: 100%;
+		max-width: 940px;
+		height: auto;
+		display: block;
+    margin: 0 auto;
+
+	}
+
+}
+
+/* Footer */
+
+footer {
+	font-size: 0.88em;
+	margin: 100px 0 10px 0;
+	overflow: hidden;
+
+	p.label {
+		text-transform: uppercase;
+		font-size: 12px;
+		font-weight: 600;
+		color: $font-color;
+		opacity: .5;
+		margin-bottom: 15px;
+	}
+
+	.email {
+		float: left;
+
+		a {
+			color: $font-color;
+			text-transform: lowercase;
+			opacity: 0.5;
+			&:hover {
+				color: #2D90E8;
+				opacity: 1;
+			}
+		}
+	}
+
+	.social {
+		float: right;
+
+		li {
+			display: inline-block;
+			margin: 0 0 0 20px;
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+
+		a {
+			display: inline-block;
+			width: 24px;
+			height: 24px;
+			text-indent: -9999px;
+			&.twitter {
+				background: url("../img/twitter.svg") no-repeat;
+			}
+			&.dribbble {
+				background: url("../img/dribbble.svg") no-repeat;
+			}
+			&.instagram {
+				background: url("../img/instagram.svg") no-repeat;
+			}
+			&.linkedin {
+				background: url("../img/linkedin.svg") no-repeat;
+			}
+			&:hover {
+				opacity: .5;
+			}
+		}
+
+	}
+}
+
+/****** Detail Page *******/
+
+
+.single-work, .page {
+
+	h1 {
+		float: left;
+		background: url("../img/bruno-logo-small.svg") no-repeat 0 0;
+		width: 47px;
+		height: 60px;
+		margin: 0;
+	}
+	.hero {
+
+		width: 100%;
+		margin: 0;
+	}
+
+	.top-image {
+
+		width: 100%;
+		padding: 40px;
+		margin: 40px 0 40px;
+		background: #f3f3f3;
+		//background: #3A5DAA;
+
+
+		img {
+			width: 100%;
+			max-width: 940px;
+			vertical-align: bottom;
+			margin: 0 auto;
+			display: block;
+			}
+	}
+
+	.image {
+
+		padding: 0 0 40px;
+
+		img {
+			padding-bottom: 40px;
+			max-width: 100%;
+
+		}
+
+		p {
+			font-weight: 300;
+		}
+
+	}
+
+
+
+		.title {
+			text-transform: uppercase;
+			font-size: 0.88em;
+			font-weight: 600;
+			text-align: center;
+			margin: 100px 0 20px;
+			color: $font-color;
+			opacity: .5;
+
+
+	}
+
+	.description {
+		overflow: hidden;
+		margin: 40px 0 80px;
+		//padding: 8.51%;
+		p {
+			font-weight: 300;
+			line-height: 1.7;
+		}
+		.about {
+			width: 58.97435897%;
+			float: left;
+
+		}
+
+		.sidebar {
+			width: 28.20512821%;
+			float: left;
+			margin-left: 12.82051282%;
+			font-size: 0.88em;
+		}
+
+		dl {
+			line-height: $line-height;
+
+			dd {
+				color: $font-color-dark;
+				padding-bottom: 5px;
+				font-weight: 600;
+			}
+
+			dt {
+				line-height: $line-height;
+				padding-bottom: 20px;
+				color: $font-color;
+			}
+
+		}
+
+	}
+
+}
+
+/* About page */
+
+.page {
+
+	img {
+		text-align: center;
+		margin: 20px 0 40px;
+		width: 100%;
+		max-width: 645px;
+	}
+
+	.hero {
+		text-align: center;
+	}
+
+	.content {
+
+		h2 {
+			font-size: 1.875em;
+		}
+
+		margin: 0 auto;
+
+		.description {
+
+			width: 50%;
+			margin: 0 auto;
+
+			p {
+
+				font-size: 1.11em;
+				line-height: 1.8;
+
+			}
+
+			a {
+
+				font-weight: 500;
+				color: #2D90E8;
+
+				&:hover {
+					color: $link-color;
+				}
+			}
+		}
+	}
+}
+
+/********************************************/
+/*********** Contact page styling ***********/
+/********************************************/
+
+.page-template-contact {
+
+	header {
+		li {
+
+			a {
+				color: white;
+
+				&:hover {
+					color: $link-color;
+				}
+				&.cta {
+					background: #fff;
+					color: #0F86F1;
+				}
+			}
+
+		}
+	}
+
+	h1 {
+		background: url("../img/bruno-logo-white.svg") no-repeat 0 0;
+	}
+
+	h2 {
+		color: white;
+	}
+
+	.title {
+		color: white;
+	}
+
+	.main-container {
+		background: #0F86F2;
+		color: #fff;
+	}
+
+	.contact-form {
+		max-width: 50%;
+		margin: 0 auto;
+
+		form {
+			width: 100%;
+
+			input, textarea, select {
+				width: 100%;
+				padding: 14px 16px;
+				border: none;
+				@include border-radius(4px);
+				box-shadow: 0 1px 2px 0 rgba(0,0,0,0.23);
+				border-radius: 2px;
+			}
+
+			select {
+				-webkit-appearance: none;
+				background: #fff url("../img/drop-down-arrow.svg") no-repeat 96% center;
+			}
+
+			input[type="submit"]{
+				background: #254B6D;
+				color: #fff;
+				font-weight: 600;
+				margin: 20px 0 20px;
+				@include border-radius(4px);
+			}
+
+			label {
+				color: #fff;
+				text-transform: uppercase;
+				@include opacity(.5);
+				font-size: 0.77em;
+				font-weight: 500;
+				display: inline-block;
+				margin: 20px 0 8px;
+			}
+
+		}
+
+		.wpcf7-response-output {
+			color: #fff;
+			border: none;
+			padding: 20px;
+			margin: 0px 0 10px;
+			background: #117CDD;
+			@include border-radius(4px);
+		}
+
+		.wpcf7-not-valid-tip {
+			display: inline-block;
+			background: #B63434;
+			color: #fff;
+			padding: 8px 10px;
+			font-size: 0.88em;
+			margin: 5px 0;
+			@include border-radius(4px);
+		}
+
+	}
+
+	footer {
+		p, a {
+			color: #fff;
+		}
+	}
+
+}
