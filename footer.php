@@ -19,10 +19,5 @@
         </div>
       </footer>
 
-
-
-    <script src="https://use.typekit.net/mdc7oxx.js"></script>
-    <script>try{Typekit.load({ async: true });}catch(e){}</script>
-
   </body>
 </html>

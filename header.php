@@ -4,12 +4,26 @@
     <meta charset="<?php bloginfo('charset');?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title><?php wp_title('|', true, 'right'); ?><?php bloginfo ('name');?></title>
+    <script>
+    (function(d) {
+    var tkTimeout=3000;
+    if(window.sessionStorage){if(sessionStorage.getItem('useTypekit')==='false'){tkTimeout=0;}}
+    var config = {
+      kitId: 'mdc7oxx',
+      scriptTimeout: tkTimeout
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";if(window.sessionStorage){sessionStorage.setItem("useTypekit","false")}},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
+
     <meta name="description" content="<?php bloginfo ('description');?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.4.min.js"><\/script>')</script>
-    <script src="<?php echo THEME_JS; ?>/vendor/modernizr-2.6.2.min.js"></script>
     <link rel="stylesheet" href="<?php echo THEMEROOT; ?>/css/normalize.css">
     <link rel="stylesheet" href="<?php echo THEMEROOT; ?>/css/style.css">
+
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.4.min.js"><\/script>')</script>
+    <script src="<?php echo THEME_JS; ?>/vendor/modernizr-2.6.2.min.js"></script>
+
     <?php wp_head(); ?>
 
 </head>
