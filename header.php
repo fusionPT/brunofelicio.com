@@ -25,11 +25,11 @@
               <div class="full-width">
 
                   <header>
-                    <a href="http://localhost/brunofelicio-v2-wp/"><h1>Bruno Felicio</h1></a>
+                    <a href="<?php bloginfo('home'); ?>"><h1>Bruno Felicio</h1></a>
                     <ul>
-                      <li><a href="../brunofelicio-v2/">Works</a></li>
-                      <li><a href="#">About</a></li>
-                      <li><a class="cta" href="#">Let's Talk</a></li>
+                      <li><a href="<?php bloginfo('home'); ?>">Works</a></li>
+                      <li><a href="<?php bloginfo('home'); ?>/about">About</a></li>
+                      <li><a class="cta" href="<?php bloginfo('home'); ?>/contact">Let's Talk</a></li>
                     </ul>
                   </header><!-- end of header -->
 

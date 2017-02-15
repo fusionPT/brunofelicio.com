@@ -14,11 +14,11 @@ $image_detail = wp_get_attachment_image_src( $attachment_id_details, $size_detai
 
           <div class="hero">
 
-            <p class="title">TRAINERPLAN</p>
-            <h2>Manage Your Athletes and Workout Plans.</h2>
+            <p class="title"><?php the_field('title');?></p>
+            <h2><?php the_field('subtitle');?></h2>
 
             <div class="top-image" style="background:<?php the_field('bg_color'); ?>">
-              <img src="<?php the_field('top_image'); ?>" alt="trainerplan.co">
+              <img src="<?php the_field('top_image'); ?>" alt="<?php the_field('alt'); ?>">
             </div><!-- top-image -->
 
           </div><!-- end of hero -->
@@ -30,24 +30,21 @@ $image_detail = wp_get_attachment_image_src( $attachment_id_details, $size_detai
             <div class="description">
 
               <div class="about">
-                <h3>Marketing/Product Design</h3>
+                <h3>About <?php the_field('title');?></h3>
+                
                 <p>
-                  The editor must enable the user to quickly and simply edit their portfolio.
-                  The UI is very minimal — it gets out of the way and allows you to focus on the design of your website.
-                  All changes you make happen live in the editor. I was going for simple, clean and beautiful.
-                  It empowers the user to: Easily edit anything they can see, manage and add content,
-                  responsively preview their website, and publish/update a live website.
+                  <?php the_field('description_big');?>
                 </p>
               </div>
 
 
                 <dl class="sidebar">
     							<dd>Client</dd>
-    							<dt>Bruno Felicio</dt>
+    							<dt><?php the_field('client');?></dt>
     							<dd>Role</dd>
-    							<dt>Lead Designer, Front-end development</dt>
+    							<dt><?php the_field('role');?></dt>
     							<dd>Included</dd>
-    							<dt>Responsive site</dt>
+    							<dt><?php the_field('included');?></dt>
     						</dl>
 
             </div><!-- description -->
@@ -56,7 +53,7 @@ $image_detail = wp_get_attachment_image_src( $attachment_id_details, $size_detai
                while ( have_rows('image_details') ) : the_row(); ?>
             <div class="image">
 
-              <img src="<?php the_sub_field('image');?>" alt="screenshot">
+              <img src="<?php the_sub_field('image');?>" alt="<?php the_sub_field('alt');?>">
               <p><?php the_sub_field('image_description');?></p>
 
             </div><!-- image -->

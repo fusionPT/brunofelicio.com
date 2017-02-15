@@ -32,13 +32,13 @@
       <div class="pf-item">
 
         <div class="image">
-          <a href="<?php the_permalink(); ?>"><img src="<?php echo $image[0]; ?>"></a>
+          <a href="<?php the_permalink(); ?>"><img src="<?php echo $image[0]; ?>" alt="<?php the_field('alt') ?>"></a>
         </div>
 
         <div class="info">
           <ul>
             <li><?php the_field('title'); ?></li>
-            <li><a href="<?php the_field('url'); ?>"><?php the_field('url'); ?></a></li>
+            <li><a href="<?php the_field('url'); ?>"><?php the_field('url_label'); ?></a></li>
           </ul>
           <p><?php the_field('description'); ?></p>
         </div>

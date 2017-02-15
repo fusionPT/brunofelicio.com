@@ -10,10 +10,10 @@
         <div class="social">
           <p class="label">Follow Me</p>
           <ul>
-            <li><a class="twitter" href="#">Twitter</a></li>
-            <li><a class="dribbble" href="#">Dribbble</a></li>
-            <li><a class="instagram" href="#">Instagram</a></li>
-            <li><a class="linkedin" href="#">LinkedIn</a></li>
+            <li><a class="twitter" href="https://twitter.com/brunofelici">Twitter</a></li>
+            <li><a class="dribbble" href="https://dribbble.com/brunofelicio">Dribbble</a></li>
+            <li><a class="instagram" href="https://www.instagram.com/brunofelici/">Instagram</a></li>
+            <li><a class="linkedin" href="https://www.linkedin.com/in/brunofelicio/">LinkedIn</a></li>
           </ul>
 
         </div>
