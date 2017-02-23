@@ -31,7 +31,7 @@ $image_detail = wp_get_attachment_image_src( $attachment_id_details, $size_detai
 
               <div class="about">
                 <h3>About <?php the_field('title');?></h3>
-                
+
                 <p>
                   <?php the_field('description_big');?>
                 </p>
@@ -49,15 +49,23 @@ $image_detail = wp_get_attachment_image_src( $attachment_id_details, $size_detai
 
             </div><!-- description -->
 
-            <?php if( have_rows('image_details') ):
-               while ( have_rows('image_details') ) : the_row(); ?>
+            <?php
+
+            if( have_rows('image_details') ):
+
+              while ( have_rows('image_details') ) : the_row();?>
+
             <div class="image">
 
-              <img src="<?php the_sub_field('image');?>" alt="<?php the_sub_field('alt');?>">
+              <a class="screenshot" href="<?php the_sub_field('image');?>"><img src="<?php the_sub_field('image');?>" alt="<?php the_sub_field('alt');?>"></a>
+
               <p><?php the_sub_field('image_description');?></p>
 
-            </div><!-- image -->
-<?php
+
+            </div><!-- end of image -->
+
+            <?php
+
             endwhile;
 
             else :

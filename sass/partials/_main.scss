@@ -9,9 +9,10 @@
 	@include box-sizing(border-box);
 }
 
-body,
+
 html {
-	height: 100%;
+	height:100%;
+	margin: 0;
 }
 
 
@@ -26,6 +27,8 @@ body {
 
 .main-container {
 	padding: 40px;
+	min-height: 100%;
+
 }
 
 .container {
@@ -33,6 +36,7 @@ body {
 	max-width: 940px;
 	margin: auto;
 	overflow: hidden;
+
 }
 
 // Header
@@ -212,6 +216,7 @@ footer {
 	margin: 100px 0 10px 0;
 	overflow: hidden;
 
+
 	p.label {
 		text-transform: uppercase;
 		font-size: 12px;
@@ -264,7 +269,7 @@ footer {
 				background: url("../img/linkedin.svg") no-repeat;
 			}
 			&:hover {
-				opacity: .5;
+				opacity: .8;
 			}
 		}
 
@@ -433,6 +438,28 @@ footer {
 
 .page-template-contact {
 
+	/* hide original loader */
+	.ajax-loader {
+			display: inline-block;
+	    background: #fff;
+			text-align: left;
+			padding: 24px;
+			width: 45% !important;
+			height: 24px !important;
+			background-repeat: no-repeat;
+			background-position: 4px;
+			@include border-radius(20px);
+			@include box-shadow(0 1px 2px 0 rgba(0,0,0,0.23));
+
+			&:after {
+				margin-left: 24px;
+				content: "Sending your message...";
+				font-size: 0.88em;
+				display: block;
+				width: 100% !important;
+			}
+	}
+
 	header {
 		li {
 
@@ -480,8 +507,12 @@ footer {
 				padding: 14px 16px;
 				border: none;
 				@include border-radius(4px);
-				box-shadow: 0 1px 2px 0 rgba(0,0,0,0.23);
+				@include box-shadow(0 1px 2px 0 rgba(0,0,0,0.23));
 				border-radius: 2px;
+			}
+
+			textarea {
+				resize: none;
 			}
 
 			select {
@@ -531,9 +562,41 @@ footer {
 	}
 
 	footer {
-		p, a {
+		p {
 			color: #fff;
+			@include opacity(.5);
 		}
+		.email {
+
+			a {
+				color: #fff;
+				@include opacity(1);
+				&:hover {
+					@include opacity(.5);
+				}
+			}
+		}
+		.social {
+			a {
+
+				&.twitter {
+					background: url("../img/twitter-white.svg") no-repeat;
+				}
+				&.dribbble {
+					background: url("../img/dribbble-white.svg") no-repeat;
+				}
+				&.instagram {
+					background: url("../img/instagram-white.svg") no-repeat;
+				}
+				&.linkedin {
+					background: url("../img/linkedin-white.svg") no-repeat;
+				}
+				&:hover {
+					opacity: .5;
+				}
+			}
+		}
+
 	}
 
 }

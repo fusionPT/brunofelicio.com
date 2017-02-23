@@ -20,10 +20,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="<?php echo THEMEROOT; ?>/css/normalize.css">
     <link rel="stylesheet" href="<?php echo THEMEROOT; ?>/css/style.css">
-
+    <link rel="stylesheet" href="<?php echo THEMEROOT; ?>/css/jquery.fancybox.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.4.min.js"><\/script>')</script>
-    <script src="<?php echo THEME_JS; ?>/vendor/modernizr-2.6.2.min.js"></script>
 
+    <script src="<?php echo THEME_JS; ?>/vendor/modernizr-2.6.2.min.js"></script>
+    <script src="<?php echo THEME_JS; ?>/vendor/jquery.fancybox.js"></script>
+    <script src="<?php echo THEME_JS; ?>/main.js"></script>
     <?php wp_head(); ?>
 
 </head>

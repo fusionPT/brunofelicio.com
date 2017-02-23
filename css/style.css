@@ -112,13 +112,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   box-sizing: border-box;
 }
 
-/* line 12, ../sass/partials/_main.scss */
-body,
+/* line 13, ../sass/partials/_main.scss */
 html {
   height: 100%;
+  margin: 0;
 }
 
-/* line 18, ../sass/partials/_main.scss */
+/* line 19, ../sass/partials/_main.scss */
 body {
   font-family: "sofia-pro", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -128,12 +128,13 @@ body {
   color: #848489;
 }
 
-/* line 27, ../sass/partials/_main.scss */
+/* line 28, ../sass/partials/_main.scss */
 .main-container {
   padding: 40px;
+  min-height: 100%;
 }
 
-/* line 31, ../sass/partials/_main.scss */
+/* line 34, ../sass/partials/_main.scss */
 .container {
   width: 100%;
   /* 940px/940px */
@@ -142,29 +143,29 @@ body {
   overflow: hidden;
 }
 
-/* line 40, ../sass/partials/_main.scss */
+/* line 44, ../sass/partials/_main.scss */
 .full-width {
   width: 100%;
   overflow: hidden;
 }
 
-/* line 48, ../sass/partials/_main.scss */
+/* line 52, ../sass/partials/_main.scss */
 header {
   max-width: 100%;
   margin: auto;
   overflow: hidden;
 }
-/* line 54, ../sass/partials/_main.scss */
+/* line 58, ../sass/partials/_main.scss */
 header ul {
   float: right;
   margin-top: 8px;
 }
-/* line 58, ../sass/partials/_main.scss */
+/* line 62, ../sass/partials/_main.scss */
 header li {
   display: inline-block;
   margin-left: 40px;
 }
-/* line 62, ../sass/partials/_main.scss */
+/* line 66, ../sass/partials/_main.scss */
 header li a {
   color: #BFC4D7;
   text-decoration: none;
@@ -172,11 +173,11 @@ header li a {
   transition: all .3s;
   font-weight: 600;
 }
-/* line 68, ../sass/partials/_main.scss */
+/* line 72, ../sass/partials/_main.scss */
 header li a:hover {
   color: #4CA8F9;
 }
-/* line 71, ../sass/partials/_main.scss */
+/* line 75, ../sass/partials/_main.scss */
 header li a.cta {
   background: #2D90E8;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
@@ -187,13 +188,13 @@ header li a.cta {
   padding: 0 18px 0 18px;
   color: #fff;
 }
-/* line 81, ../sass/partials/_main.scss */
+/* line 85, ../sass/partials/_main.scss */
 header li a.cta:hover {
   background: #4CA7F9;
 }
 
 /* Hero */
-/* line 94, ../sass/partials/_main.scss */
+/* line 98, ../sass/partials/_main.scss */
 h1 {
   text-indent: -9999px;
   background: url("../img/bruno-logo-small.svg") no-repeat 0 0;
@@ -203,7 +204,7 @@ h1 {
   float: left;
 }
 
-/* line 103, ../sass/partials/_main.scss */
+/* line 107, ../sass/partials/_main.scss */
 h2 {
   text-align: center;
   font-size: 42px;
@@ -213,7 +214,7 @@ h2 {
   padding: 0 0 40px 0;
 }
 
-/* line 113, ../sass/partials/_main.scss */
+/* line 117, ../sass/partials/_main.scss */
 h3 {
   font-size: 1.22em;
   color: #38383D;
@@ -221,51 +222,51 @@ h3 {
   font-weight: 600;
 }
 
-/* line 124, ../sass/partials/_main.scss */
+/* line 128, ../sass/partials/_main.scss */
 a {
   text-decoration: none;
 }
 
-/* line 128, ../sass/partials/_main.scss */
+/* line 132, ../sass/partials/_main.scss */
 p {
   line-height: 1.5;
   color: #38383D;
   font-weight: 400;
 }
 
-/* line 134, ../sass/partials/_main.scss */
+/* line 138, ../sass/partials/_main.scss */
 .hero {
   margin: 80px auto 80px;
   width: 80%;
   overflow: hidden;
 }
 
-/* line 142, ../sass/partials/_main.scss */
+/* line 146, ../sass/partials/_main.scss */
 .pf-item {
   width: 100%;
   position: relative;
 }
-/* line 147, ../sass/partials/_main.scss */
+/* line 151, ../sass/partials/_main.scss */
 .pf-item .info {
   padding: 50px 0px;
   margin: auto;
   margin-bottom: 50px;
   overflow: hidden;
 }
-/* line 154, ../sass/partials/_main.scss */
+/* line 158, ../sass/partials/_main.scss */
 .pf-item .info ul {
   float: left;
   width: 25%;
   margin-right: 0px;
 }
-/* line 160, ../sass/partials/_main.scss */
+/* line 164, ../sass/partials/_main.scss */
 .pf-item .info ul li {
   font-weight: 700;
   line-height: 1.5;
   font-size: 1em;
   color: #38383D;
 }
-/* line 167, ../sass/partials/_main.scss */
+/* line 171, ../sass/partials/_main.scss */
 .pf-item .info ul a {
   color: #b4b4b4;
   text-decoration: none;
@@ -275,12 +276,12 @@ p {
   transition: all .3s;
   font-weight: 600;
 }
-/* line 177, ../sass/partials/_main.scss */
+/* line 181, ../sass/partials/_main.scss */
 .pf-item .info ul a:hover {
   color: #2D90E8;
   background: url("../img/link-icon-hover.svg") no-repeat 0 10px;
 }
-/* line 185, ../sass/partials/_main.scss */
+/* line 189, ../sass/partials/_main.scss */
 .pf-item .info p {
   line-height: 1.5em;
   color: #848489;
@@ -288,7 +289,7 @@ p {
   float: left;
   width: 75%;
 }
-/* line 195, ../sass/partials/_main.scss */
+/* line 199, ../sass/partials/_main.scss */
 .pf-item img {
   top: -40px;
   width: 100%;
@@ -299,13 +300,13 @@ p {
 }
 
 /* Footer */
-/* line 210, ../sass/partials/_main.scss */
+/* line 214, ../sass/partials/_main.scss */
 footer {
   font-size: 0.88em;
   margin: 100px 0 10px 0;
   overflow: hidden;
 }
-/* line 215, ../sass/partials/_main.scss */
+/* line 220, ../sass/partials/_main.scss */
 footer p.label {
   text-transform: uppercase;
   font-size: 12px;
@@ -314,64 +315,64 @@ footer p.label {
   opacity: .5;
   margin-bottom: 15px;
 }
-/* line 224, ../sass/partials/_main.scss */
+/* line 229, ../sass/partials/_main.scss */
 footer .email {
   float: left;
 }
-/* line 227, ../sass/partials/_main.scss */
+/* line 232, ../sass/partials/_main.scss */
 footer .email a {
   color: #848489;
   text-transform: lowercase;
   opacity: 0.5;
 }
-/* line 231, ../sass/partials/_main.scss */
+/* line 236, ../sass/partials/_main.scss */
 footer .email a:hover {
   color: #2D90E8;
   opacity: 1;
 }
-/* line 238, ../sass/partials/_main.scss */
+/* line 243, ../sass/partials/_main.scss */
 footer .social {
   float: right;
 }
-/* line 241, ../sass/partials/_main.scss */
+/* line 246, ../sass/partials/_main.scss */
 footer .social li {
   display: inline-block;
   margin: 0 0 0 20px;
 }
-/* line 244, ../sass/partials/_main.scss */
+/* line 249, ../sass/partials/_main.scss */
 footer .social li:first-child {
   margin-left: 0;
 }
-/* line 249, ../sass/partials/_main.scss */
+/* line 254, ../sass/partials/_main.scss */
 footer .social a {
   display: inline-block;
   width: 24px;
   height: 24px;
   text-indent: -9999px;
 }
-/* line 254, ../sass/partials/_main.scss */
+/* line 259, ../sass/partials/_main.scss */
 footer .social a.twitter {
   background: url("../img/twitter.svg") no-repeat;
 }
-/* line 257, ../sass/partials/_main.scss */
+/* line 262, ../sass/partials/_main.scss */
 footer .social a.dribbble {
   background: url("../img/dribbble.svg") no-repeat;
 }
-/* line 260, ../sass/partials/_main.scss */
+/* line 265, ../sass/partials/_main.scss */
 footer .social a.instagram {
   background: url("../img/instagram.svg") no-repeat;
 }
-/* line 263, ../sass/partials/_main.scss */
+/* line 268, ../sass/partials/_main.scss */
 footer .social a.linkedin {
   background: url("../img/linkedin.svg") no-repeat;
 }
-/* line 266, ../sass/partials/_main.scss */
+/* line 271, ../sass/partials/_main.scss */
 footer .social a:hover {
-  opacity: .5;
+  opacity: .8;
 }
 
 /****** Detail Page *******/
-/* line 279, ../sass/partials/_main.scss */
+/* line 284, ../sass/partials/_main.scss */
 .single-work h1, .page h1 {
   float: left;
   background: url("../img/bruno-logo-small.svg") no-repeat 0 0;
@@ -379,19 +380,19 @@ footer .social a:hover {
   height: 60px;
   margin: 0;
 }
-/* line 286, ../sass/partials/_main.scss */
+/* line 291, ../sass/partials/_main.scss */
 .single-work .hero, .page .hero {
   width: 100%;
   margin: 0;
 }
-/* line 292, ../sass/partials/_main.scss */
+/* line 297, ../sass/partials/_main.scss */
 .single-work .top-image, .page .top-image {
   width: 100%;
   padding: 40px;
   margin: 40px 0 40px;
   background: #f3f3f3;
 }
-/* line 301, ../sass/partials/_main.scss */
+/* line 306, ../sass/partials/_main.scss */
 .single-work .top-image img, .page .top-image img {
   width: 100%;
   max-width: 940px;
@@ -399,20 +400,20 @@ footer .social a:hover {
   margin: 0 auto;
   display: block;
 }
-/* line 310, ../sass/partials/_main.scss */
+/* line 315, ../sass/partials/_main.scss */
 .single-work .image, .page .image {
   padding: 0 0 40px;
 }
-/* line 314, ../sass/partials/_main.scss */
+/* line 319, ../sass/partials/_main.scss */
 .single-work .image img, .page .image img {
   padding-bottom: 40px;
   max-width: 100%;
 }
-/* line 320, ../sass/partials/_main.scss */
+/* line 325, ../sass/partials/_main.scss */
 .single-work .image p, .page .image p {
   font-weight: 300;
 }
-/* line 328, ../sass/partials/_main.scss */
+/* line 333, ../sass/partials/_main.scss */
 .single-work .title, .page .title {
   text-transform: uppercase;
   font-size: 0.88em;
@@ -422,39 +423,39 @@ footer .social a:hover {
   color: #848489;
   opacity: .5;
 }
-/* line 340, ../sass/partials/_main.scss */
+/* line 345, ../sass/partials/_main.scss */
 .single-work .description, .page .description {
   overflow: hidden;
   margin: 40px 0 80px;
 }
-/* line 344, ../sass/partials/_main.scss */
+/* line 349, ../sass/partials/_main.scss */
 .single-work .description p, .page .description p {
   font-weight: 300;
   line-height: 1.7;
 }
-/* line 348, ../sass/partials/_main.scss */
+/* line 353, ../sass/partials/_main.scss */
 .single-work .description .about, .page .description .about {
   width: 58.97435897%;
   float: left;
 }
-/* line 354, ../sass/partials/_main.scss */
+/* line 359, ../sass/partials/_main.scss */
 .single-work .description .sidebar, .page .description .sidebar {
   width: 28.20512821%;
   float: left;
   margin-left: 12.82051282%;
   font-size: 0.88em;
 }
-/* line 361, ../sass/partials/_main.scss */
+/* line 366, ../sass/partials/_main.scss */
 .single-work .description dl, .page .description dl {
   line-height: 1.5;
 }
-/* line 364, ../sass/partials/_main.scss */
+/* line 369, ../sass/partials/_main.scss */
 .single-work .description dl dd, .page .description dl dd {
   color: #38383D;
   padding-bottom: 5px;
   font-weight: 600;
 }
-/* line 370, ../sass/partials/_main.scss */
+/* line 375, ../sass/partials/_main.scss */
 .single-work .description dl dt, .page .description dl dt {
   line-height: 1.5;
   padding-bottom: 20px;
@@ -462,41 +463,41 @@ footer .social a:hover {
 }
 
 /* About page */
-/* line 386, ../sass/partials/_main.scss */
+/* line 391, ../sass/partials/_main.scss */
 .page img {
   text-align: center;
   margin: 20px 0 40px;
   width: 100%;
   max-width: 645px;
 }
-/* line 393, ../sass/partials/_main.scss */
+/* line 398, ../sass/partials/_main.scss */
 .page .hero {
   text-align: center;
 }
-/* line 397, ../sass/partials/_main.scss */
+/* line 402, ../sass/partials/_main.scss */
 .page .content {
   margin: 0 auto;
 }
-/* line 399, ../sass/partials/_main.scss */
+/* line 404, ../sass/partials/_main.scss */
 .page .content h2 {
   font-size: 1.875em;
 }
-/* line 405, ../sass/partials/_main.scss */
+/* line 410, ../sass/partials/_main.scss */
 .page .content .description {
   width: 50%;
   margin: 0 auto;
 }
-/* line 410, ../sass/partials/_main.scss */
+/* line 415, ../sass/partials/_main.scss */
 .page .content .description p {
   font-size: 1.11em;
   line-height: 1.8;
 }
-/* line 417, ../sass/partials/_main.scss */
+/* line 422, ../sass/partials/_main.scss */
 .page .content .description a {
   font-weight: 500;
   color: #2D90E8;
 }
-/* line 422, ../sass/partials/_main.scss */
+/* line 427, ../sass/partials/_main.scss */
 .page .content .description a:hover {
   color: #4CA8F9;
 }
@@ -505,45 +506,74 @@ footer .social a:hover {
 /*********** Contact page styling ***********/
 /********************************************/
 /* line 439, ../sass/partials/_main.scss */
+.page-template-contact {
+  /* hide original loader */
+}
+/* line 442, ../sass/partials/_main.scss */
+.page-template-contact .ajax-loader {
+  display: inline-block;
+  background: #fff;
+  text-align: left;
+  padding: 24px;
+  width: 45% !important;
+  height: 24px !important;
+  background-repeat: no-repeat;
+  background-position: 4px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  -moz-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.23);
+  -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.23);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.23);
+}
+/* line 454, ../sass/partials/_main.scss */
+.page-template-contact .ajax-loader:after {
+  margin-left: 24px;
+  content: "Sending your message...";
+  font-size: 0.88em;
+  display: block;
+  width: 100% !important;
+}
+/* line 466, ../sass/partials/_main.scss */
 .page-template-contact header li a {
   color: white;
 }
-/* line 442, ../sass/partials/_main.scss */
+/* line 469, ../sass/partials/_main.scss */
 .page-template-contact header li a:hover {
   color: #4CA8F9;
 }
-/* line 445, ../sass/partials/_main.scss */
+/* line 472, ../sass/partials/_main.scss */
 .page-template-contact header li a.cta {
   background: #fff;
   color: #0F86F1;
 }
-/* line 454, ../sass/partials/_main.scss */
+/* line 481, ../sass/partials/_main.scss */
 .page-template-contact h1 {
   background: url("../img/bruno-logo-white.svg") no-repeat 0 0;
 }
-/* line 458, ../sass/partials/_main.scss */
+/* line 485, ../sass/partials/_main.scss */
 .page-template-contact h2 {
   color: white;
 }
-/* line 462, ../sass/partials/_main.scss */
+/* line 489, ../sass/partials/_main.scss */
 .page-template-contact .title {
   color: white;
 }
-/* line 466, ../sass/partials/_main.scss */
+/* line 493, ../sass/partials/_main.scss */
 .page-template-contact .main-container {
   background: #0F86F2;
   color: #fff;
 }
-/* line 471, ../sass/partials/_main.scss */
+/* line 498, ../sass/partials/_main.scss */
 .page-template-contact .contact-form {
   max-width: 50%;
   margin: 0 auto;
 }
-/* line 475, ../sass/partials/_main.scss */
+/* line 502, ../sass/partials/_main.scss */
 .page-template-contact .contact-form form {
   width: 100%;
 }
-/* line 478, ../sass/partials/_main.scss */
+/* line 505, ../sass/partials/_main.scss */
 .page-template-contact .contact-form form input, .page-template-contact .contact-form form textarea, .page-template-contact .contact-form form select {
   width: 100%;
   padding: 14px 16px;
@@ -551,15 +581,21 @@ footer .social a:hover {
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   border-radius: 4px;
+  -moz-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.23);
+  -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.23);
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.23);
   border-radius: 2px;
 }
-/* line 487, ../sass/partials/_main.scss */
+/* line 514, ../sass/partials/_main.scss */
+.page-template-contact .contact-form form textarea {
+  resize: none;
+}
+/* line 518, ../sass/partials/_main.scss */
 .page-template-contact .contact-form form select {
   -webkit-appearance: none;
   background: #fff url("../img/drop-down-arrow.svg") no-repeat 96% center;
 }
-/* line 492, ../sass/partials/_main.scss */
+/* line 523, ../sass/partials/_main.scss */
 .page-template-contact .contact-form form input[type="submit"] {
   background: #254B6D;
   color: #fff;
@@ -569,7 +605,7 @@ footer .social a:hover {
   -webkit-border-radius: 4px;
   border-radius: 4px;
 }
-/* line 500, ../sass/partials/_main.scss */
+/* line 531, ../sass/partials/_main.scss */
 .page-template-contact .contact-form form label {
   color: #fff;
   text-transform: uppercase;
@@ -580,7 +616,7 @@ footer .social a:hover {
   display: inline-block;
   margin: 20px 0 8px;
 }
-/* line 512, ../sass/partials/_main.scss */
+/* line 543, ../sass/partials/_main.scss */
 .page-template-contact .contact-form .wpcf7-response-output {
   color: #fff;
   border: none;
@@ -591,7 +627,7 @@ footer .social a:hover {
   -webkit-border-radius: 4px;
   border-radius: 4px;
 }
-/* line 521, ../sass/partials/_main.scss */
+/* line 552, ../sass/partials/_main.scss */
 .page-template-contact .contact-form .wpcf7-not-valid-tip {
   display: inline-block;
   background: #B63434;
@@ -603,9 +639,42 @@ footer .social a:hover {
   -webkit-border-radius: 4px;
   border-radius: 4px;
 }
-/* line 534, ../sass/partials/_main.scss */
-.page-template-contact footer p, .page-template-contact footer a {
+/* line 565, ../sass/partials/_main.scss */
+.page-template-contact footer p {
   color: #fff;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
+}
+/* line 571, ../sass/partials/_main.scss */
+.page-template-contact footer .email a {
+  color: #fff;
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+}
+/* line 574, ../sass/partials/_main.scss */
+.page-template-contact footer .email a:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
+}
+/* line 582, ../sass/partials/_main.scss */
+.page-template-contact footer .social a.twitter {
+  background: url("../img/twitter-white.svg") no-repeat;
+}
+/* line 585, ../sass/partials/_main.scss */
+.page-template-contact footer .social a.dribbble {
+  background: url("../img/dribbble-white.svg") no-repeat;
+}
+/* line 588, ../sass/partials/_main.scss */
+.page-template-contact footer .social a.instagram {
+  background: url("../img/instagram-white.svg") no-repeat;
+}
+/* line 591, ../sass/partials/_main.scss */
+.page-template-contact footer .social a.linkedin {
+  background: url("../img/linkedin-white.svg") no-repeat;
+}
+/* line 594, ../sass/partials/_main.scss */
+.page-template-contact footer .social a:hover {
+  opacity: .5;
 }
 
 @media screen and (max-width: 700px) {
