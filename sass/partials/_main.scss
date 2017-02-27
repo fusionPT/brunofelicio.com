@@ -119,10 +119,13 @@ h3 {
 	color: $font-color-dark;
 	margin-bottom: 20px;
 	font-weight: 600;
+	color: #38383D;
 }
 
 h4 {
-
+	font-size: 1em;
+	font-weight: 600;
+	color: $font-color-dark;
 }
 
 a {
@@ -380,6 +383,76 @@ footer {
 
 		}
 
+	}
+
+/* Related boxes */
+
+	.related {
+		overflow: hidden;
+		width: 960px;
+		margin: 40px auto;
+		padding: 10px;
+
+		h3 {
+			margin-bottom: 40px;
+
+		}
+
+		ul {
+
+			li {
+				width: 300px;
+				height: auto;
+				background: #fff;
+				float: left;
+				margin-right: 20px;
+				@include box-shadow(0 2px 8px 0 rgba(0,0,0,0.17));
+
+				.img-wrapper {
+					width: 300px;
+					height: 300px;
+					color: blue;
+
+					img {
+						width: 300px;
+						height: auto;
+						overflow: hidden;
+					}
+
+				}
+
+				.thumb-details {
+					padding: 20px;
+					overflow: hidden;
+
+					h4 {
+						margin-bottom: 10px;
+					}
+
+					.left {
+						float: left;
+					}
+
+					.right {
+						float: right;
+					}
+
+				}
+
+				a {
+					color: $font-color-dark;
+					font-size: 20px;
+					font-weight: 600;
+				}
+
+				span p {
+					color: #c4c4c6;
+				}
+
+
+			}
+
+		}
 	}
 
 }

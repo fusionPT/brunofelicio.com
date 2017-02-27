@@ -2,14 +2,6 @@
 
 get_header();
 
-$attachment_id = get_field('image');
-$size = get_field('image_size'); // (thumbnail, medium, large, full or custom size)
-$image = wp_get_attachment_image_src( $attachment_id, $size );
-
-$attachment_id_details = get_field('image_details');
-$size_details = 'inner-image'; // (thumbnail, medium, large, full or custom size)
-$image_detail = wp_get_attachment_image_src( $attachment_id_details, $size_details );
-
 ?>
 
           <div class="hero">
@@ -45,6 +37,8 @@ $image_detail = wp_get_attachment_image_src( $attachment_id_details, $size_detai
     							<dt><?php the_field('role');?></dt>
     							<dd>Included</dd>
     							<dt><?php the_field('included');?></dt>
+                  <dd>Year</dd>
+    							<dt><?php the_field('year');?></dt>
     						</dl>
 
             </div><!-- description -->
@@ -74,6 +68,71 @@ $image_detail = wp_get_attachment_image_src( $attachment_id_details, $size_detai
             ?>
 
           </div><!-- content -->
+
         </div><!-- end of container -->
+
+        <div class="related">
+
+          <h3>More Projects</h3>
+
+          <?php
+
+            $posttags = wp_get_post_tags($post->ID);
+            $first_tag = $posttags[0]->term_id;
+            $original_query = $wp_query;
+            $wp_query = null;
+            $args = array('posts_per_page'=>3,
+                        'tag__in' => array($first_tag),
+                        'post__not_in' => array($post->ID),
+                        'post_type' => 'work'
+                      );
+
+            $wp_query = new WP_Query( $args );
+
+            if ( have_posts() ) :
+              echo '<ul class="related-item">';
+
+                while (have_posts()) : the_post(); ?>
+                      <a href="<?php the_permalink();?>">
+                      <?php echo '<li>'; ?>
+
+                      <div class="img-wrapper">
+                        <?php the_post_thumbnail('medium'); ?>
+                      </div>
+
+                      <div class="thumb-details">
+                        <h4>
+                          <?php the_title();?>
+                        </h4>
+                        <span>
+                        <?php $post_tags = get_the_tags();
+
+                          if ( $post_tags ) {
+                              foreach( $post_tags as $tag ) {
+
+                              echo '<p class="left">'. $tag->name . '</p>';
+
+                              echo '<p class="right">'. get_field('year') . '</p>';
+                              }
+                          } ?>
+                        </span>
+                      </div>
+
+                    <?php
+
+                    echo '</li>';
+                    echo '</a>';
+                endwhile;
+                    echo '</ul>';
+            endif;
+
+            $wp_query = null;
+            $wp_query = $original_query;
+            wp_reset_postdata();
+
+          ?>
+
+
+        </div><!-- end of related -->
 
 <?php get_footer(); ?>

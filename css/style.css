@@ -220,53 +220,61 @@ h3 {
   color: #38383D;
   margin-bottom: 20px;
   font-weight: 600;
+  color: #38383D;
 }
 
-/* line 128, ../sass/partials/_main.scss */
+/* line 125, ../sass/partials/_main.scss */
+h4 {
+  font-size: 1em;
+  font-weight: 600;
+  color: #38383D;
+}
+
+/* line 131, ../sass/partials/_main.scss */
 a {
   text-decoration: none;
 }
 
-/* line 132, ../sass/partials/_main.scss */
+/* line 135, ../sass/partials/_main.scss */
 p {
   line-height: 1.5;
   color: #38383D;
   font-weight: 400;
 }
 
-/* line 138, ../sass/partials/_main.scss */
+/* line 141, ../sass/partials/_main.scss */
 .hero {
   margin: 80px auto 80px;
   width: 80%;
   overflow: hidden;
 }
 
-/* line 146, ../sass/partials/_main.scss */
+/* line 149, ../sass/partials/_main.scss */
 .pf-item {
   width: 100%;
   position: relative;
 }
-/* line 151, ../sass/partials/_main.scss */
+/* line 154, ../sass/partials/_main.scss */
 .pf-item .info {
   padding: 50px 0px;
   margin: auto;
   margin-bottom: 50px;
   overflow: hidden;
 }
-/* line 158, ../sass/partials/_main.scss */
+/* line 161, ../sass/partials/_main.scss */
 .pf-item .info ul {
   float: left;
   width: 25%;
   margin-right: 0px;
 }
-/* line 164, ../sass/partials/_main.scss */
+/* line 167, ../sass/partials/_main.scss */
 .pf-item .info ul li {
   font-weight: 700;
   line-height: 1.5;
   font-size: 1em;
   color: #38383D;
 }
-/* line 171, ../sass/partials/_main.scss */
+/* line 174, ../sass/partials/_main.scss */
 .pf-item .info ul a {
   color: #b4b4b4;
   text-decoration: none;
@@ -276,12 +284,12 @@ p {
   transition: all .3s;
   font-weight: 600;
 }
-/* line 181, ../sass/partials/_main.scss */
+/* line 184, ../sass/partials/_main.scss */
 .pf-item .info ul a:hover {
   color: #2D90E8;
   background: url("../img/link-icon-hover.svg") no-repeat 0 10px;
 }
-/* line 189, ../sass/partials/_main.scss */
+/* line 192, ../sass/partials/_main.scss */
 .pf-item .info p {
   line-height: 1.5em;
   color: #848489;
@@ -289,7 +297,7 @@ p {
   float: left;
   width: 75%;
 }
-/* line 199, ../sass/partials/_main.scss */
+/* line 202, ../sass/partials/_main.scss */
 .pf-item img {
   top: -40px;
   width: 100%;
@@ -300,13 +308,13 @@ p {
 }
 
 /* Footer */
-/* line 214, ../sass/partials/_main.scss */
+/* line 217, ../sass/partials/_main.scss */
 footer {
   font-size: 0.88em;
   margin: 100px 0 10px 0;
   overflow: hidden;
 }
-/* line 220, ../sass/partials/_main.scss */
+/* line 223, ../sass/partials/_main.scss */
 footer p.label {
   text-transform: uppercase;
   font-size: 12px;
@@ -315,64 +323,68 @@ footer p.label {
   opacity: .5;
   margin-bottom: 15px;
 }
-/* line 229, ../sass/partials/_main.scss */
+/* line 232, ../sass/partials/_main.scss */
 footer .email {
   float: left;
 }
-/* line 232, ../sass/partials/_main.scss */
+/* line 235, ../sass/partials/_main.scss */
 footer .email a {
   color: #848489;
   text-transform: lowercase;
   opacity: 0.5;
 }
-/* line 236, ../sass/partials/_main.scss */
+/* line 239, ../sass/partials/_main.scss */
 footer .email a:hover {
   color: #2D90E8;
   opacity: 1;
 }
-/* line 243, ../sass/partials/_main.scss */
+/* line 246, ../sass/partials/_main.scss */
 footer .social {
   float: right;
 }
-/* line 246, ../sass/partials/_main.scss */
+/* line 249, ../sass/partials/_main.scss */
 footer .social li {
   display: inline-block;
   margin: 0 0 0 20px;
 }
-/* line 249, ../sass/partials/_main.scss */
+/* line 252, ../sass/partials/_main.scss */
 footer .social li:first-child {
   margin-left: 0;
 }
-/* line 254, ../sass/partials/_main.scss */
+/* line 257, ../sass/partials/_main.scss */
 footer .social a {
   display: inline-block;
   width: 24px;
   height: 24px;
   text-indent: -9999px;
 }
-/* line 259, ../sass/partials/_main.scss */
+/* line 262, ../sass/partials/_main.scss */
 footer .social a.twitter {
   background: url("../img/twitter.svg") no-repeat;
 }
-/* line 262, ../sass/partials/_main.scss */
+/* line 265, ../sass/partials/_main.scss */
 footer .social a.dribbble {
   background: url("../img/dribbble.svg") no-repeat;
 }
-/* line 265, ../sass/partials/_main.scss */
+/* line 268, ../sass/partials/_main.scss */
 footer .social a.instagram {
   background: url("../img/instagram.svg") no-repeat;
 }
-/* line 268, ../sass/partials/_main.scss */
+/* line 271, ../sass/partials/_main.scss */
 footer .social a.linkedin {
   background: url("../img/linkedin.svg") no-repeat;
 }
-/* line 271, ../sass/partials/_main.scss */
+/* line 274, ../sass/partials/_main.scss */
 footer .social a:hover {
   opacity: .8;
 }
 
 /****** Detail Page *******/
-/* line 284, ../sass/partials/_main.scss */
+/* line 285, ../sass/partials/_main.scss */
+.single-work, .page {
+  /* Related boxes */
+}
+/* line 287, ../sass/partials/_main.scss */
 .single-work h1, .page h1 {
   float: left;
   background: url("../img/bruno-logo-small.svg") no-repeat 0 0;
@@ -380,19 +392,19 @@ footer .social a:hover {
   height: 60px;
   margin: 0;
 }
-/* line 291, ../sass/partials/_main.scss */
+/* line 294, ../sass/partials/_main.scss */
 .single-work .hero, .page .hero {
   width: 100%;
   margin: 0;
 }
-/* line 297, ../sass/partials/_main.scss */
+/* line 300, ../sass/partials/_main.scss */
 .single-work .top-image, .page .top-image {
   width: 100%;
   padding: 40px;
   margin: 40px 0 40px;
   background: #f3f3f3;
 }
-/* line 306, ../sass/partials/_main.scss */
+/* line 309, ../sass/partials/_main.scss */
 .single-work .top-image img, .page .top-image img {
   width: 100%;
   max-width: 940px;
@@ -400,20 +412,20 @@ footer .social a:hover {
   margin: 0 auto;
   display: block;
 }
-/* line 315, ../sass/partials/_main.scss */
+/* line 318, ../sass/partials/_main.scss */
 .single-work .image, .page .image {
   padding: 0 0 40px;
 }
-/* line 319, ../sass/partials/_main.scss */
+/* line 322, ../sass/partials/_main.scss */
 .single-work .image img, .page .image img {
   padding-bottom: 40px;
   max-width: 100%;
 }
-/* line 325, ../sass/partials/_main.scss */
+/* line 328, ../sass/partials/_main.scss */
 .single-work .image p, .page .image p {
   font-weight: 300;
 }
-/* line 333, ../sass/partials/_main.scss */
+/* line 336, ../sass/partials/_main.scss */
 .single-work .title, .page .title {
   text-transform: uppercase;
   font-size: 0.88em;
@@ -423,81 +435,142 @@ footer .social a:hover {
   color: #848489;
   opacity: .5;
 }
-/* line 345, ../sass/partials/_main.scss */
+/* line 348, ../sass/partials/_main.scss */
 .single-work .description, .page .description {
   overflow: hidden;
   margin: 40px 0 80px;
 }
-/* line 349, ../sass/partials/_main.scss */
+/* line 352, ../sass/partials/_main.scss */
 .single-work .description p, .page .description p {
   font-weight: 300;
   line-height: 1.7;
 }
-/* line 353, ../sass/partials/_main.scss */
+/* line 356, ../sass/partials/_main.scss */
 .single-work .description .about, .page .description .about {
   width: 58.97435897%;
   float: left;
 }
-/* line 359, ../sass/partials/_main.scss */
+/* line 362, ../sass/partials/_main.scss */
 .single-work .description .sidebar, .page .description .sidebar {
   width: 28.20512821%;
   float: left;
   margin-left: 12.82051282%;
   font-size: 0.88em;
 }
-/* line 366, ../sass/partials/_main.scss */
+/* line 369, ../sass/partials/_main.scss */
 .single-work .description dl, .page .description dl {
   line-height: 1.5;
 }
-/* line 369, ../sass/partials/_main.scss */
+/* line 372, ../sass/partials/_main.scss */
 .single-work .description dl dd, .page .description dl dd {
   color: #38383D;
   padding-bottom: 5px;
   font-weight: 600;
 }
-/* line 375, ../sass/partials/_main.scss */
+/* line 378, ../sass/partials/_main.scss */
 .single-work .description dl dt, .page .description dl dt {
   line-height: 1.5;
   padding-bottom: 20px;
   color: #848489;
 }
+/* line 390, ../sass/partials/_main.scss */
+.single-work .related, .page .related {
+  overflow: hidden;
+  width: 960px;
+  margin: 40px auto;
+  padding: 10px;
+}
+/* line 396, ../sass/partials/_main.scss */
+.single-work .related h3, .page .related h3 {
+  margin-bottom: 40px;
+}
+/* line 403, ../sass/partials/_main.scss */
+.single-work .related ul li, .page .related ul li {
+  width: 300px;
+  height: auto;
+  background: #fff;
+  float: left;
+  margin-right: 20px;
+  -moz-box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.17);
+  -webkit-box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.17);
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.17);
+}
+/* line 411, ../sass/partials/_main.scss */
+.single-work .related ul li .img-wrapper, .page .related ul li .img-wrapper {
+  width: 300px;
+  height: 300px;
+  color: blue;
+}
+/* line 416, ../sass/partials/_main.scss */
+.single-work .related ul li .img-wrapper img, .page .related ul li .img-wrapper img {
+  width: 300px;
+  height: auto;
+  overflow: hidden;
+}
+/* line 424, ../sass/partials/_main.scss */
+.single-work .related ul li .thumb-details, .page .related ul li .thumb-details {
+  padding: 20px;
+  overflow: hidden;
+}
+/* line 428, ../sass/partials/_main.scss */
+.single-work .related ul li .thumb-details h4, .page .related ul li .thumb-details h4 {
+  margin-bottom: 10px;
+}
+/* line 432, ../sass/partials/_main.scss */
+.single-work .related ul li .thumb-details .left, .page .related ul li .thumb-details .left {
+  float: left;
+}
+/* line 436, ../sass/partials/_main.scss */
+.single-work .related ul li .thumb-details .right, .page .related ul li .thumb-details .right {
+  float: right;
+}
+/* line 442, ../sass/partials/_main.scss */
+.single-work .related ul li a, .page .related ul li a {
+  color: #38383D;
+  font-size: 20px;
+  font-weight: 600;
+}
+/* line 448, ../sass/partials/_main.scss */
+.single-work .related ul li span p, .page .related ul li span p {
+  color: #c4c4c6;
+}
 
 /* About page */
-/* line 391, ../sass/partials/_main.scss */
+/* line 464, ../sass/partials/_main.scss */
 .page img {
   text-align: center;
   margin: 20px 0 40px;
   width: 100%;
   max-width: 645px;
 }
-/* line 398, ../sass/partials/_main.scss */
+/* line 471, ../sass/partials/_main.scss */
 .page .hero {
   text-align: center;
 }
-/* line 402, ../sass/partials/_main.scss */
+/* line 475, ../sass/partials/_main.scss */
 .page .content {
   margin: 0 auto;
 }
-/* line 404, ../sass/partials/_main.scss */
+/* line 477, ../sass/partials/_main.scss */
 .page .content h2 {
   font-size: 1.875em;
 }
-/* line 410, ../sass/partials/_main.scss */
+/* line 483, ../sass/partials/_main.scss */
 .page .content .description {
   width: 50%;
   margin: 0 auto;
 }
-/* line 415, ../sass/partials/_main.scss */
+/* line 488, ../sass/partials/_main.scss */
 .page .content .description p {
   font-size: 1.11em;
   line-height: 1.8;
 }
-/* line 422, ../sass/partials/_main.scss */
+/* line 495, ../sass/partials/_main.scss */
 .page .content .description a {
   font-weight: 500;
   color: #2D90E8;
 }
-/* line 427, ../sass/partials/_main.scss */
+/* line 500, ../sass/partials/_main.scss */
 .page .content .description a:hover {
   color: #4CA8F9;
 }
@@ -505,11 +578,11 @@ footer .social a:hover {
 /********************************************/
 /*********** Contact page styling ***********/
 /********************************************/
-/* line 439, ../sass/partials/_main.scss */
+/* line 512, ../sass/partials/_main.scss */
 .page-template-contact {
   /* hide original loader */
 }
-/* line 442, ../sass/partials/_main.scss */
+/* line 515, ../sass/partials/_main.scss */
 .page-template-contact .ajax-loader {
   display: inline-block;
   background: #fff;
@@ -526,7 +599,7 @@ footer .social a:hover {
   -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.23);
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.23);
 }
-/* line 454, ../sass/partials/_main.scss */
+/* line 527, ../sass/partials/_main.scss */
 .page-template-contact .ajax-loader:after {
   margin-left: 24px;
   content: "Sending your message...";
@@ -534,46 +607,46 @@ footer .social a:hover {
   display: block;
   width: 100% !important;
 }
-/* line 466, ../sass/partials/_main.scss */
+/* line 539, ../sass/partials/_main.scss */
 .page-template-contact header li a {
   color: white;
 }
-/* line 469, ../sass/partials/_main.scss */
+/* line 542, ../sass/partials/_main.scss */
 .page-template-contact header li a:hover {
   color: #4CA8F9;
 }
-/* line 472, ../sass/partials/_main.scss */
+/* line 545, ../sass/partials/_main.scss */
 .page-template-contact header li a.cta {
   background: #fff;
   color: #0F86F1;
 }
-/* line 481, ../sass/partials/_main.scss */
+/* line 554, ../sass/partials/_main.scss */
 .page-template-contact h1 {
   background: url("../img/bruno-logo-white.svg") no-repeat 0 0;
 }
-/* line 485, ../sass/partials/_main.scss */
+/* line 558, ../sass/partials/_main.scss */
 .page-template-contact h2 {
   color: white;
 }
-/* line 489, ../sass/partials/_main.scss */
+/* line 562, ../sass/partials/_main.scss */
 .page-template-contact .title {
   color: white;
 }
-/* line 493, ../sass/partials/_main.scss */
+/* line 566, ../sass/partials/_main.scss */
 .page-template-contact .main-container {
   background: #0F86F2;
   color: #fff;
 }
-/* line 498, ../sass/partials/_main.scss */
+/* line 571, ../sass/partials/_main.scss */
 .page-template-contact .contact-form {
   max-width: 50%;
   margin: 0 auto;
 }
-/* line 502, ../sass/partials/_main.scss */
+/* line 575, ../sass/partials/_main.scss */
 .page-template-contact .contact-form form {
   width: 100%;
 }
-/* line 505, ../sass/partials/_main.scss */
+/* line 578, ../sass/partials/_main.scss */
 .page-template-contact .contact-form form input, .page-template-contact .contact-form form textarea, .page-template-contact .contact-form form select {
   width: 100%;
   padding: 14px 16px;
@@ -586,16 +659,16 @@ footer .social a:hover {
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.23);
   border-radius: 2px;
 }
-/* line 514, ../sass/partials/_main.scss */
+/* line 587, ../sass/partials/_main.scss */
 .page-template-contact .contact-form form textarea {
   resize: none;
 }
-/* line 518, ../sass/partials/_main.scss */
+/* line 591, ../sass/partials/_main.scss */
 .page-template-contact .contact-form form select {
   -webkit-appearance: none;
   background: #fff url("../img/drop-down-arrow.svg") no-repeat 96% center;
 }
-/* line 523, ../sass/partials/_main.scss */
+/* line 596, ../sass/partials/_main.scss */
 .page-template-contact .contact-form form input[type="submit"] {
   background: #254B6D;
   color: #fff;
@@ -605,7 +678,7 @@ footer .social a:hover {
   -webkit-border-radius: 4px;
   border-radius: 4px;
 }
-/* line 531, ../sass/partials/_main.scss */
+/* line 604, ../sass/partials/_main.scss */
 .page-template-contact .contact-form form label {
   color: #fff;
   text-transform: uppercase;
@@ -616,7 +689,7 @@ footer .social a:hover {
   display: inline-block;
   margin: 20px 0 8px;
 }
-/* line 543, ../sass/partials/_main.scss */
+/* line 616, ../sass/partials/_main.scss */
 .page-template-contact .contact-form .wpcf7-response-output {
   color: #fff;
   border: none;
@@ -627,7 +700,7 @@ footer .social a:hover {
   -webkit-border-radius: 4px;
   border-radius: 4px;
 }
-/* line 552, ../sass/partials/_main.scss */
+/* line 625, ../sass/partials/_main.scss */
 .page-template-contact .contact-form .wpcf7-not-valid-tip {
   display: inline-block;
   background: #B63434;
@@ -639,40 +712,40 @@ footer .social a:hover {
   -webkit-border-radius: 4px;
   border-radius: 4px;
 }
-/* line 565, ../sass/partials/_main.scss */
+/* line 638, ../sass/partials/_main.scss */
 .page-template-contact footer p {
   color: #fff;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
 }
-/* line 571, ../sass/partials/_main.scss */
+/* line 644, ../sass/partials/_main.scss */
 .page-template-contact footer .email a {
   color: #fff;
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
 }
-/* line 574, ../sass/partials/_main.scss */
+/* line 647, ../sass/partials/_main.scss */
 .page-template-contact footer .email a:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
 }
-/* line 582, ../sass/partials/_main.scss */
+/* line 655, ../sass/partials/_main.scss */
 .page-template-contact footer .social a.twitter {
   background: url("../img/twitter-white.svg") no-repeat;
 }
-/* line 585, ../sass/partials/_main.scss */
+/* line 658, ../sass/partials/_main.scss */
 .page-template-contact footer .social a.dribbble {
   background: url("../img/dribbble-white.svg") no-repeat;
 }
-/* line 588, ../sass/partials/_main.scss */
+/* line 661, ../sass/partials/_main.scss */
 .page-template-contact footer .social a.instagram {
   background: url("../img/instagram-white.svg") no-repeat;
 }
-/* line 591, ../sass/partials/_main.scss */
+/* line 664, ../sass/partials/_main.scss */
 .page-template-contact footer .social a.linkedin {
   background: url("../img/linkedin-white.svg") no-repeat;
 }
-/* line 594, ../sass/partials/_main.scss */
+/* line 667, ../sass/partials/_main.scss */
 .page-template-contact footer .social a:hover {
   opacity: .5;
 }
