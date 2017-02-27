@@ -33,7 +33,7 @@ body {
 
 .container {
 	width: 100%; /* 940px/940px */
-	max-width: 940px;
+	max-width: 960px;
 	padding: 0 10px 0 10px;
 	margin: auto;
 	overflow: hidden;
@@ -135,7 +135,7 @@ a {
 p {
 	line-height: $line-height;
 	color: $font-color-dark;
-	font-weight: 400;
+	font-weight: 300;
 }
 
 .hero {
@@ -369,6 +369,9 @@ footer {
 
 		p {
 			font-weight: 300;
+			color: $font-color;
+			padding-left: 20px;
+			border-left: 4px solid #e7e7e9;
 		}
 
 	}
@@ -504,6 +507,7 @@ footer {
 
 				span p {
 					color: #c4c4c6;
+					font-size: 0.88em;
 				}
 
 			}
