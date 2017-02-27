@@ -34,9 +34,9 @@ body {
 .container {
 	width: 100%; /* 940px/940px */
 	max-width: 940px;
+	padding: 0 10px 0 10px;
 	margin: auto;
 	overflow: hidden;
-
 }
 
 // Header
@@ -143,6 +143,48 @@ p {
 	width: 80%;
 	overflow: hidden;
 }
+
+// Active states
+
+.home, .single-work {
+
+	li a.works{
+		color: $link-color;
+		&::after {
+			color: $link-color;
+			content: '';
+			display: block;
+			width: 25px;
+			padding-bottom: 8px;
+			margin: 0 auto;
+			border-bottom: 4px solid $link-color;
+			@include opacity(.9);
+		}
+
+	}
+
+}
+
+.page-template-about {
+
+	li a.about{
+		color: $link-color;
+
+		&::after {
+			color: $link-color;
+			content: '';
+			display: block;
+			width: 25px;
+			padding-bottom: 8px;
+			margin: 0 auto;
+			border-bottom: 4px solid $link-color;
+			@include opacity(.9);
+		}
+
+	}
+
+}
+
 
 // Portfolio item
 
@@ -388,30 +430,36 @@ footer {
 /* Related boxes */
 
 	.related {
-		overflow: hidden;
-		width: 960px;
+
+		width: 100%;
 		margin: 40px auto;
-		padding: 10px;
+		//overflow: auto;
 
 		h3 {
 			margin-bottom: 40px;
-
 		}
 
 		ul {
 
+			a:last-child {
+				li {
+					margin-right: 0;
+				}
+			}
+
 			li {
-				width: 300px;
+				width: 32%;
 				height: auto;
 				background: #fff;
 				float: left;
-				margin-right: 20px;
+				margin: 10px 2% 10px 0;
 				@include box-shadow(0 2px 8px 0 rgba(0,0,0,0.17));
-
+				overflow: hidden;
 				.img-wrapper {
 					width: 300px;
 					height: 300px;
 					color: blue;
+					overflow: hidden;
 
 					img {
 						width: 300px;
@@ -439,16 +487,9 @@ footer {
 
 				}
 
-				a {
-					color: $font-color-dark;
-					font-size: 20px;
-					font-weight: 600;
-				}
-
 				span p {
 					color: #c4c4c6;
 				}
-
 
 			}
 
@@ -459,7 +500,7 @@ footer {
 
 /* About page */
 
-.page {
+.page-template-about {
 
 	img {
 		text-align: center;
@@ -510,6 +551,7 @@ footer {
 /********************************************/
 
 .page-template-contact {
+
 
 	/* hide original loader */
 	.ajax-loader {

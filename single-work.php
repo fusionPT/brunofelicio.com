@@ -69,8 +69,6 @@ get_header();
 
           </div><!-- content -->
 
-        </div><!-- end of container -->
-
         <div class="related">
 
           <h3>More Projects</h3>
@@ -134,5 +132,5 @@ get_header();
 
 
         </div><!-- end of related -->
-
+    </div><!-- end of container -->
 <?php get_footer(); ?>
