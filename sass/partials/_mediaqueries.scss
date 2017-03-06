@@ -43,6 +43,15 @@
       width: 100% !important;
       margin-right: 0 !important;
 
+      .img-wrapper {
+        width: 100% !important;
+        height: auto;
+
+        img {
+          width: 100% !important;
+        }
+      }
+
     }
 
   }
