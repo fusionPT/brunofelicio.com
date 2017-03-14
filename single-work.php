@@ -63,7 +63,7 @@ get_header();
             endwhile;
 
             else :
-              echo '<p>No result was found.</p>';
+              //echo '<p>No result was found.</p>';
             endif;
             ?>
 
