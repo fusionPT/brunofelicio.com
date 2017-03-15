@@ -26,6 +26,7 @@
 
     <script src="<?php echo THEME_JS; ?>/vendor/modernizr-2.6.2.min.js"></script>
     <script src="<?php echo THEME_JS; ?>/vendor/jquery.fancybox.js"></script>
+    <script src="<?php echo THEME_JS; ?>/vendor/jribbble.min.js"></script>
     <script src="<?php echo THEME_JS; ?>/main.js"></script>
     <?php include_once("fullstory.php") ?>
     <?php wp_head(); ?>

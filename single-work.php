@@ -88,7 +88,7 @@ get_header();
             $wp_query = new WP_Query( $args );
 
             if ( have_posts() ) :
-              echo '<ul class="related-item">';
+              echo '<ul class="related-items">';
 
                 while (have_posts()) : the_post(); ?>
                       <a href="<?php the_permalink();?>">

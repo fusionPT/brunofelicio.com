@@ -33,10 +33,10 @@ body {
 
 .container {
 	width: 100%; /* 940px/940px */
-	max-width: 960px;
-	padding: 0 10px 0 10px;
+	max-width: 940px;
 	margin: auto;
 	overflow: hidden;
+
 }
 
 // Header
@@ -120,6 +120,8 @@ h3 {
 	margin-bottom: 20px;
 	font-weight: 600;
 	color: #38383D;
+	margin-bottom: 40px;
+
 }
 
 h4 {
@@ -432,15 +434,11 @@ footer {
 
 /* Related boxes */
 
-	.related {
-
+	.related, .sideproject-item {
+		overflow: hidden;
 		width: 100%;
-		margin: 40px auto;
-		//overflow: auto;
-
-		h3 {
-			margin-bottom: 40px;
-		}
+		margin: 100px auto;
+		padding: 0 10px;
 
 		ul {
 			a {
@@ -452,7 +450,10 @@ footer {
 				&:hover {
 					li {
 						@include box-shadow(0 4px 18px 2px rgba(0,0,0,0.12));
-
+						p.link {
+							color: #2D90E8;
+							background: url("../img/link-icon-hover.svg") no-repeat 0 10px;
+						}
 					}
 				}
 
@@ -468,7 +469,7 @@ footer {
 				height: auto;
 				background: #fff;
 				float: left;
-				margin: 10px 2% 20px 0;
+				margin: 0 2% 20px 0;
 				overflow: hidden;
 
 
@@ -480,9 +481,11 @@ footer {
 					overflow: hidden;
 
 					img {
-						width: 300px;
+
 						height: auto;
 						overflow: hidden;
+						margin: 0;
+						padding: 0;
 					}
 
 				}
@@ -505,9 +508,27 @@ footer {
 
 				}
 
-				span p {
-					color: #c4c4c6;
-					font-size: 0.88em;
+				span{
+
+					p {
+						color: #c4c4c6;
+						font-size: 1em;
+						font-weight: 400;
+						&.link{
+							color: #b4b4b4;
+							text-decoration: none;
+							font-size: 0.88em;
+							background: url("../img/link-icon.svg") no-repeat 0 10px;
+							padding-left: 22px;
+							transition: all .3s;
+							font-weight: 600;
+							margin: 10px 0 4px;
+						}
+						&.text {
+							color: $font-color;
+
+						}
+					}
 				}
 
 			}
@@ -521,11 +542,54 @@ footer {
 
 .page-template-about {
 
+	.dribbble-shots {
+		overflow: hidden;
+		padding: 20px 10px;
+		.portfolio {
+
+
+			.thumb {
+				max-width: 220px;
+				height: 167px;
+
+				float: left;
+				margin-right: 20px;
+
+				&:last-child {
+					margin-right: 0 !important;
+
+				}
+
+				img {
+					margin: 0;
+				}
+
+				a {
+					height: 165px;
+					display: block;
+					@include box-shadow(0 2px 8px 0 rgba(0,0,0,0.17));
+					transition: box-shadow 0.3s ease-in-out;
+					&:hover {
+						@include box-shadow(0 4px 18px 2px rgba(0,0,0,0.12));
+					}
+				}
+
+			}
+
+		}
+
+	}
+
+
 	img {
 		text-align: center;
 		margin: 20px 0 40px;
 		width: 100%;
 		max-width: 645px;
+		&.avatar {
+			max-width: 136px;
+			height: auto;
+		}
 	}
 
 	.hero {
@@ -533,6 +597,7 @@ footer {
 	}
 
 	.content {
+		width: 100%;
 
 		h2 {
 			font-size: 1.875em;
@@ -547,9 +612,10 @@ footer {
 
 			p {
 
-				font-size: 1.11em;
+				font-size: 1.375em;
 				line-height: 1.8;
-
+				color: #38383E;
+				@include opacity(0.8);
 			}
 
 			a {
