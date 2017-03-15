@@ -81,15 +81,6 @@ get_header();
     </ul>
   </div><!-- end of related -->
 
-  <div class="dribbble-shots">
-    <h3>From Dribbble</h3>
-
-    <ul class="portfolio">
-      <p>Loading...</p>
-    </ul>
-
-  </div>
-
   </div><!-- end of content -->
 </div><!-- end of container -->
 <?php

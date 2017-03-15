@@ -54,7 +54,6 @@ header {
 	margin: auto;
 	overflow: hidden;
 
-
 	ul {
 		float: right;
 		margin-top: 8px;
@@ -112,6 +111,19 @@ h2 {
 	font-weight: 500;
 	padding: 0 0 40px 0;
 
+	opacity: 1;
+	transition: transform .4s ease-in-out, opacity .4s ease-in-out;
+	-webkit-transform: translateY(0);
+	-ms-transform: translateY(0);
+			transform: translateY(0);
+
+}
+
+.wf-loading h2 {
+  opacity: 0;
+  -webkit-transform: translateY(-20px);
+      -ms-transform: translateY(-20px);
+          transform: translateY(-20px);
 }
 
 h3 {
@@ -388,9 +400,20 @@ footer {
 			margin: 100px 0 20px;
 			color: $font-color;
 			opacity: .5;
-
+		  transition: transform .4s ease-in-out, opacity .4s ease-in-out;
+		  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
 
 	}
+
+			.wf-loading p.title {
+				opacity: 0;
+	  		-webkit-transform: translateY(-20px);
+	      -ms-transform: translateY(-20px);
+	          transform: translateY(-20px);
+
+}
 
 	.description {
 		overflow: hidden;
@@ -601,7 +624,9 @@ footer {
 
 		h2 {
 			font-size: 1.875em;
+
 		}
+
 
 		margin: 0 auto;
 
@@ -685,6 +710,8 @@ footer {
 	h2 {
 		color: white;
 	}
+
+
 
 	.title {
 		color: white;
