@@ -51,7 +51,7 @@ get_header();
 
             <div class="image">
 
-              <a class="screenshot" href="<?php the_sub_field('image');?>"><img src="<?php the_sub_field('image');?>" alt="<?php the_sub_field('alt');?>"></a>
+              <a class="screenshot" href="<?php the_sub_field('image');?>"><img class="lazy" data-original="<?php the_sub_field('image');?>" alt="<?php the_sub_field('alt');?>"></a>
 
               <p><?php the_sub_field('image_description');?></p>
 

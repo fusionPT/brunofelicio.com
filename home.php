@@ -21,18 +21,12 @@
     <?php
 
       while ($wp_query->have_posts()) : $wp_query->the_post();
-
-      $attachment_id = get_field('image');
-    	$size = 'frontpage-image-normal'; // (thumbnail, medium, large, full or custom size)
-    	$image = wp_get_attachment_image_src( $attachment_id, $size );
-    	// url = $image[0];
-    	// width = $image[1];
-    	// height = $image[2]; ?>
+?>
 
       <div class="pf-item">
 
         <div class="image">
-          <a href="<?php the_permalink(); ?>"><img src="<?php echo $image[0]; ?>" alt="<?php the_field('alt') ?>"></a>
+          <a href="<?php the_permalink(); ?>"><img class="lazy" data-original="<?php the_field('image'); ?>" alt="<?php the_field('alt'); ?>"></a>
         </div>
 
         <div class="info">

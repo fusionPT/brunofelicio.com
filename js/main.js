@@ -1,5 +1,9 @@
 $(document).ready(function() {
 
+	$("img.lazy").lazyload({
+	    effect : "fadeIn"
+	});
+
 	$("a.screenshot").fancybox({
 		'transitionIn'		: 'fade',
 		'transitionOut'		: 'fade',
@@ -31,6 +35,9 @@ $(document).ready(function() {
 		});
 
 	}
+
 	getPlayerShots();
+
+
 
 });
