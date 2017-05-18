@@ -1,16 +1,4 @@
 <?php get_header(); ?>
-
-<?php
-$attachment_id = get_field('image');
-$size = "frontpage-image-half"; // (thumbnail, medium, large, full or custom size)
-$sizefull = "frontpage-image-normal"; // (thumbnail, medium, large, full or custom size)
-$image = wp_get_attachment_image_src( $attachment_id, $size );
-$image_full = wp_get_attachment_image_src( $attachment_id, $size );
-// url = $image[0];
-// width = $image[1];
-// height = $image[2];
-?>
-
 <?php
   $args = array (
       'post_type' => 'work',
@@ -38,7 +26,7 @@ $image_full = wp_get_attachment_image_src( $attachment_id, $size );
       <div class="pf-item">
 
         <div class="image">
-          <a href="<?php the_permalink(); ?>"><img class="lazy" src="<?php echo $image[0]; ?>" data-original="<?php echo $image_full[0]; ?>" alt="<?php the_field('alt'); ?>"></a>
+          <a href="<?php the_permalink(); ?>"><img class="lazy" src="<?php echo THEMEROOT; ?>/img/blank-slate.png" data-original="<?php the_field('image'); ?>" alt="<?php the_field('alt'); ?>"></a>
         </div>
 
         <div class="info">
