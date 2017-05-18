@@ -2,7 +2,7 @@ $(document).ready(function() {
 
 	$("img.lazy").lazyload({
 	    effect : "fadeIn",
-			threshold : 200
+			threshold : 400
 	});
 
 	$("a.screenshot").fancybox({
