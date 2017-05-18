@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <?php
-$attachment_id = get_field('field_name');
+$attachment_id = get_field('image');
 $size = "frontpage-image-half"; // (thumbnail, medium, large, full or custom size)
 $image = wp_get_attachment_image_src( $attachment_id, $size );
 // url = $image[0];
