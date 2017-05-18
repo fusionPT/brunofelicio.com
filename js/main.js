@@ -2,7 +2,8 @@ $(document).ready(function() {
 
 	$("img.lazy").lazyload({
 	    effect : "fadeIn",
-			event: "scrollstop"
+			event: "scrollstop",
+			threshold : 200
 	});
 
 	$("a.screenshot").fancybox({
