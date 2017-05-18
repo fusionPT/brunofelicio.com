@@ -1,4 +1,14 @@
 <?php get_header(); ?>
+
+<?php
+$attachment_id = get_field('field_name');
+$size = "frontpage-image-half"; // (thumbnail, medium, large, full or custom size)
+$image = wp_get_attachment_image_src( $attachment_id, $size );
+// url = $image[0];
+// width = $image[1];
+// height = $image[2];
+?>
+
 <?php
   $args = array (
       'post_type' => 'work',
@@ -26,7 +36,7 @@
       <div class="pf-item">
 
         <div class="image">
-          <a href="<?php the_permalink(); ?>"><img class="lazy" src="<?php the_field('image, frontpage-image-half'); ?>" data-original="<?php the_field('image'); ?>" alt="<?php the_field('alt'); ?>"></a>
+          <a href="<?php the_permalink(); ?>"><img class="lazy" src="<?php echo $image[0]; ?>" data-original="<?php the_field('image'); ?>" alt="<?php the_field('alt'); ?>"></a>
         </div>
 
         <div class="info">
