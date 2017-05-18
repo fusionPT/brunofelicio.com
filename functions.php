@@ -15,6 +15,7 @@ define ('THEME_JS', THEMEROOT.'/js');
 if ( function_exists( 'add_image_size' ) ) {
 
 	add_image_size( 'frontpage-image-normal', 1880, 'auto', true ); //(scaled)
+	add_image_size( 'frontpage-image-half', 470, 'auto', true );
   add_image_size( 'frontpage-image-big', 2150, 'auto', true ); //(scaled)
 	add_image_size( 'inner-image', 1560, 'auto', true ); //(scaled)
 

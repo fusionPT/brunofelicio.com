@@ -26,7 +26,7 @@
       <div class="pf-item">
 
         <div class="image">
-          <a href="<?php the_permalink(); ?>"><img class="lazy" src="<?php echo THEMEROOT; ?>/img/blank-slate.png" data-original="<?php the_field('image'); ?>" alt="<?php the_field('alt'); ?>"></a>
+          <a href="<?php the_permalink(); ?>"><img class="lazy" src="<?php the_field('image, frontpage-image-half'); ?>" data-original="<?php the_field('image'); ?>" alt="<?php the_field('alt'); ?>"></a>
         </div>
 
         <div class="info">
