@@ -1,7 +1,8 @@
 $(document).ready(function() {
 
 	$("img.lazy").lazyload({
-	    effect : "fadeIn"
+	    effect : "fadeIn",
+			event: "scrollstop"
 	});
 
 	$("a.screenshot").fancybox({
