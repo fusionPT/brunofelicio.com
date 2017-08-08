@@ -21,20 +21,28 @@
 
   .info {
 
-    padding: 30px 0 !important;
-    margin: 0 !important;
+    padding: 0 !important;
+    margin: 0 0 40px !important;
 
     ul {
-      width: 100%;
+      width: 100% !important;
       float: none !important;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
     }
 
     p {
       float: none !important;
       width: 100% !important;
+      font-size: 0.88em !important;
+      line-height: 1.5 !important;
     }
 
+  }
+
+  .pf-item {
+    .image {
+      padding: 0 !important;
+    }
   }
 
   .related {
