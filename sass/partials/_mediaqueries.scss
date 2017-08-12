@@ -1,5 +1,22 @@
 @media screen and (max-width: 700px) {
 
+  // Header
+  .menu-overlay {
+
+  }
+
+  header {
+    .menu {
+      display: none;
+    }
+    .mobile-menu-toggle {
+      display: block;
+    }
+  }
+
+
+  //
+
   .main-container {
   	padding: 20px;
   }
@@ -128,6 +145,11 @@
 }
 
 @media screen and (max-width: 460px) {
+
+  .menu-overlay {
+
+  }
+  
   .main-container {
 
     padding: 10px;
@@ -135,8 +157,8 @@
   }
 
   h1, .single-work h1, .page h1 {
-      float: none !important;
-      margin: auto;
+      //float: none !important;
+      //margin: auto;
   }
 
   header {

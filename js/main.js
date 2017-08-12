@@ -1,5 +1,19 @@
 $(document).ready(function() {
 
+	// Close mobile menu
+
+	$( ".close-btn" ).on( "click", function() {
+	  //console.log('Success!');
+		$(".menu-overlay").css("display", "none");
+	});
+
+	$( ".mobile-menu-toggle" ).on( "click", function() {
+	  //console.log('Success!');
+		$(".menu-overlay").css("display", "block");
+	});
+
+	//
+
 	$("img.lazy").lazyload({
 			threshold : 200,
 			effect : "fadeIn"

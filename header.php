@@ -39,18 +39,35 @@
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+        <div class="menu-overlay">
+          <a href="#" class="close-btn">close</a>
+          <ul class="mobile-menu-overlay">
+            <li><a class="works" href="<?php bloginfo('home'); ?>">Works</a></li>
+            <li><a class="about" href="<?php bloginfo('home'); ?>/about">About</a></li>
+            <li><a class="contact" href="<?php bloginfo('home'); ?>/contact">Let's Talk</a></li>
+          </ul>
 
+        </div><!-- Mobile menu -->
         <div class="main-container">
 
               <div class="full-width">
 
+
+
                   <header>
-                    <a href="<?php bloginfo('home'); ?>"><h1>Bruno Felicio</h1></a>
-                    <ul>
+                    <a class="logo" href="<?php bloginfo('home'); ?>"><h1>Bruno Felicio</h1></a>
+
+                    <!-- Burguer menu -->
+                    <a href="#" class="mobile-menu-toggle">
+                      <div class="burger" href="#">Menu</div>
+                    </a>
+
+                    <ul class="menu">
                       <li><a class="works" href="<?php bloginfo('home'); ?>">Works</a></li>
                       <li><a class="about" href="<?php bloginfo('home'); ?>/about">About</a></li>
                       <li><a class="cta contact" href="<?php bloginfo('home'); ?>/contact">Let's Talk</a></li>
                     </ul>
+
                   </header><!-- end of header -->
 
                 </div><!-- full-width -->
