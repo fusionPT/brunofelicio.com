@@ -61,7 +61,7 @@ body {
 			width: 90%;
 			margin: 0 auto;
 
-			&::last-child {
+			&:last-child {
 				margin-top: 0 !important;
 			}
 
@@ -84,10 +84,11 @@ body {
 .close-btn {
 	width: 24px;
 	height: 24px;
-	float: right;
+	right: 35px;
+	top: 35px;
 	text-indent: -9999px;
 	display: block;
-	position: relative;
+	position: absolute;
 	&::before {
 		width: 24px;
 		height: 2px;
@@ -285,6 +286,22 @@ p {
 		}
 
 	}
+	.mobile-menu-overlay {
+		li a.works{
+			color: #fff;
+			&::after {
+				color: #fff;
+				content: '';
+				display: block;
+				width: 25px;
+				padding-bottom: 8px;
+				margin: 0 auto;
+				border-bottom: 4px solid #fff;
+				@include opacity(.9);
+			}
+
+		}
+	}
 
 }
 
@@ -305,7 +322,22 @@ p {
 		}
 
 	}
+	.mobile-menu-overlay {
+		li a.about{
+			color: #fff !important;
 
+			&::after {
+				color: #fff;
+				content: '';
+				display: block;
+				width: 25px;
+				padding-bottom: 8px;
+				margin: 0 auto;
+				border-bottom: 4px solid #fff;
+				@include opacity(.9);
+			}
+		}
+	}
 }
 
 
@@ -771,7 +803,22 @@ footer {
 
 .page-template-contact {
 
+	.mobile-menu-overlay {
+		li a.contact {
+			color: #fff !important;
 
+			&::after {
+				color: #fff;
+				content: '';
+				display: block;
+				width: 25px;
+				padding-bottom: 8px;
+				margin: 0 auto;
+				border-bottom: 4px solid #fff;
+				@include opacity(.9);
+			}
+		}
+	}
 	/* hide original loader */
 	.ajax-loader {
 			display: inline-block;

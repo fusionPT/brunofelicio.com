@@ -4,13 +4,20 @@ $(document).ready(function() {
 
 	$( ".close-btn" ).on( "click", function() {
 	  //console.log('Success!');
-		$(".menu-overlay").css("display", "none");
+		$( ".menu-overlay" ).fadeOut( 200, function() {
+	    $(".menu-overlay").css("display", "none");
+	  });
 	});
 
 	$( ".mobile-menu-toggle" ).on( "click", function() {
 	  //console.log('Success!');
-		$(".menu-overlay").css("display", "block");
+
+		$( ".menu-overlay" ).fadeIn( 200, function() {
+	    $(".menu-overlay").css("display", "block");
+	  });
+
 	});
+
 
 	//
 

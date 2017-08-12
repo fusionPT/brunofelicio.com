@@ -6,6 +6,7 @@
   }
 
   header {
+    
     .menu {
       display: none;
     }
@@ -28,6 +29,7 @@
   .hero {
 
     width: 100% !important;
+    margin: 10px 0 30px;
 
     h2 {
       font-size: 1.25em;
@@ -147,9 +149,14 @@
 @media screen and (max-width: 460px) {
 
   .menu-overlay {
+    //
+  }
+
+  .close-btn {
+    top: 25px;
+    right: 25px;
 
   }
-  
   .main-container {
 
     padding: 10px;
