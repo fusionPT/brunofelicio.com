@@ -215,11 +215,11 @@ h1 {
 
 h2 {
 	text-align: center;
-	font-size: 52px;
+	font-size: 50px;
 	color: #38383D;
 	line-height: $line-height;
 	font-weight: 500;
-	padding: 0 0 40px 0;
+	padding: 0 0 20px 0;
 	opacity: 1;
 	transition: transform .4s ease-in-out, opacity .4s ease-in-out;
 	-webkit-transform: translateY(0);
@@ -229,6 +229,12 @@ h2 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
+}
+
+.subheader {
+	text-align: center;
+	color: #b4b4b4;
+	font-weight: 500;
 }
 
 .wf-loading h2 {
