@@ -14,7 +14,7 @@
     <div class="container">
       <div class="hero">
 
-        <h2>Hello! I’m Bruno and I design and build beautiful and clean user interfaces.</h2>
+        <h2>Hello! I'm Bruno and I design and code digital stuff. <i class="em em-satisfied"></i></h2>
 
       </div><!-- end of hero -->
 
