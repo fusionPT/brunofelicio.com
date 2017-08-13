@@ -1,7 +1,35 @@
 @media screen and (max-width: 700px) {
 
+  .subheader {
+  	text-align: center;
+  	color: #b4b4b4;
+  	font-weight: 500;
+    font-size: 0.88em;
+    margin-top: 10px;
+  }
+
+
   // Header
+.home {
+  .hero {
+
+    width: 90% !important;
+    margin: 10px auto 20px;
+
+    h2 {
+      font-size: 1.25em;
+      padding: 0;
+    }
+
+  }
+}
+.single {
+  .top-image {
+    padding: 5px !important;
+  }
+}
 .home, .page-template-about, .page-template-contact, .single {
+
     header {
 
       margin: 5px 0 15px;
@@ -52,7 +80,7 @@
   .hero {
 
     width: 100% !important;
-    margin: 10px 0 30px;
+    margin: 10px auto 20px;
 
     h2 {
       font-size: 1.25em;
@@ -60,6 +88,8 @@
     }
 
   }
+
+
 
   .info {
 

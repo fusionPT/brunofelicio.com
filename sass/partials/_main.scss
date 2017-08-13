@@ -232,9 +232,15 @@ h2 {
 }
 
 .subheader {
+	display: block;
 	text-align: center;
 	color: #b4b4b4;
 	font-weight: 500;
+	opacity: 1;
+	transition: transform .4s ease-in-out, opacity .4s ease-in-out;
+	-webkit-transform: translateY(0);
+	-ms-transform: translateY(0);
+			transform: translateY(0);
 }
 
 .wf-loading h2 {
@@ -242,6 +248,12 @@ h2 {
   -webkit-transform: translateY(-20px);
       -ms-transform: translateY(-20px);
           transform: translateY(-20px);
+}
+.wf-loading .subheader {
+  opacity: 0;
+  -webkit-transform: translateY(-10px);
+      -ms-transform: translateY(-10px);
+          transform: translateY(-10px);
 }
 
 h3 {
