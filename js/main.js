@@ -4,7 +4,7 @@ $(document).ready(function() {
 
 	$( ".close-btn" ).on( "click", function() {
 	  //console.log('Success!');
-			
+
 		$(".menu-overlay ul li").toggleClass('menu-anim').promise().done(function(){
 			$(".menu-overlay").toggleClass('overlay-anim');
 		});
