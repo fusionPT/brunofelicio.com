@@ -4,22 +4,30 @@ $(document).ready(function() {
 
 	$( ".close-btn" ).on( "click", function() {
 	  //console.log('Success!');
-		$( ".menu-overlay" ).fadeOut( 200, function() {
+			
+		$(".menu-overlay ul li").toggleClass('menu-anim').promise().done(function(){
+			$(".menu-overlay").toggleClass('overlay-anim');
+		});
+
+		/*$( ".menu-overlay" ).fadeOut( 200, function() {
 	    $(".menu-overlay").css("display", "none");
-	  });
+	  });*/
 	});
 
 	$( ".mobile-menu-toggle" ).on( "click", function() {
 	  //console.log('Success!');
 
-		$( ".menu-overlay" ).fadeIn( 200, function() {
+		$(".menu-overlay").toggleClass('overlay-anim').promise().done(function(){
+			$(".menu-overlay ul li").addClass('menu-anim');
+		});
+		/*$( ".menu-overlay" ).fadeIn( 200, function() {
 	    $(".menu-overlay").css("display", "block");
-	  });
+	  });*/
 
 	});
 
 
-	//
+	// End of mobile menu
 
 	$("img.lazy").lazyload({
 			threshold : 200,

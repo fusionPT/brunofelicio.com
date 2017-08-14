@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="<?php echo THEMEROOT; ?>/css/style.css">
     <link rel="stylesheet" href="<?php echo THEMEROOT; ?>/css/jquery.fancybox.css">
     <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
-    
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.4.min.js"><\/script>')</script>
     <script src="<?php echo THEME_JS; ?>/vendor/typekit-cache.min.js"></script>
@@ -41,6 +41,7 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <div class="menu-overlay">
+          <a class="logo" href="<?php bloginfo('home'); ?>"><h1>Bruno Felicio</h1></a>
           <a href="#" class="close-btn">close</a>
           <ul class="mobile-menu-overlay">
             <li><a class="works" href="<?php bloginfo('home'); ?>">Works</a></li>
