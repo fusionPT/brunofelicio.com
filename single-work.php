@@ -51,10 +51,20 @@ get_header();
 
             <div class="image">
 
-              <a class="screenshot" href="<?php the_sub_field('image');?>"><img class="lazy" src="<?php echo THEMEROOT; ?>/img/blank-slate.png" data-original="<?php the_sub_field('image');?>" alt="<?php the_sub_field('alt');?>"></a>
+              <a class="screenshot" href="<?php the_sub_field('image');?>">
+                <img class="lazy" src="<?php echo THEMEROOT; ?>/img/blank-slate.png" data-original="<?php the_sub_field('image');?>" alt="<?php the_sub_field('alt');?>">
+              </a>
 
-              <p><?php the_sub_field('image_description');?></p>
+              <div class="text-description">
+                <h4><?php
 
+                the_sub_field('title'); ?>
+
+                </h4>
+
+
+                <p><?php the_sub_field('image_description');?></p>
+              </div>
 
             </div><!-- end of image -->
 

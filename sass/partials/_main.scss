@@ -580,10 +580,20 @@ footer {
 
 		}
 
-		p {
-			font-weight: 200;
+		.text-description {
+
 			padding-left: 20px;
 			border-left: 4px solid #e7e7e9;
+
+			p {
+				font-weight: 200;
+			}
+
+			h4 {
+				margin-bottom: 10px;
+			}
+
+
 		}
 
 	}
