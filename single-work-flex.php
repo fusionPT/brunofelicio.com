@@ -64,9 +64,7 @@ get_header();
                         </a>
                         <span class="caption"><?php the_sub_field('caption'); ?></span>
                       </div>
-
                       <?php
-
                     elseif( get_row_layout() == 'flex_text' ):
                         echo "<div class='text-block'><h4>" . get_sub_field('text_block_title') . '</h4>';
                         echo '<p>' . get_sub_field('text_block_description') . '</p></div>';
