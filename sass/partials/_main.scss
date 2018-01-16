@@ -577,7 +577,6 @@ footer {
 		img {
 			padding-bottom: 40px;
 			max-width: 100%;
-
 		}
 
 		.text-description {
@@ -593,11 +592,31 @@ footer {
 				margin-bottom: 10px;
 			}
 
-
 		}
 
+	} // image
+
+	.image-flex {
+		img {
+			max-width: 100%;
+			padding-bottom: 20px;
+		}
+		.caption {
+			font-size: 16px;
+			color: #999;
+			padding-left: 20px;
+			border-left: 4px solid #e7e7e9;
+		}
 	}
 
+	.text-block {
+		margin: 50px 0 50px;
+		padding: 10px 0 10px;
+
+		h4 {
+			margin-bottom: 10px;
+		}
+	}
 
 
 		.title {

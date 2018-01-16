@@ -1,5 +1,10 @@
 <?php
 
+/*
+ * Template Name: Flex Portfolio Work
+ * Template Post Type: post, work
+ */
+
 get_header();
 
 ?>
@@ -45,31 +50,37 @@ get_header();
 
             <?php
 
-            if( have_rows('image_details') ):
+            // check if the flexible content field has rows of data
+            if( have_rows('flex_details') ):
 
-              while ( have_rows('image_details') ) : the_row();?>
+                 // loop through the rows of data
+                while ( have_rows('flex_details') ) : the_row();
 
-            <div class="image">
+                    if( get_row_layout() == 'flex_image' ): ?>
 
-              <a class="screenshot" href="<?php the_sub_field('image');?>">
-                <img class="lazy" src="<?php echo THEMEROOT; ?>/img/blank-slate.png" data-original="<?php the_sub_field('image');?>" alt="<?php the_sub_field('alt');?>">
-              </a>
+                      <div class="image-flex">
+                        <a class="screenshot" href="<?php the_sub_field('image_url');?>">
+                          <img class="lazy" src="<?php echo THEMEROOT; ?>/img/blank-slate.png" data-original="<?php the_sub_field('image_url');?>" alt="<?php the_sub_field('alt');?>">
+                        </a>
+                        <span class="caption"><?php the_sub_field('caption'); ?></span>
+                      </div>
 
-              <div class="text-description">
-                <h4><?phpthe_sub_field('title'); ?></h4>
-                <p><?php the_sub_field('image_description');?></p>
-              </div>
+                      <?php
 
-            </div><!-- end of image -->
+                    elseif( get_row_layout() == 'flex_text' ):
+                        echo "<div class='text-block'><h4>" . get_sub_field('text_block_title') . '</h4>';
+                        echo '<p>' . get_sub_field('text_block_description') . '</p></div>';
+                    endif;
 
-            <?php
-
-            endwhile;
+                endwhile;
 
             else :
-              //echo '<p>No result was found.</p>';
+
+                // no layouts found
+
             endif;
-            ?>
+
+          ?>
 
           </div><!-- content -->
 
@@ -111,7 +122,9 @@ get_header();
 
                           if ( $post_tags ) {
                               foreach( $post_tags as $tag ) {
+
                               echo '<p class="left">'. $tag->name . '</p>';
+
                               echo '<p class="right">'. get_field('year') . '</p>';
                               }
                           } ?>
