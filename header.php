@@ -32,6 +32,7 @@
     <script src="<?php echo THEME_JS; ?>/vendor/jribbble.min.js"></script>
     <script src="<?php echo THEME_JS; ?>/vendor/jquery.lazyload.min.js"></script>
     <script src="<?php echo THEME_JS; ?>/main.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
     <?php include_once("fullstory.php") ?>
     <?php wp_head(); ?>
 
