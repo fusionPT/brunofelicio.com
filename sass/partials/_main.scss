@@ -573,7 +573,7 @@ clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 		//background: #3A5DAA;
 
 		.lazy {
-			animation: lazyAnim 5s;
+			animation: lazyAnim .5s;
 		}
 		img {
 			width: 100%;
