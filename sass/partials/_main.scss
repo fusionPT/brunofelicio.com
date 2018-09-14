@@ -533,14 +533,14 @@ footer {
 		-webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
 		clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
 		-webkit-filter: blur(10px);
-		opacity: 0;
+		
 	}
 
 	100% {
 		-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 		-webkit-filter: blur(0);
-		opacity: 1;
+
 	}
 }
 @keyframes lazyOpacity {
