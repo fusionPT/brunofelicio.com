@@ -533,12 +533,14 @@ footer {
 		-webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
 		clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
 		-webkit-filter: blur(10px);
+		opacity: 0;
 	}
 
 	100% {
 		-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 		-webkit-filter: blur(0);
+		opacity: 1;
 	}
 }
 
@@ -572,7 +574,7 @@ clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 		background: #f3f3f3;
 		//background: #3A5DAA;
 
-		.lazy {
+		.lazyAnim {
 			animation: lazyAnim .5s;
 		}
 		img {
