@@ -29,26 +29,10 @@ $(document).ready(function() {
 
 	// End of mobile menu
 
-	/*$("img.lazy").lazyload({
+	$("img.lazy").lazyload({
 			threshold : 200,
 			effect : "fadeIn"
-	});*/
-
-	$(".top-image img").lazyload({
-        beforeLoad: function(element) {
-            // called before an elements gets handled
-						$(this).addClass(lazyAnim);
-        },
-        afterLoad: function(element) {
-            // called after an element was successfully handled
-        },
-        onError: function(element) {
-            // called whenever an element could not be handled
-        },
-        onFinishedAll: function() {
-            // called once all elements was handled
-        }
-    });
+	});
 
 
 	$("a.screenshot").fancybox({
