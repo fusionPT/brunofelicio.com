@@ -38,12 +38,13 @@ $(document).ready(function() {
 					$(".top-image").animate({
 						height: (image_height + 120),
 					});
-					
+
         },
         afterLoad: function(element) {
 
-					element.addClass('lazyAnimation');
-
+					$('.top-image .lazy').addClass('lazyAnimation');
+					$('.pf-item .lazy').addClass('lazyOpacity');
+					$('.screenshot .lazy').addClass('lazyOpacity');
 
         },
         onError: function(element) {
