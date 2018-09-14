@@ -528,7 +528,19 @@ footer {
 }
 
 /****** Detail Page *******/
+@keyframes lazyAnim {
+	0% {
+		-webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+		clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+		-webkit-filter: blur(10px);
+	}
 
+	100% {
+		-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+		-webkit-filter: blur(0);
+	}
+}
 
 .single-work, .page {
 
@@ -553,7 +565,7 @@ footer {
 	}
 
 	.top-image {
-
+		animation: lazyAnim 1s;
 		width: 100%;
 		padding: 40px;
 		margin: 40px 0 40px;
