@@ -395,7 +395,7 @@ p {
 // Portfolio item
 
 .pf-item {
-	animation: lazyOpacity 1s;
+	animation: lazyOpacity 2s;
 	width: 100%;
 	position: relative;
 
@@ -533,7 +533,7 @@ footer {
 		-webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
 		clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
 		-webkit-filter: blur(10px);
-		
+
 	}
 
 	100% {
