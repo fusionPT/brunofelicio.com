@@ -32,14 +32,18 @@ $(document).ready(function() {
 
 	$(".lazy").Lazy({
         beforeLoad: function(element) {
+
 					var image_height = (element).height();
 					console.log("Image height is:" + image_height);
 					$(".top-image").animate({
 						height: (image_height + 120),
 					});
+					
         },
         afterLoad: function(element) {
+
 					element.addClass('lazyAnimation');
+
 
         },
         onError: function(element) {

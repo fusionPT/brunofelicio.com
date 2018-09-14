@@ -395,7 +395,7 @@ p {
 // Portfolio item
 
 .pf-item {
-	animation: lazyOpacity 2s;
+	animation: lazyOpacity 1s;
 	width: 100%;
 	position: relative;
 
@@ -547,13 +547,25 @@ footer {
 	0% {
 		opacity: 0;
 	}
-
 	100% {
 		opacity: 1;
 	}
 }
+@keyframes lazyOpacityReverse {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
 .lazyAnimation {
 	animation: lazyAnim 1s;
+}
+.lazyOpacity {
+	animation: lazyOpacityReverse 1s;
+
 }
 
 .single-work, .page {
