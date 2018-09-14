@@ -30,7 +30,9 @@
     <script src="<?php echo THEME_JS; ?>/vendor/modernizr-2.6.2.min.js"></script>
     <script src="<?php echo THEME_JS; ?>/vendor/jquery.fancybox.js"></script>
     <script src="<?php echo THEME_JS; ?>/vendor/jribbble.min.js"></script>
-    <script src="<?php echo THEME_JS; ?>/vendor/jquery.lazyload.min.js"></script>
+    <!--<script src="<?php echo THEME_JS; ?>/vendor/jquery.lazyload.min.js"></script>-->
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.plugins.min.js"></script>
     <script src="<?php echo THEME_JS; ?>/main.js"></script>
     <script src='https://www.google.com/recaptcha/api.js'></script>
     <?php include_once("fullstory.php") ?>
