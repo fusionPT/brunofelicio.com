@@ -574,6 +574,7 @@ clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 
 
 		img {
+			animation: lazyAnim .5s;
 			width: 100%;
 			max-width: 940px;
 			vertical-align: bottom;
