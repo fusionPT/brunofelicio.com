@@ -66,9 +66,8 @@ $(document).ready(function() {
 
 	function getPlayerShots (){
 
-	    console.log("Loading dribbble shots");
 
-			$.jribbble.setToken('2784cf9d3d8abea842e4752f76b77aa14939e568cf6c4da558a1d5f459d64e8c');
+			$.jribbble.setToken('4ede761d04082a5979c78395034951584d593b51bb1f00c4f7150d25d2141d45');
 
 			$.jribbble.users('brunofelicio').shots({per_page: 4}).then(function(shots) {
 
@@ -81,7 +80,7 @@ $(document).ready(function() {
 			    html.push('alt="' + shot.title + '"></a></li>');
 			    });
 
-			  $('.portfolio').html(html.join(''));
+			  $('.page-template-about-php .content').html(html.join(''));
 
 		});
 
