@@ -64,30 +64,6 @@ $(document).ready(function() {
 		'overlayColor'		: '#fff'
 	});
 
-	function getPlayerShots (){
-
-
-			$.jribbble.setToken('4ede761d04082a5979c78395034951584d593b51bb1f00c4f7150d25d2141d45');
-
-			$.jribbble.users('brunofelicio').shots({per_page: 4}).then(function(shots) {
-
-			  	var html = [];
-
-			  shots.forEach(function(shot) {
-			    html.push('<li class="thumb">');
-			    html.push('<a href="' + shot.html_url + '">');
-			    html.push('<img class="overlay-image" src="' + shot.images.normal + '" ');
-			    html.push('alt="' + shot.title + '"></a></li>');
-			    });
-
-			  $('.page-template-about-php .content').html(html.join(''));
-
-		});
-
-	}
-
-	getPlayerShots();
-
 
 
 });
