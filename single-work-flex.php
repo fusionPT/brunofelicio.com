@@ -15,7 +15,7 @@ get_header();
             <h2><?php the_field('subtitle');?></h2>
 
             <div class="top-image" style="background:<?php the_field('bg_color'); ?>">
-              <img class="lazy" src="<?php echo THEMEROOT; ?>/img/blank-slate.png" data-original="<?php the_field('top_image'); ?>" alt="<?php the_field('alt'); ?>">
+              <img class="lazy" src="<?php echo THEMEROOT; ?>/img/blank-slate.png" data-src="<?php the_field('top_image'); ?>" alt="<?php the_field('alt'); ?>">
             </div><!-- top-image -->
 
           </div><!-- end of hero -->
@@ -60,7 +60,7 @@ get_header();
 
                       <div class="image-flex">
                         <a class="screenshot" href="<?php the_sub_field('image_url');?>">
-                          <img class="lazy" src="<?php echo THEMEROOT; ?>/img/blank-slate.png" data-original="<?php the_sub_field('image_url');?>" alt="<?php the_sub_field('alt');?>">
+                          <img class="lazy" src="<?php echo THEMEROOT; ?>/img/blank-slate.png" data-src="<?php the_sub_field('image_url');?>" alt="<?php the_sub_field('alt');?>">
                         </a>
                         <span class="caption"><?php the_sub_field('caption'); ?></span>
                       </div>
