@@ -44,6 +44,7 @@ get_header();
     							<dt><?php the_field('included');?></dt>
                   <dd>Year</dd>
     							<dt><?php the_field('year');?></dt>
+                  <dt><a href="<?php the_field('url'); ?>"><?php the_field('url_label'); ?></a></dt>
     						</dl>
 
             </div><!-- description -->

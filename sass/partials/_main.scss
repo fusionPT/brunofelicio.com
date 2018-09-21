@@ -699,6 +699,20 @@ footer {
 			float: left;
 			margin-left: 12.82051282%;
 			font-size: 0.88em;
+
+			a {
+				color: #b4b4b4;
+				text-decoration: none;
+				background: url("../img/link-icon.svg") no-repeat 0 10px;
+				padding-left: 22px;
+				transition: all .3s;
+				font-weight: 600;
+
+				&:hover {
+					color: #2D90E8;
+					background: url("../img/link-icon-hover.svg") no-repeat 0 10px;
+				}
+			}
 		}
 
 		dl {
