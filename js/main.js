@@ -50,7 +50,7 @@ $(document).ready(function() {
 		'showCloseButton'	: false,
 		'titlePosition' 	: 'inside',
 		'overlayOpacity'	: '0.8',
-		'overlayColor'		: '#fff',
+		'overlayColor'		: '#000',
 		'maxWidth'        : '100%',
 		'fitToView'       : false,
     'width'           : '100%',
@@ -59,6 +59,10 @@ $(document).ready(function() {
 		'closeClick'  : true,
 		'helpers' : {
           'overlay' : {
+							'css': {
+								'background-color': '#fff',
+								'opacity'					: 0.8
+							},
               'locked': false,
 							'overlay' : {'closeClick': true}
           }
