@@ -18,6 +18,7 @@ $(document).ready(function() {
 
 	});
 
+
 	// End of mobile menu
 
 	$(".lazy").Lazy({
@@ -36,7 +37,7 @@ $(document).ready(function() {
 
         },
         onError: function(element) {
-            
+
         },
         onFinishedAll: function() {
 
@@ -49,7 +50,25 @@ $(document).ready(function() {
 		'showCloseButton'	: false,
 		'titlePosition' 	: 'inside',
 		'overlayOpacity'	: '0.8',
-		'overlayColor'		: '#fff'
+		'overlayColor'		: '#fff',
+		'maxWidth'        : '100%',
+		'fitToView'       : false,
+    'width'           : '100%',
+    'height'          : 'auto',
+    'autoSize'        : false,
+		'closeClick'  : true,
+		'helpers' : {
+          'overlay' : {
+              'locked': false,
+							'overlay' : {'closeClick': true}
+          }
+    }
+	});
+
+	$( ".fancybox-opened" ).on( "click", function() {
+	  console.log('Click!');
+
+		$.fancybox.close();
 	});
 
 
