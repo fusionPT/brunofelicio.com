@@ -1132,8 +1132,59 @@ footer {
 	}
 	h1, h2, h3, h4 {
 		color: #fff;
+
 	}
 	p {
 		color: #fff;
 	}
+	.image {
+		background: #fff;
+	}
+	.pf-item {
+		.info {
+			p {
+				color: #fff;
+			}
+			ul li {
+				color: #fff;
+			}
+		}
+	}
+	.single-work .description {
+			dl dt {
+				color: #fff;
+			}
+			dl dd {
+				color: #fff;
+				opacity: .5;
+			}
+	}
+	footer {
+		p.label, .email a {
+			color: #fff;
+		}
+	}
+	.single-work, .page {
+		h2 {
+		background: -webkit-linear-gradient(#fff, #fff);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		color: #fff;
+		}
+		.title {
+			color: #fff;
+			opacity: .5;
+		}
+	}
+
+	.page-template-about {
+		.content {
+			.description {
+				p {
+					color: #fff;
+				}
+			}
+		}
+	}
+
 }
