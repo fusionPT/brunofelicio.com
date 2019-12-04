@@ -1124,3 +1124,16 @@ footer {
 	}
 
 }
+
+@media (prefers-color-scheme: dark) {
+	body {
+		background: rgb(21, 32, 43);
+		color: #fff;
+	}
+	h1, h2, h3, h4 {
+		color: #fff;
+	}
+	p {
+		color: #fff;
+	}
+}
