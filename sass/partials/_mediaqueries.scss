@@ -33,6 +33,8 @@
 .single {
   .top-image {
     padding: 5px !important;
+    display: flex;
+    align-items: center;
   }
 }
 .home, .page-template-about, .page-template-contact, .single {
@@ -155,9 +157,9 @@
 
   .image {
     img {
-      padding-bottom: 20px !important;
+      margin-bottom: 20px !important;
     }
-    padding-bottom: 20px !important;
+    margin-bottom: 20px !important;
   }
   .description {
 

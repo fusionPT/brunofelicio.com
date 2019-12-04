@@ -612,7 +612,7 @@ footer {
 		padding: 0 0 40px;
 
 		img {
-			padding-bottom: 40px;
+			margin-bottom: 40px;
 			max-width: 100%;
 		}
 
@@ -1138,7 +1138,9 @@ footer {
 		color: #fff;
 	}
 	.image {
-		background: #fff;
+		img {
+			background: #fff;
+		}
 	}
 	.pf-item {
 		.info {
