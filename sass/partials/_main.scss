@@ -23,6 +23,10 @@ body {
 	color: $font-color;
 }
 
+body:not(.page-template-contact) .grecaptcha-badge {
+	display: none;
+}
+
 .main-container {
 	padding: 40px;
 	min-height: 100%;
@@ -976,6 +980,7 @@ footer {
 				font-size: 0.88em;
 				display: block;
 				width: 100% !important;
+				color: $font-color;
 			}
 	}
 
@@ -1185,6 +1190,13 @@ footer {
 				p {
 					color: #fff;
 				}
+			}
+		}
+	}
+	.page-template-contact {
+		.contact-form {
+			form input, select, textarea {
+				color: $font-color;
 			}
 		}
 	}
