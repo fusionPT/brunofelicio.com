@@ -27,4 +27,5 @@ function my_function_admin_bar() {
 
 add_filter('show_admin_bar', '__return_false');
 add_theme_support( 'post-thumbnails' );
+add_theme_support( 'title-tag' );
 set_post_thumbnail_size( 300, 300, true );
