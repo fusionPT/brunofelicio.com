@@ -1,0 +1,284 @@
+@media screen and (max-width: 700px) {
+  .menu-overlay {
+    h1 {
+      background: url("../img/logo-small-white.svg") no-repeat 0 0;
+      position: absolute;
+      top: 25px;
+      left: 25px;
+    }
+  }
+  .subheader {
+  	text-align: center;
+  	color: #b4b4b4;
+  	font-weight: 500;
+    font-size: 0.88em;
+    margin-top: 10px;
+  }
+
+
+  // Header
+.home {
+  .hero {
+
+    width: 90% !important;
+    margin: 10px auto 20px;
+
+    h2 {
+      font-size: 1.25em;
+      padding: 0;
+    }
+
+  }
+}
+.single {
+  .top-image {
+    padding: 5px !important;
+  }
+}
+.home, .page-template-about, .page-template-contact, .single {
+
+    header {
+
+      margin: 5px 0 15px;
+      h1 {
+        background: url("../img/logo-small-blue.svg") no-repeat 0 0;
+      	width: 42px;
+      	height: 42px;
+        margin-left: 5px;
+      }
+      .menu {
+        display: none;
+      }
+      .mobile-menu-toggle {
+        display: block;
+        margin: 10px 15px 0;
+      }
+    }
+  }
+
+  .page-template-contact {
+    header {
+      h1 {
+        background: url("../img/logo-small-white.svg") no-repeat 0 0;
+        margin-left: 5px;
+      }
+      .mobile-menu-toggle {
+        .burger {
+          background: #fff;
+          &::before, &::after {
+            background: #fff;
+          }
+        }
+      }
+    }
+  }
+
+
+  //
+
+  .main-container {
+  	padding: 20px;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .hero {
+
+    width: 100% !important;
+    margin: 10px auto 20px;
+
+    h2 {
+      font-size: 1.25em;
+      padding: 0;
+    }
+
+  }
+
+
+
+  .info {
+
+    padding: 0 !important;
+    margin: 0 0 40px !important;
+
+    ul {
+      width: 100% !important;
+      float: none !important;
+      margin-bottom: 10px;
+    }
+
+    p {
+      float: none !important;
+      width: 100% !important;
+      font-size: 0.88em !important;
+      line-height: 1.5 !important;
+    }
+
+  }
+
+  .pf-item {
+    .image {
+      padding: 0 !important;
+    }
+  }
+
+  .related {
+
+    li {
+      width: 100% !important;
+      margin-right: 0 !important;
+
+      .img-wrapper {
+        width: 100% !important;
+        height: auto;
+
+        img {
+          width: 100% !important;
+        }
+      }
+
+    }
+
+  }
+
+  /* Detail page */
+
+  .title {
+    margin: 40px 0 10px !important;
+  }
+
+  h3 {
+    font-size: 1em;
+  }
+
+  .image {
+    img {
+      padding-bottom: 20px !important;
+    }
+    padding-bottom: 20px !important;
+  }
+  .description {
+
+    margin: 0 !important;
+
+    .sidebar {
+      overflow: none;
+      float: none !important;
+      width: 100%;
+      margin: 0 0 20px !important;
+    }
+
+    .about {
+      float: none !important;
+      width: 100% !important;
+      margin-bottom: 30px;
+    }
+    dl {
+      width: 100% !important;
+    }
+  }
+
+/* General mediaqueries for pages */
+
+  .page {
+
+    .content {
+
+  		.description {
+  			   width: 100% !important;
+  		 }
+
+      }
+
+  	}
+
+/* Contact page */
+
+  .page-template-contact {
+
+    .contact-form {
+      max-width: 100%;
+    }
+
+  }
+
+}
+
+@media screen and (max-width: 460px) {
+
+  .menu-overlay {
+    //
+  }
+
+  .close-btn {
+    top: 25px;
+    right: 25px;
+
+  }
+  .main-container {
+
+    padding: 10px;
+
+  }
+
+  h1, .single-work h1, .page h1 {
+      //float: none !important;
+      //margin: auto;
+  }
+
+  header {
+
+    width: 100%;
+
+    ul {
+      width: 100%;
+      float: none !important;
+
+      li {
+        margin-left: 0;
+        float: left;
+        width: 33%;
+        display: block;
+        line-height: 40px;
+
+        text-align: center;
+        &:last-child {
+          width: 33%;
+          float: right;
+        }
+      }
+
+      a {
+        font-size: 0.88em;
+        text-align: center;
+        display: block;
+        &.cta {
+          display: block;
+          float: none !important;
+          margin: 0 !important;
+          margin-left: 0 !important;
+          padding: 0 !important;
+          height: 40px;
+          line-height: 40px;
+
+        }
+
+      }
+
+    }
+  }
+
+  footer {
+    .email {
+      float: none !important;
+      width: 100% !important;
+      margin-bottom: 20px;
+    }
+    .social {
+      float: none !important;
+      width: 100% !important;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.1 (44463) - http://www.bohemiancoding.com/sketch -->
+    <title>logo-small-white</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linejoin="round">
+        <g id="logo-small-white" stroke-width="2" stroke="#FFFFFF">
+            <g id="Logo" transform="translate(1.000000, 2.000000)">
+                <g id="bruno-logo-small">
+                    <path d="M11,17 L11,25 M10.6666667,25.5517241 C10.6666667,25.5517241 30,19.8317759 30,12.7758621 C30,5.71994828 11,0 11,0 L11,13.5" id="Oval" stroke-linecap="round"></path>
+                    <path d="M11.005848,25.4872958 L11.005848,39 C11.005848,39 30,33.4038397 30,26.2241379 C30,24.5259757 28.9184358,22.9038625 27.2669364,21.416824 M24.6106607,19.2593047 C18.8030827,15.6313731 10.6666667,13.2241379 10.6666667,13.2241379" id="Oval-Copy-4" stroke-linecap="round"></path>
+                    <path d="M10.6666667,13.4482759 C6,12.1034483 0,14.2149552 0,19.5 C0,24.7850448 5.33333333,26.8965517 10.6666667,25.5517241" id="Oval-2"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
