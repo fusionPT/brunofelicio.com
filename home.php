@@ -14,8 +14,8 @@
     <div class="container">
       <div class="hero">
 
-        <h2>Hello! I'm Bruno and I design and code digital stuff.</h2>
-        <p class="subheader">Go ahead, scroll down. Don't be shy <i class="em em-satisfied"></i>.</p>
+        <h2>Let's Create Something Awesome Together!</h2>
+        <p class="subheader">Curious? Scroll down and see for yourself.</p>
       </div><!-- end of hero -->
 
     <?php

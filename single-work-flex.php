@@ -75,7 +75,7 @@ get_header();
                     elseif ( get_row_layout() == 'flex_video' ):
                         echo "<div class='text-block'><h4>" . get_sub_field('video_block_title') . '</h4>';
                         echo '<div style="position: relative; padding-bottom: 62.7177700348432%; height: 0;"><iframe src="'. get_sub_field('video_block') .'" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>';
-
+                        
                     endif;
 
                 

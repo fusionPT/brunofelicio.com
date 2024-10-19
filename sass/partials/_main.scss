@@ -34,6 +34,7 @@ body {
 	max-width: 940px;
 	margin: auto;
 	overflow: hidden;
+	transition: all 0.6s ease-in-out; 
 
 }
 
@@ -230,9 +231,28 @@ header {
 
 // Logo
 
+.cursor {
+    border-right: 2px solid #3594E8; /* Set your preferred cursor color */
+    animation: blink 0.7s infinite step-end;
+    margin-left: 2px; /* Optional: add some spacing between text and cursor */
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
 a.logo {
 	overflow: hidden;
 }
+
+.gradient-text {
+    background: -webkit-linear-gradient(#3594E8, #126AD2); /* Adjust the gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 
 h1 {
 	text-indent: -9999px;
@@ -246,9 +266,9 @@ h1 {
 h2 {
 	text-align: center;
 	font-size: 50px;
-	color: #38383D;
+	color: #17171e;
 	line-height: $line-height;
-	font-weight: 500;
+	font-weight: 600;
 	padding: 0 0 20px 0;
 	opacity: 1;
 	transition: transform .4s ease-in-out, opacity .4s ease-in-out;
@@ -256,8 +276,8 @@ h2 {
 	-ms-transform: translateY(0);
 			transform: translateY(0);
 	background: -webkit-linear-gradient(#3594E8, #126AD2);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 
 }
 
@@ -317,6 +337,7 @@ p {
 	margin: 80px auto 80px;
 	width: 80%;
 	overflow: hidden;
+	transition: all 0.6s ease-in-out; 
 }
 
 // Active states
