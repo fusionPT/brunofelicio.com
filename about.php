@@ -25,7 +25,8 @@ get_header();
 
   <p class="title">About Me</p>
   <h2>Passionate Design with Purpose.</h2>
-  <img class="avatar" src="<?php echo THEME_IMAGES; ?>/about-avatar.png" alt="Bruno Felicio Avatar">
+  <!--<img class="avatar" src="<?php //echo THEME_IMAGES; ?>/about-avatar.png" alt="Bruno Felicio Avatar">-->
+  <div class="designer-avatar"><img src="<?php echo THEME_IMAGES; ?>/bruno-avatar.png" alt="Bruno Felicio Avatar"></div>
 
 </div><!-- hero -->
 
@@ -50,36 +51,36 @@ get_header();
   <!-- Sideprojects -->
 
 
-    <div class="related">
+    <!--<div class="related">
 
     <h3>Side Projects</h3>
 
     <ul class="related-items">
-    <?php while ($wp_query_sp->have_posts()) : $wp_query_sp->the_post(); ?>
-      <a href="<?php the_field('url'); ?>">
+    <?php //while ($wp_query_sp->have_posts()) : $wp_query_sp->the_post(); ?>
+      <a href="<?php //the_field('url'); ?>">
         <li>
           <div class="img-wrapper">
-            <img src="<?php the_field('thumb'); ?>" alt="<?php the_field('name'); ?>">
+            <img src="<?php //the_field('thumb'); ?>" alt="<?php //the_field('name'); ?>">
           </div>
 
           <div class="thumb-details">
             <h4>
-              <?php the_field('name'); ?>
+              <?php //the_field('name'); ?>
             </h4>
             <span>
 
               <p></p>
 
-              <p class="text"><?php the_field('description'); ?>
-              <p class="link"><?php the_field('url_label'); ?>
+              <p class="text"><?php //the_field('description'); ?>
+              <p class="link"><?php //the_field('url_label'); ?>
             </span>
           </div>
 
         </li>
       </a>
-      <?php endwhile; ?>
+      <?php //endwhile; ?>
     </ul>
-  </div><!-- end of related -->
+  </div> end of related -->
 
   </div><!-- end of content -->
 </div><!-- end of container -->

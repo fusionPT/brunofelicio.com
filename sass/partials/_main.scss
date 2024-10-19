@@ -38,6 +38,10 @@ body {
 
 }
 
+.grecaptcha-badge {
+	visibility: hidden;
+}
+
 /* Header */
 
 // Mobile menu overlay
@@ -46,7 +50,7 @@ body {
 	position: fixed;
 	z-index: 100;
 	width: 100%;
-	background: #0F86F2;
+	background: $main-color;
 	height: 100%;
 	top: 0;
 	padding: 50px;
@@ -166,7 +170,7 @@ header {
 		display: block;
 		width: 22px;
 		height: 2px;
-		background: #2D90E8;
+		background: $main-color;
 		content: '';
 		text-indent: -9999px;
 		position: absolute;
@@ -176,7 +180,7 @@ header {
 				top: 7px;
 				width: 22px;
 				height: 2px;
-				background: #2D90E8;
+				background: $main-color;
 				content: '';
 				position: absolute;
 			}
@@ -185,7 +189,7 @@ header {
 				top: 14px;
 				width: 22px;
 				height: 2px;
-				background: #2D90E8;
+				background: $main-color;
 				content: '';
 				position: absolute;
 			}
@@ -210,9 +214,9 @@ header {
 				color: $link-color;
 			}
 			&.cta {
-				background: #2D90E8;
+				background: $main-color;
 				box-shadow: 0 1px 2px 0 rgba(0,0,0,0.20);
-				border-radius: 4px;
+				border-radius: $border-radius-01;
 				display: block;
 				height: 44px;
 				line-height: 44px;
@@ -220,7 +224,7 @@ header {
 				color: #fff;
 
 				&:hover {
-					background: #4CA7F9;
+					background: $main-color;
 				}
 			}
 		}
@@ -232,7 +236,7 @@ header {
 // Logo
 
 .cursor {
-    border-right: 2px solid #3594E8; /* Set your preferred cursor color */
+    border-right: 2px solid $main-color; /* Set your preferred cursor color */
     animation: blink 0.7s infinite step-end;
     margin-left: 2px; /* Optional: add some spacing between text and cursor */
 }
@@ -410,6 +414,7 @@ p {
 			}
 		}
 	}
+
 }
 
 
@@ -451,7 +456,7 @@ p {
 				font-weight: 600;
 
 				&:hover {
-					color: #2D90E8;
+					color: $main-color;
 					background: url("../img/link-icon-hover.svg") no-repeat 0 10px;
 				}
 			}
@@ -475,7 +480,7 @@ p {
 		max-width: 940px;
 		height: auto;
 		display: block;
-    margin: 0 auto;
+    	margin: 0 auto;
 
 	}
 
@@ -889,6 +894,16 @@ footer {
 
 	}
 
+	.designer-avatar {
+		border-radius: 200px;
+		overflow: hidden;
+		width: 200px;
+		height: 200px;
+		margin: 20px 0 40px;
+		img {
+			margin: 0;
+		}
+	}
 
 	img {
 		text-align: center;
@@ -903,6 +918,9 @@ footer {
 
 	.hero {
 		text-align: center;
+		display: flex;
+    	flex-direction: column;
+    	align-items: center;
 	}
 
 	.content {
@@ -923,10 +941,10 @@ footer {
 
 			p {
 
-				font-size: 1.375em;
+				font-size: 1.275em;
 				line-height: 1.8;
 				color: #38383E;
-				@include opacity(0.8);
+				margin-bottom: 25px;
 			}
 
 			a {
@@ -993,7 +1011,7 @@ footer {
 				color: white;
 
 				&:hover {
-					color: $link-color;
+					opacity: .4;
 				}
 				&.cta {
 					background: #fff;
@@ -1037,9 +1055,8 @@ footer {
 				width: 100%;
 				padding: 14px 16px;
 				border: none;
-				@include border-radius(4px);
 				@include box-shadow(0 1px 2px 0 rgba(0,0,0,0.23));
-				border-radius: 2px;
+				border-radius: $border-radius-01;
 			}
 
 			textarea {
@@ -1056,7 +1073,7 @@ footer {
 				color: #fff;
 				font-weight: 600;
 				margin: 20px 0 20px;
-				@include border-radius(4px);
+				@include border-radius($border-radius-01);
 			}
 
 			label {
