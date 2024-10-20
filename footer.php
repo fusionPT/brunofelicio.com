@@ -100,7 +100,7 @@
             });
         }
 
-        startTextAnimation();
+        //startTextAnimation();
     }
 });
       </script>
