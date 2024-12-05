@@ -24,9 +24,7 @@ get_header();
 <div class="hero">
 
   <p class="title">About Me</p>
-  <h2>Passionate Design with Purpose.</h2>
-  <!--<img class="avatar" src="<?php //echo THEME_IMAGES; ?>/about-avatar.png" alt="Bruno Felicio Avatar">-->
-  <div class="designer-avatar"><img src="<?php echo THEME_IMAGES; ?>/bruno-avatar.png" alt="Bruno Felicio Avatar"></div>
+  <h2><?php echo get_the_title(); ?></h2>
 
 </div><!-- hero -->
 

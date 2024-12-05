@@ -1,7 +1,18 @@
 <?php
+/*
+ * Template Name: Flex Portfolio Work
+ * Template Post Type: post, work
+ */
 
 get_header();
 
+// Check if the post is password-protected
+if (post_password_required()) {
+    // Display the password form and exit early
+    echo get_the_password_form();
+    get_footer();
+    exit;
+}
 ?>
 
           <div class="hero">
@@ -71,6 +82,61 @@ get_header();
               //echo '<p>No result was found.</p>';
             endif;
             ?>
+            
+            <div class="navigation-links">
+              <?php
+              // Arguments for the custom query
+              $args = array(
+                  'post_type' => 'work',
+                  'orderby' => 'date',
+                  'order' => 'DESC',
+                  'posts_per_page' => -1
+              );
+
+              // Query all work posts
+              $works = new WP_Query($args);
+              $work_ids = array();
+
+              if ($works->have_posts()) {
+                  while ($works->have_posts()) {
+                      $works->the_post();
+                      $work_ids[] = get_the_ID();
+                  }
+                  wp_reset_postdata();
+              }
+
+              // Get the current post ID
+              $current_id = get_the_ID();
+
+              // Find current index
+              $current_index = array_search($current_id, $work_ids);
+
+              // Get previous and next post IDs
+              $prev_id = $current_index > 0 ? $work_ids[$current_index - 1] : null;
+              $next_id = $current_index < count($work_ids) - 1 ? $work_ids[$current_index + 1] : null;
+              ?>
+
+            <div class="navigation-links">
+                <div class="nav-wrapper">
+                    <?php if ($prev_id): ?>
+                        <div class="prev-link">
+                            <a href="<?php echo get_permalink($prev_id); ?>">
+                                &larr; Previous: <?php echo get_the_title($prev_id); ?>
+                            </a>
+                        </div>
+                    <?php endif; ?>
+
+                    <?php if ($next_id): ?>
+                        <div class="next-link">
+                            <a href="<?php echo get_permalink($next_id); ?>">
+                                Next: <?php echo get_the_title($next_id); ?> &rarr;
+                            </a>
+                        </div>
+                    <?php endif; ?>
+                </div>
+            </div>
+          </div>
+
 
           </div><!-- content -->
 
@@ -113,7 +179,6 @@ get_header();
                           if ( $post_tags ) {
                               foreach( $post_tags as $tag ) {
                               echo '<p class="left">'. $tag->name . '</p>';
-                              echo '<p class="right">'. get_field('year') . '</p>';
                               }
                           } ?>
                         </span>

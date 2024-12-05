@@ -8,6 +8,20 @@
     <meta name="description" content="<?php bloginfo ('description');?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <meta property="og:title" content="Bruno Felicio - Product Designer" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.brunofelicio.com" />
+    <meta property="og:image" content="https://www.brunofelicio.com/wp-content/themes/brunofelicio/img/og-brunofelicio.png" />
+    <meta property="og:description" content="I turn ideas into beautiful, user-friendly designs. Check out my portfolio to see how I can help bring your vision to life!" />
+    <meta property="og:site_name" content="Bruno Felicio" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Bruno Felicio - Product Designer" />
+    <meta name="twitter:description" content="I turn ideas into beautiful, user-friendly designs. Check out my portfolio to see how I can help bring your vision to life!" />
+    <meta name="twitter:image" content="https://www.brunofelicio.com/wp-content/themes/brunofelicio/img/og-brunofelicio.png" />
+
+    <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/img/favicon.png" sizes="32x32" />
+    
     <link rel="stylesheet" href="<?php echo THEMEROOT; ?>/css/normalize.css">
     <link rel="stylesheet" href="<?php echo THEMEROOT; ?>/css/style.css">
     <link rel="stylesheet" href="<?php echo THEMEROOT; ?>/css/jquery.fancybox.css">
