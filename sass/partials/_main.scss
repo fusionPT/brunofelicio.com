@@ -268,7 +268,7 @@ h1 {
 
 h2 {
 	text-align: center;
-	font-size: 42px;
+	font-size: 52px;
 	color: #14243c;
 	line-height: 1.3;
 	font-weight: 600;
@@ -339,7 +339,6 @@ p {
 
 .hero {
 	margin: 80px auto 80px;
-	width: 80%;
 	overflow: hidden;
 	transition: all 0.6s ease-in-out; 
 }
@@ -359,6 +358,7 @@ p {
 			margin: 0 auto;
 			border-bottom: 4px solid $link-color;
 			@include opacity(.9);
+			border-radius: 4px;
 		}
 
 	}
@@ -374,6 +374,7 @@ p {
 				margin: 0 auto;
 				border-bottom: 4px solid #fff;
 				@include opacity(.9);
+				border-radius: 4px;
 			}
 
 		}
@@ -385,10 +386,6 @@ p {
 	
 	.hero {
 		padding: 0 80px;
-
-		h2 {
-			width: 50%;
-		}
 	}
 
 	li a.about{
@@ -403,6 +400,7 @@ p {
 			margin: 0 auto;
 			border-bottom: 4px solid $link-color;
 			@include opacity(.9);
+			border-radius: 4px;
 		}
 
 	}
@@ -812,14 +810,6 @@ footer {
 
 .single-work, .page {
 
-	h1 {
-		float: left;
-		background: url("../img/bruno-logo-small.svg") no-repeat 0 0;
-		width: 47px;
-		height: 60px;
-		margin: 0;
-	}
-
 	h2 {
 		background: -webkit-linear-gradient($font-color-dark, $font-color-dark);
   	-webkit-background-clip: text;
@@ -1111,6 +1101,7 @@ footer {
 				background: $link-color;
 				transform: translateX(-50%); // Center-align the underline
 				transition: all 0.3s ease; // Smooth animation for both width and position
+				border-radius: 4px;
 			  }
 	  
 			  &:hover {
@@ -1121,6 +1112,7 @@ footer {
 				  left: 0; // Moves left to cover the entire width
 				  transform: translateX(0); // Resets translation
 				  background: $link-color--hover; // Matches hover color for the underline
+				  border-radius: 4px;
 				}
 			  }
 	  
@@ -1266,6 +1258,7 @@ footer {
 				margin: 0 auto;
 				border-bottom: 4px solid #fff;
 				@include opacity(.9);
+				border-radius: 4px;
 			}
 		}
 	}
@@ -1434,4 +1427,97 @@ footer {
 
 	}
 
+}
+
+@media (prefers-color-scheme: dark) {
+
+	$background-dark: #010812;
+	$text-dark: #b8c5da;
+
+	body {
+		background: $background-dark;
+	}
+
+	.hero {
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: url('https://www.transparenttextures.com/patterns/asfalt-light.png'); /* Grainy texture */
+			opacity: 0.2; /* Subtle effect */
+			pointer-events: none;
+		  }
+	}
+
+	h2 {
+		background: linear-gradient(96deg, #A4CAF5 1.49%, #9159db 81.01%);
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+	p {
+
+	}
+
+	.pf-item {
+		.info {
+
+			p {
+				color: $text-dark;
+			}
+			a {
+				color: $text-dark !important;
+				&.url {
+					color: $main-color !important;
+				}
+			}
+		}
+	}
+
+	.single-work{
+		background: $background-dark;
+		color: $text-dark;
+		h2 {
+			background: linear-gradient(96deg, #A4CAF5 1.49%, #692CB9 81.01%);
+			background-clip: text;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+		h3, h4 {
+			color: #dfe4eb;
+		}
+		p {
+			color: $text-dark;
+		}
+		.title {
+			color: $text-dark;
+		}
+		.description {
+			dl{
+				dd {
+					color: #dfe4eb;
+				}
+				dt {
+					color: $text-dark;
+				}
+			}
+		}
+		
+		.image-flex .caption, .page .image-flex {
+			color: #92a4c1;
+			border-left: 2px solid #92a4c1;
+		}
+		.related {
+			ul {
+				li {
+					background: #171f29;
+				}
+			}
+
+		}
+	}
 }

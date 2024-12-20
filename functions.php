@@ -130,3 +130,102 @@ function load_gutenberg_styles() {
     add_editor_style('style-editor.css'); // Custom editor styles (optional)
 }
 add_action('after_setup_theme', 'load_gutenberg_styles');
+
+/* Pass password in the url */
+
+function modify_main_query($query) {
+    // Ensure we're modifying the main query and the homepage
+    if ($query->is_main_query() && !is_admin() && $query->is_home()) {
+        error_log('Modifying main query for the homepage.');
+
+        // Set post type to 'work'
+        $query->set('post_type', 'work');
+
+        // Preserve custom order set by the plugin
+        if (!$query->get('orderby')) {
+            $query->set('orderby', 'menu_order');
+        }
+
+        if (!$query->get('order')) {
+            $query->set('order', 'ASC'); // Default to ascending if not already set
+        }
+
+        // Limit posts per page
+        $query->set('posts_per_page', 16);
+    }
+}
+add_action('pre_get_posts', 'modify_main_query');
+
+add_action('wp', function () {
+    global $wp_query;
+
+    error_log('Template redirect triggered.');
+
+    // Check if a password is provided using ?p=
+    if (!isset($_GET['p'])) {
+        error_log('No password provided in the query string.');
+        return;
+    }
+
+    $provided_password = sanitize_text_field($_GET['p']);
+    error_log('Provided password: ' . $provided_password);
+
+    // Ensure the main query contains posts
+    if (empty($wp_query->posts)) {
+        error_log('No posts found in the main query.');
+        return;
+    }
+
+    // Log the number of posts in the query
+    error_log('Number of posts in the query: ' . count($wp_query->posts));
+
+    $cookie_set = false;
+
+    // Process each post in the main query
+    foreach ($wp_query->posts as $post) {
+        setup_postdata($post);
+
+        // Skip non-password-protected posts
+        if (!post_password_required($post)) {
+            error_log('Post ID ' . $post->ID . ' is not password protected.');
+            continue;
+        }
+
+        $stored_password = get_post_field('post_password', $post->ID);
+        error_log('Post ID: ' . $post->ID . ' | Stored Password: ' . $stored_password);
+
+        // Check if the provided password matches the stored password
+        if ($provided_password === $stored_password) {
+            global $wp_hasher;
+
+            if (empty($wp_hasher)) {
+                require_once ABSPATH . WPINC . '/class-phpass.php';
+                $wp_hasher = new PasswordHash(8, true);
+            }
+
+            setcookie(
+                'wp-postpass_' . COOKIEHASH,
+                $wp_hasher->HashPassword($provided_password),
+                time() + 10 * DAY_IN_SECONDS,
+                COOKIEPATH,
+                COOKIE_DOMAIN
+            );
+
+            $cookie_set = true;
+            error_log('Password matched for post ID ' . $post->ID . '. Cookie set.');
+        } else {
+            error_log('Password did not match for post ID: ' . $post->ID);
+        }
+    }
+
+    wp_reset_postdata();
+
+    // Redirect if a cookie was set
+    if ($cookie_set) {
+        error_log('Cookie set. Redirecting to refresh the page.');
+        wp_redirect(remove_query_arg('p')); // Remove ?p= from the query string
+        exit;
+    } else {
+        error_log('No password cookie was set. Password likely did not match.');
+    }
+});

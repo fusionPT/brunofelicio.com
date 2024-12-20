@@ -136,7 +136,7 @@ if (post_password_required()) {
                     <?php if ($prev_id): ?>
                         <div class="prev-link">
                             <a href="<?php echo get_permalink($prev_id); ?>">
-                                &larr; Previous: <?php echo get_the_title($prev_id); ?>
+                                &larr; <?php echo get_the_title($prev_id); ?>
                             </a>
                         </div>
                     <?php endif; ?>
@@ -144,7 +144,7 @@ if (post_password_required()) {
                     <?php if ($next_id): ?>
                         <div class="next-link">
                             <a href="<?php echo get_permalink($next_id); ?>">
-                                Next: <?php echo get_the_title($next_id); ?> &rarr;
+                                <?php echo get_the_title($next_id); ?> &rarr;
                             </a>
                         </div>
                     <?php endif; ?>
