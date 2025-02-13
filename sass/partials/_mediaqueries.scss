@@ -24,8 +24,8 @@
     margin: 10px auto 20px;
 
     h2 {
-      font-size: 1.25em;
-      padding: 0;
+      font-size: 1.45em;
+      padding: 0 20px 20px;
     }
 
   }
@@ -38,8 +38,7 @@
 .home, .page-template-about, .page-template-contact, .single {
 
     header {
-
-      margin: 5px 0 15px;
+      margin: 5px 0 15px !important;
       h1 {
         background: url("../img/logo-small-blue.svg") no-repeat 0 0;
       	width: 42px;
@@ -194,7 +193,7 @@
 
   	}
 
-/* Contact page */
+  /* Contact page */
 
   .page-template-contact {
 
@@ -203,7 +202,9 @@
     }
 
   }
-
+  footer {
+    padding: 0;
+  }
 }
 
 @media screen and (max-width: 460px) {
@@ -221,11 +222,6 @@
 
     padding: 10px;
 
-  }
-
-  h1, .single-work h1, .page h1 {
-      //float: none !important;
-      //margin: auto;
   }
 
   header {
@@ -271,6 +267,7 @@
   }
 
   footer {
+    padding: 0 !important;
     .email {
       float: none !important;
       width: 100% !important;
