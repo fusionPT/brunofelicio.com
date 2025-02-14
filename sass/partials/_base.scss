@@ -1,12 +1,17 @@
 @import "compass/css3";
 @import "compass/reset";
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100..900&display=swap');
 
-$font-color             : #656569;
+$font-color             : #14243c;
 $font-color-dark        : #38383D;
 $line-height            : 1.5;
-$base-font-size         : 1.125em; //20px
+$base-font-size         : 16px;//16px
 $h2-font-size           : 1.875em; //30px
-$font-family            : "sofia-pro", sans-serif;
+//$font-family            : "sofia-pro", sans-serif;
+//$font-family            : "Geist", sans-serif;
+//$font-family            : 'IBM Plex Sans', sans-serif;
+$font-family            : 'Hanken Grotesk', sans-serif;
 $link-color             : #1c84f9;
 $link-color--hover      : #0057bb;
 $main-color             : #1c84f9;       
