@@ -148,13 +148,37 @@ body {
 
 .full-width {
 	max-width: 100%;
-	overflow: hidden;
+	display: flex;
 }
 
 header {
-	overflow: hidden;
+	flex: 1;
 	max-width: 100%;
 	margin: 40px !important;
+
+/* Language Dropdown Styles */
+.dropdown {
+  position: relative;
+}
+
+.dropdown .submenu {
+  display: none;
+  position: absolute;
+  background: #fff;
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+  border: 1px solid #ccc;
+  z-index: 999;
+
+  li {
+	margin: 0;
+  }
+}
+
+.dropdown.open .submenu {
+  display: block;
+}
 
 .mobile-menu-toggle {
 	width: 22px;
@@ -1620,6 +1644,79 @@ footer {
 
 	}
 
+}
+
+// Hire me page
+
+/* Hire Me Page Pricing Section */
+.pricing-tiers {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  margin-top: 60px;
+  flex-wrap: wrap;
+
+  .plan {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 30px 40px;
+    width: 320px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .price {
+      font-size: 32px;
+      font-weight: bold;
+      margin: 10px 0 20px;
+
+      span {
+        font-size: 16px;
+        color: #666;
+        margin-left: 4px;
+      }
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 20px;
+
+      li {
+        margin-bottom: 10px;
+        font-size: 15px;
+        color: #333;
+      }
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #000;
+      color: #fff;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+
+      &:hover {
+        background-color: #333;
+      }
+    }
+  }
+
+  .featured {
+    border: 2px solid #000;
+  }
 }
 
 /*

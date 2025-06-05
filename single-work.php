@@ -9,7 +9,7 @@ get_header();
 
 <?php if (!post_password_required()): ?>
     <!-- Full-width Hero Section -->
-    <div class="hero full-width">
+    <div class="hero">
         <div class="title-wrapper">
             <p class="title"><?php the_field('title'); ?></p>
             <h2><?php the_field('subtitle'); ?></h2>

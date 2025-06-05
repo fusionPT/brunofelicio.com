@@ -67,8 +67,33 @@
           <a href="#" class="close-btn">close</a>
           <ul class="mobile-menu-overlay">
             <li><a class="works" href="<?php bloginfo('url'); ?>"><?php echo pll__('works_menu');?></a></li>
-            <li><a class="about" href="<?php bloginfo('url'); ?>/about"><?php echo pll__('about_menu');?></a></li>
-            <li><a class="contact" href="<?php bloginfo('url'); ?>/contact"><?php echo pll__('lets_talk_menu');?></a></li>
+            <?php
+              $about_page = get_page_by_path('about', OBJECT, 'page');
+              $about_link = $about_page ? get_permalink(pll_get_post($about_page->ID)) : '#';
+            ?>
+            <li class="about"><a href="<?php echo esc_url($about_link); ?>"><?php echo pll__('about_menu'); ?></a></li>
+            <?php
+              $contact_page = get_page_by_path('contact', OBJECT, 'page');
+              $translated_contact_id = pll_get_post($contact_page->ID, pll_current_language());
+              $contact_url = get_permalink($translated_contact_id);
+            ?>
+            <li><a class="contact" href="<?php echo esc_url($contact_url); ?>"><?php echo pll__('lets_talk_menu'); ?></a></li>
+            <?php
+              $hireme_page = get_page_by_path('hire-me');
+              $hireme_link = $hireme_page ? get_permalink($hireme_page->ID) : '#';
+            ?>
+            <li><a class="cta hireme" href="<?php echo esc_url($hireme_link); ?>"><?php echo pll__('hire_me'); ?></a></li>
+            <li class="lang-switcher dropdown">
+              <a href="#"><?php echo esc_html(pll_current_language('name')); ?> <i class="fa fa-caret-down"></i></a>
+              <ul class="submenu">
+                <?php
+                $languages = pll_the_languages(array('raw' => 1));
+                foreach ($languages as $lang) {
+                  echo '<li><a href="' . esc_url($lang['url']) . '">' . esc_html($lang['name']) . '</a></li>';
+                }
+                ?>
+              </ul>
+            </li>
           </ul>
 
         </div><!-- Mobile menu -->
@@ -88,10 +113,58 @@
 
                     <ul class="menu">
                       <li><a class="works" href="<?php bloginfo('url'); ?>"><?php echo pll__('works_menu');?></a></a></li>
-                      <li><a class="about" href="<?php bloginfo('url'); ?>/about"><?php echo pll__('about_menu');?></a></a></li>
-                      <li><a class="cta contact" href="<?php bloginfo('url'); ?>/contact"><?php echo pll__('lets_talk_menu');?></a></a></li>
+                      <?php
+                        $about_page = get_page_by_path('about', OBJECT, 'page');
+                        $about_link = $about_page ? get_permalink(pll_get_post($about_page->ID)) : '#';
+                      ?>
+                      <li class="about"><a href="<?php echo esc_url($about_link); ?>"><?php echo pll__('about_menu'); ?></a></li>
+                      <?php
+                        $contact_page = get_page_by_path('contact', OBJECT, 'page');
+                        $translated_contact_id = pll_get_post($contact_page->ID, pll_current_language());
+                        $contact_url = get_permalink($translated_contact_id);
+                      ?>
+                      <li><a class="contact" href="<?php echo esc_url($contact_url); ?>"><?php echo pll__('lets_talk_menu'); ?></a></li>
+                      <?php
+                        $hireme_page = get_page_by_path('hire-me');
+                        $hireme_link = $hireme_page ? get_permalink($hireme_page->ID) : '#';
+                      ?>
+                      <li><a class="cta hireme" href="<?php echo esc_url($hireme_link); ?>"><?php echo pll__('hire_me'); ?></a></li>
+                      <li class="lang-switcher dropdown">
+                        <a href="#"><?php echo esc_html(pll_current_language('name')); ?> <i class="fa fa-caret-down"></i></a>
+                        <ul class="submenu">
+                          <?php
+                          $languages = pll_the_languages(array('raw' => 1));
+                          foreach ($languages as $lang) {
+                            echo '<li><a href="' . esc_url($lang['url']) . '">' . esc_html($lang['name']) . '</a></li>';
+                          }
+                          ?>
+                        </ul>
+                      </li>
                     </ul>
 
                   </header><!-- end of header -->
 
                 </div><!-- full-width -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const dropdownToggles = document.querySelectorAll(".lang-switcher.dropdown > a");
+
+    dropdownToggles.forEach(function(toggle) {
+      toggle.addEventListener("click", function(e) {
+        e.preventDefault();
+        const parent = toggle.closest(".dropdown");
+        parent.classList.toggle("open");
+      });
+    });
+
+    // Optional: close dropdown when clicking outside
+    document.addEventListener("click", function(e) {
+      dropdownToggles.forEach(function(toggle) {
+        const parent = toggle.closest(".dropdown");
+        if (!parent.contains(e.target)) {
+          parent.classList.remove("open");
+        }
+      });
+    });
+  });
+</script>

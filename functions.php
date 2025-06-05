@@ -237,6 +237,7 @@ function register_polylang_strings() {
         pll_register_string('Works', 'works_menu', 'brunofelicio');
         pll_register_string('About', 'about_menu', 'brunofelicio');
         pll_register_string('Let\'s Talk', 'lets_talk_menu', 'brunofelicio');
+        pll_register_string('Hire Me', 'hire_me', 'brunofelicio');
     }
 }
 
