@@ -16,7 +16,7 @@ get_header();
       <div class="hero">
 
         <p class="title">Let's talk</p>
-        <h2>I'm always happy to hear from you.</h2>
+        <h2><?php the_title(); ?></h2>
 
       </div><!-- hero -->
 

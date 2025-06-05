@@ -2,7 +2,8 @@
 
 <div class="container">
   <div class="hero">
-    <h2><?php echo get_theme_mod('hero_heading', 'Let\'s Create Something Awesome Together!'); ?></h2>
+  <!--<h2><?php //echo pll__('hero_heading');?></h2>-->
+  <h2><?php echo decode_unicode_escape(pll__('hero_heading')); ?></h2>
   </div><!-- end of hero -->
 
   <?php if (have_posts()) : ?>
@@ -22,6 +23,7 @@
                   <div class="info">
                       <h3><a href="<?php the_permalink(); ?>"><?php the_field('title'); ?></a></h3>
                       <p><?php the_field('description'); ?></p>
+                      
                   </div>
               </div>
               <div class="pf-grid"> <!-- Start of grid -->
@@ -37,6 +39,7 @@
                   <div class="info">
                       <h3><a href="<?php the_permalink(); ?>"><?php the_field('title'); ?></a></h3>
                       <p><?php the_field('description'); ?></p>
+                      
                   </div>
               </div>
               <?php if ($count % 2 == 0) : ?>

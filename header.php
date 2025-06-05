@@ -31,7 +31,6 @@
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.4.min.js"><\/script>')</script>
     <script src="<?php echo THEME_JS; ?>/vendor/typekit-cache.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
     <script>
 
   (function(d) {
@@ -67,9 +66,9 @@
           <a class="logo" href="<?php bloginfo('url'); ?>"><h1>Bruno Felicio</h1></a>
           <a href="#" class="close-btn">close</a>
           <ul class="mobile-menu-overlay">
-            <li><a class="works" href="<?php bloginfo('url'); ?>">Works</a></li>
-            <li><a class="about" href="<?php bloginfo('url'); ?>/about">About</a></li>
-            <li><a class="contact" href="<?php bloginfo('url'); ?>/contact">Let's Talk</a></li>
+            <li><a class="works" href="<?php bloginfo('url'); ?>"><?php echo pll__('works_menu');?></a></li>
+            <li><a class="about" href="<?php bloginfo('url'); ?>/about"><?php echo pll__('about_menu');?></a></li>
+            <li><a class="contact" href="<?php bloginfo('url'); ?>/contact"><?php echo pll__('lets_talk_menu');?></a></li>
           </ul>
 
         </div><!-- Mobile menu -->
@@ -88,9 +87,9 @@
                     </a>
 
                     <ul class="menu">
-                      <li><a class="works" href="<?php bloginfo('url'); ?>">Works</a></li>
-                      <li><a class="about" href="<?php bloginfo('url'); ?>/about">About</a></li>
-                      <li><a class="cta contact" href="<?php bloginfo('url'); ?>/contact">Let's Talk</a></li>
+                      <li><a class="works" href="<?php bloginfo('url'); ?>"><?php echo pll__('works_menu');?></a></a></li>
+                      <li><a class="about" href="<?php bloginfo('url'); ?>/about"><?php echo pll__('about_menu');?></a></a></li>
+                      <li><a class="cta contact" href="<?php bloginfo('url'); ?>/contact"><?php echo pll__('lets_talk_menu');?></a></a></li>
                     </ul>
 
                   </header><!-- end of header -->

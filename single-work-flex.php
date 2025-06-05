@@ -31,7 +31,7 @@ get_header();
         <div class="content">
             <div class="description">
                 <div class="about">
-                    <h3>About <?php the_field('title'); ?></h3>
+                    <h3><?php the_field('title'); ?></h3>
                     <p><?php the_field('description_big'); ?></p>
                 </div>
 

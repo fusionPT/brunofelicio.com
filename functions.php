@@ -229,3 +229,32 @@ add_action('wp', function () {
         error_log('No password cookie was set. Password likely did not match.');
     }
 });
+
+add_action('after_setup_theme', 'register_polylang_strings');
+function register_polylang_strings() {
+    if (function_exists('pll_register_string')) {
+        pll_register_string('Heading', 'hero_heading', 'brunofelicio');
+        pll_register_string('Works', 'works_menu', 'brunofelicio');
+        pll_register_string('About', 'about_menu', 'brunofelicio');
+        pll_register_string('Let\'s Talk', 'lets_talk_menu', 'brunofelicio');
+    }
+}
+
+function register_polylang_custom_post_types() {
+    if (function_exists('pll_register_post_type')) {
+        pll_register_post_type('work', array(
+            'show_ui' => true,
+            'public' => true,
+            'has_archive' => true,
+            'supports' => array('title', 'editor', 'thumbnail', 'excerpt'),
+        ));
+    }
+}
+add_action('init', 'register_polylang_custom_post_types');
+
+function decode_unicode_escape($string) {
+    return preg_replace_callback('/\\\\u\{([0-9A-Fa-f]+)\}/u', function ($matches) {
+        return mb_convert_encoding(pack('H*', str_pad($matches[1], 8, '0', STR_PAD_LEFT)), 'UTF-8', 'UCS-4BE');
+    }, $string);
+}
+
