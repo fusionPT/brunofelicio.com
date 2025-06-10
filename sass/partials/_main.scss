@@ -149,6 +149,7 @@ body {
 .full-width {
 	max-width: 100%;
 	display: flex;
+	justify-content: space-between;
 }
 
 header {
@@ -1048,7 +1049,7 @@ footer {
 			font-size: 0.88em;
 			font-weight: 600;
 			text-align: center;
-			margin: 100px 0 20px;
+			margin: 20px 0 20px;
 			color: $font-color;
 			opacity: .5;
 		  	transition: transform .4s ease-in-out, opacity .4s ease-in-out;
@@ -1650,35 +1651,39 @@ footer {
 
 /* Hire Me Page Pricing Section */
 .pricing-tiers {
-  display: flex;
-  gap: 40px;
-  justify-content: center;
-  margin-top: 60px;
-  flex-wrap: wrap;
+	display: flex;
+    gap: 40px;
+    justify-content: center;
+    margin-top: 60px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+	margin-bottom: 40px;
+
+	h2 {
+		font-size: 2.25rem;
+		padding: 0;
+	}
 
   .plan {
     background: #fff;
-    border: 1px solid #eee;
-    border-radius: 12px;
-    padding: 30px 40px;
-    width: 320px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+    border: 1px solid #1D84F9;
+    border-radius: 24px;
+    padding: 30px;
+    width: 400px;
+    box-shadow: none;
     text-align: center;
     transition: transform 0.3s ease;
+
 
     &:hover {
       transform: translateY(-5px);
     }
 
-    h2 {
-      font-size: 24px;
-      margin-bottom: 10px;
-    }
-
     .price {
-      font-size: 32px;
+      font-size: 40px;
       font-weight: bold;
-      margin: 10px 0 20px;
+      margin: 20px 0 20px;
 
       span {
         font-size: 16px;
@@ -1690,26 +1695,28 @@ footer {
     ul {
       list-style: none;
       padding: 0;
-      margin-bottom: 20px;
+      margin-bottom: 40px;
 
       li {
         margin-bottom: 10px;
-        font-size: 15px;
-        color: #333;
+		font-size: 15px;
+        color: #14243c;
       }
     }
 
     .btn {
       display: inline-block;
-      background-color: #000;
+      background-color: #1a73e8;
       color: #fff;
-      padding: 10px 20px;
+      padding: 14px 0;
+      width: 100%;
       text-decoration: none;
-      border-radius: 6px;
+      border-radius: 12px;
       font-weight: 600;
+      font-size: 16px;
 
       &:hover {
-        background-color: #333;
+        background-color: #1662c4;
       }
     }
   }
@@ -1719,101 +1726,79 @@ footer {
   }
 }
 
-/*
-	Preloader
-*/
+@media (max-width: 768px) {
+  .pricing-tiers {
+    flex-direction: column;
+    align-items: center;
+  }
 
-/*@media (prefers-color-scheme: dark) {
+  .plan {
+    width: 100%;
+    max-width: 400px;
+  }
+}
 
-	$background-dark: #010812;
-	$text-dark: #b8c5da;
 
-	body {
-		background: $background-dark;
-	}
-	.home {
-		li {
-			a {
-				color: $text-dark;
-			}
-		}
-	}
-	.hero {
-		&::before {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background: url('https://www.transparenttextures.com/patterns/asfalt-light.png');
-			opacity: 0.2;
-			pointer-events: none;
-		  }
-	}
+/* How it works section */
+.how-it-works-grid {
+  margin: 80px auto;
+  text-align: center;
+  padding: 0 20px;
 
-	h2 {
-		background: linear-gradient(96deg, #A4CAF5 1.49%, #9159db 81.01%);
-		background-clip: text;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-	}
+  h2 {
+    font-size: 2.25rem;
+    margin-bottom: 40px;
+    color: #14243c;
+	font-size: 24px;
+  }
 
-	.pf-item {
-		.info {
+  .steps {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: nowrap; // changed from wrap to nowrap
+  }
 
-			p {
-				color: $text-dark;
-			}
-			a {
-				color: $text-dark !important;
-				&.url {
-					color: $main-color !important;
-				}
-			}
-		}
-	}
+  .step {
+    background: #fff;
+    padding: 30px 20px;
+    width: 300px; // changed from max-width + flex to fixed width
+    text-align: center;
+    transition: transform 0.3s ease;
 
-	.single-work{
-		background: $background-dark;
-		color: $text-dark;
-		h2 {
-			background: linear-gradient(96deg, #A4CAF5 1.49%, #692CB9 81.01%);
-			background-clip: text;
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-		}
-		h3, h4 {
-			color: #dfe4eb;
-		}
-		p {
-			color: $text-dark;
-		}
-		.title {
-			color: $text-dark;
-		}
-		.description {
-			dl{
-				dd {
-					color: #dfe4eb;
-				}
-				dt {
-					color: $text-dark;
-				}
-			}
-		}
-		
-		.image-flex .caption, .page .image-flex {
-			color: #92a4c1;
-			border-left: 2px solid #92a4c1;
-		}
-		.related {
-			ul {
-				li {
-					background: #171f29;
-				}
-			}
+    &:hover {
+      transform: translateY(-5px);
+    }
 
-		}
-	}
-}*/
+    img {
+      width: auto;
+      height: 220px;
+      object-fit: contain;
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+      margin-bottom: 15px;
+      color: #14243c;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #14243c;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .steps {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .step {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+

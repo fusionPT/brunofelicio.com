@@ -238,6 +238,22 @@ function register_polylang_strings() {
         pll_register_string('About', 'about_menu', 'brunofelicio');
         pll_register_string('Let\'s Talk', 'lets_talk_menu', 'brunofelicio');
         pll_register_string('Hire Me', 'hire_me', 'brunofelicio');
+
+        pll_register_string('Design Subscription', 'Design Subscription', 'brunofelicio');
+        pll_register_string('Subscribe to your team', 'Subscribe to your team', 'brunofelicio');
+        pll_register_string('Meet your handpicked team of experts led by your dedicated project manager.', 'Meet your handpicked team of experts led by your dedicated project manager.', 'brunofelicio');
+        pll_register_string('Create requests', 'Create requests', 'brunofelicio');
+        pll_register_string('Submit design or dev requests to your board — I’ll jump right in.', 'Submit design or dev requests to your board — I’ll jump right in.', 'brunofelicio');
+        pll_register_string('Review & Complete', 'Review & Complete', 'brunofelicio');
+        pll_register_string('Receive your work, give feedback, and I’ll revise until you\'re happy.', 'Receive your work, give feedback, and I’ll revise until you\'re happy.', 'brunofelicio');
+        pll_register_string('One Simple Price', 'One Simple Price', 'brunofelicio');
+        pll_register_string('Monthly Subscription', 'Monthly Subscription', 'brunofelicio');
+        pll_register_string('month', 'month', 'brunofelicio');
+        pll_register_string('Unlimited design requests', 'Unlimited design requests', 'brunofelicio');
+        pll_register_string('1 active request at a time', '1 active request at a time', 'brunofelicio');
+        pll_register_string('Next-day turnaround', 'Next-day turnaround', 'brunofelicio');
+        pll_register_string('Pause or cancel anytime', 'Pause or cancel anytime', 'brunofelicio');
+        pll_register_string('Start with Starter', 'Start with Starter', 'brunofelicio');
     }
 }
 
@@ -259,3 +275,4 @@ function decode_unicode_escape($string) {
     }, $string);
 }
 
+?>
