@@ -270,7 +270,7 @@ function register_polylang_custom_post_types() {
 add_action('init', 'register_polylang_custom_post_types');
 
 function decode_unicode_escape($string) {
-    return preg_replace_callback('/\\\\u\{([0-9A-Fa-f]+)\}/u', function ($matches) {
+    return preg_replace_callback('/u\{([0-9A-Fa-f]+)\}/', function ($matches) {
         return mb_convert_encoding(pack('H*', str_pad($matches[1], 8, '0', STR_PAD_LEFT)), 'UTF-8', 'UCS-4BE');
     }, $string);
 }
