@@ -42,6 +42,22 @@ add_filter('pre_handle_404', function ($preempt, $query) {
     return $preempt;
 }, PHP_INT_MAX, 2);
 
+define('BF_SITE_TAGLINE', 'Product Designer');
+
+/**
+ * The site tagline (Settings > General) is a single WP option, not translated
+ * per language, so the front page's <title> tag - which WP core builds from
+ * site name + tagline via title-tag support - rendered identically on /,
+ * /es/ and /pt/. This swaps in the translated tagline on the front page only;
+ * every other page already gets a unique title from its own post title.
+ */
+add_filter('document_title_parts', function ($parts) {
+    if (is_front_page() && function_exists('pll__')) {
+        $parts['tagline'] = pll__(BF_SITE_TAGLINE);
+    }
+    return $parts;
+});
+
 /************************************************/
 /* Automatic Image sizes */
 /************************************************/
@@ -269,6 +285,7 @@ add_action('wp', function () {
 // Translate them under Languages -> Translations, group "brunofelicio".
 define('BF_SITE_META_DESCRIPTION', 'I turn ideas into beautiful, user-friendly designs. Check out my portfolio to see how I can help bring your vision to life!');
 define('BF_HIRE_ME_META_DESCRIPTION', 'A design subscription: unlimited design and development requests for one flat monthly fee. One active request at a time, next-day turnaround, pause or cancel anytime.');
+define('BF_CONTACT_META_DESCRIPTION', 'Get in touch about your next project. Fill out the form and I\'ll get back to you within 1-2 business days.');
 
 add_action('after_setup_theme', 'register_polylang_strings');
 function register_polylang_strings() {
@@ -278,10 +295,12 @@ function register_polylang_strings() {
         pll_register_string('About', 'about_menu', 'brunofelicio');
         pll_register_string('Let\'s Talk', 'lets_talk_menu', 'brunofelicio');
         pll_register_string('Hire Me', 'hire_me', 'brunofelicio');
+        pll_register_string('Site tagline', BF_SITE_TAGLINE, 'brunofelicio');
 
         // SEO meta descriptions
         pll_register_string('Site meta description', BF_SITE_META_DESCRIPTION, 'brunofelicio', true);
         pll_register_string('Hire me meta description', BF_HIRE_ME_META_DESCRIPTION, 'brunofelicio', true);
+        pll_register_string('Contact meta description', BF_CONTACT_META_DESCRIPTION, 'brunofelicio', true);
 
         pll_register_string('Design Subscription', 'Design Subscription', 'brunofelicio');
         pll_register_string('Subscribe to your team', 'Subscribe to your team', 'brunofelicio');
@@ -367,7 +386,13 @@ function brunofelicio_seo_meta() {
     $desc  = pll__(BF_SITE_META_DESCRIPTION);
     $url   = function_exists('pll_home_url') ? pll_home_url() : home_url('/');
 
-    if (is_singular()) {
+    if (is_front_page()) {
+        // The front page isn't is_singular(), so it fell through to the generic
+        // default above on every language - same title (see the document_title_parts
+        // filter for the <title> tag itself) and same description on /, /es/, /pt/.
+        $title = $name . ' | ' . pll__(BF_SITE_TAGLINE);
+        $desc  = decode_unicode_escape(pll__('hero_heading'));
+    } elseif (is_singular()) {
         $post  = get_queried_object();
         $title = get_the_title($post) . ' | ' . $name;
         $url   = get_permalink($post);
@@ -379,9 +404,18 @@ function brunofelicio_seo_meta() {
             }
         }
 
-        // These pages build their copy in the template, so post_content is empty.
+        // These pages build their copy in the template or in ACF fields, so
+        // post_content is empty - handle each explicitly before the generic
+        // content-based fallback below.
         if (is_page_template('page-hire-me.php')) {
             $desc = pll__(BF_HIRE_ME_META_DESCRIPTION);
+        } elseif (is_page_template('contact.php')) {
+            $desc = pll__(BF_CONTACT_META_DESCRIPTION);
+        } elseif ('work' === get_post_type($post) && function_exists('get_field')) {
+            $summary = get_field('description_big', $post->ID);
+            if (!empty($summary)) {
+                $desc = wp_strip_all_tags($summary, true);
+            }
         }
 
         if (has_excerpt($post)) {

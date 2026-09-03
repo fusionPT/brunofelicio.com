@@ -25,6 +25,7 @@ get_header();
 <div class="container">
     <?php if (post_password_required()): ?>
         <div class="password-protected-content">
+            <h1><?php the_title(); ?></h1>
             <?php echo get_the_password_form(); ?>
         </div>
     <?php else: ?>

@@ -9,6 +9,11 @@
     <meta name="description" content="<?php echo esc_attr($bf_seo['description']); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <?php // WP core emits a canonical tag for singular content on its own; the front page needs one explicitly. ?>
+    <?php if (!is_singular()) : ?>
+    <link rel="canonical" href="<?php echo esc_url($bf_seo['url']); ?>" />
+    <?php endif; ?>
+
     <meta property="og:title" content="<?php echo esc_attr($bf_seo['title']); ?>" />
     <meta property="og:type" content="<?php echo is_singular() ? 'article' : 'website'; ?>" />
     <meta property="og:url" content="<?php echo esc_url($bf_seo['url']); ?>" />
