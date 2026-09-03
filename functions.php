@@ -24,6 +24,24 @@ function bf_asset($path) {
 define ('THEME_IMAGES', THEMEROOT.'/img');
 define ('THEME_JS', THEMEROOT.'/js');
 
+/**
+ * WordPress's own 404 handler (WP::handle_404()) doesn't recognize sitemap
+ * requests - it only exempts is_home/is_search/is_feed/etc, so a request for
+ * /wp-sitemap.xml gets marked 404 and the header is sent before the sitemap
+ * renderer (WP_Sitemaps::render_sitemaps(), hooked later on template_redirect)
+ * ever runs. The renderer still prints a correct XML body, but the earlier
+ * 404 status sticks - so crawlers see a 404'd sitemap with valid content and
+ * discard it. `pre_handle_404` is core's documented extension point for
+ * bypassing the default 404 handling; late priority so no other plugin's
+ * pre_handle_404 hook can override our bypass for these query vars.
+ */
+add_filter('pre_handle_404', function ($preempt, $query) {
+    if ($query->get('sitemap') || $query->get('sitemap-stylesheet')) {
+        return true;
+    }
+    return $preempt;
+}, PHP_INT_MAX, 2);
+
 /************************************************/
 /* Automatic Image sizes */
 /************************************************/
