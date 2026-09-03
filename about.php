@@ -23,7 +23,7 @@ get_header();
 
 <div class="hero">
 
-  <p class="title">About Me</p>
+  <p class="title"><?php echo pll__('about_menu'); ?></p>
   <h2><?php echo get_the_title(); ?></h2>
 
 </div><!-- hero -->

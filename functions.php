@@ -254,6 +254,37 @@ function register_polylang_strings() {
         pll_register_string('Next-day turnaround', 'Next-day turnaround', 'brunofelicio');
         pll_register_string('Pause or cancel anytime', 'Pause or cancel anytime', 'brunofelicio');
         pll_register_string('Start with Starter', 'Start with Starter', 'brunofelicio');
+
+        // FAQ Strings
+        pll_register_string('Frequently Asked Questions', 'Frequently Asked Questions', 'brunofelicio');
+        pll_register_string('When can I expect to receive my designs?', 'When can I expect to receive my designs?', 'brunofelicio');
+        pll_register_string('Most tasks are delivered within 48 hours. More complex work might need a bit more time.', 'Most tasks are delivered within 48 hours. More complex work might need a bit more time.', 'brunofelicio');
+        pll_register_string('What happens after I subscribe?', 'What happens after I subscribe?', 'brunofelicio');
+        pll_register_string('You’ll get access to a shared Notion board where you can start posting requests right away.', 'You’ll get access to a shared Notion board where you can start posting requests right away.', 'brunofelicio');
+        pll_register_string('Who’s behind the work?', 'Who’s behind the work?', 'brunofelicio');
+        pll_register_string('It’s just me — I handle all the design and dev work personally.', 'It’s just me — I handle all the design and dev work personally.', 'brunofelicio');
+        pll_register_string('Is there a limit to how many requests I can make?', 'Is there a limit to how many requests I can make?', 'brunofelicio');
+        pll_register_string('No limit! You can add as many requests as you’d like to your queue — I’ll work on one at a time.', 'No limit! You can add as many requests as you’d like to your queue — I’ll work on one at a time.', 'brunofelicio');
+        pll_register_string('How does the pause feature work?', 'How does the pause feature work?', 'brunofelicio');
+        pll_register_string('You can pause your subscription anytime. This stops billing and lets you resume later without losing progress.', 'You can pause your subscription anytime. This stops billing and lets you resume later without losing progress.', 'brunofelicio');
+        pll_register_string('How do you handle large or complex projects?', 'How do you handle large or complex projects?', 'brunofelicio');
+        pll_register_string('For larger scopes, I break them down into manageable chunks and work through them request by request.', 'For larger scopes, I break them down into manageable chunks and work through them request by request.', 'brunofelicio');
+        pll_register_string('What tools do you use for design and development?', 'What tools do you use for design and development?', 'brunofelicio');
+        pll_register_string('I mainly use Figma for design and Webflow or custom code (HTML/CSS/JS) for development tasks.', 'I mainly use Figma for design and Webflow or custom code (HTML/CSS/JS) for development tasks.', 'brunofelicio');
+        pll_register_string('How does Webflow development work with your service?', 'How does Webflow development work with your service?', 'brunofelicio');
+        pll_register_string('If you have a Webflow project, I can jump in and design, build, or update pages directly in your workspace.', 'If you have a Webflow project, I can jump in and design, build, or update pages directly in your workspace.', 'brunofelicio');
+        pll_register_string('How do I send you requests?', 'How do I send you requests?', 'brunofelicio');
+        pll_register_string('Use the Notion board to add detailed descriptions, links, or references for each request.', 'Use the Notion board to add detailed descriptions, links, or references for each request.', 'brunofelicio');
+        pll_register_string('What if I’m not happy with the result?', 'What if I’m not happy with the result?', 'brunofelicio');
+        pll_register_string('No worries — I’ll keep improving it until you’re satisfied. Unlimited revisions are included.', 'No worries — I’ll keep improving it until you’re satisfied. Unlimited revisions are included.', 'brunofelicio');
+        pll_register_string('Are there any services you don’t offer?', 'Are there any services you don’t offer?', 'brunofelicio');
+        pll_register_string('Yes. I don’t offer video editing, 3D work, or long-term maintenance contracts.', 'Yes. I don’t offer video editing, 3D work, or long-term maintenance contracts.', 'brunofelicio');
+        pll_register_string('Can I sign up for just one task?', 'Can I sign up for just one task?', 'brunofelicio');
+        pll_register_string('Sure! Subscribe for a month, send your request, and pause or cancel anytime after.', 'Sure! Subscribe for a month, send your request, and pause or cancel anytime after.', 'brunofelicio');
+        pll_register_string('Do you offer refunds?', 'Do you offer refunds?', 'brunofelicio');
+        pll_register_string('Because this is a service-based model, I don’t offer refunds once work begins.', 'Because this is a service-based model, I don’t offer refunds once work begins.', 'brunofelicio');
+        pll_register_string('Can I try it just for a month?', 'Can I try it just for a month?', 'brunofelicio');
+        pll_register_string('Definitely. Many clients start with a single month — you’re free to pause or cancel whenever you like.', 'Definitely. Many clients start with a single month — you’re free to pause or cancel whenever you like.', 'brunofelicio');
     }
 }
 

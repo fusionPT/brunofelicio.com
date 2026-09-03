@@ -43,10 +43,65 @@ get_header();
           <li><?php echo pll__('Next-day turnaround'); ?></li>
           <li><?php echo pll__('Pause or cancel anytime'); ?></li>
         </ul>
-        <a class="btn" href="https://buy.stripe.com/test_8x200kc3bdqKelP14m4AU00" target="_blank" rel="noopener"><?php echo pll__('Start with Starter'); ?></a>
+        <a class="btn" href="https://buy.stripe.com/8x200kc3bdqKelP14m4AU00" target="_blank" rel="noopener"><?php echo pll__('Start with Starter'); ?></a>
       </div>
     </section>
 
+    <section class="faq">
+      <h2><?php echo pll__('Frequently Asked Questions'); ?></h2>
+      <details class="faq-item">
+        <summary><?php echo pll__('When can I expect to receive my designs?'); ?></summary>
+        <p><?php echo pll__('Most tasks are delivered within 48 hours. More complex work might need a bit more time.'); ?></p>
+      </details>
+      <details class="faq-item">
+        <summary><?php echo pll__('What happens after I subscribe?'); ?></summary>
+        <p><?php echo pll__('You’ll get access to a shared Notion board where you can start posting requests right away.'); ?></p>
+      </details>
+      <details class="faq-item">
+        <summary><?php echo pll__('Who’s behind the work?'); ?></summary>
+        <p><?php echo pll__('It’s just me — I handle all the design and dev work personally.'); ?></p>
+      </details>
+      <details class="faq-item">
+        <summary><?php echo pll__('Is there a limit to how many requests I can make?'); ?></summary>
+        <p><?php echo pll__('No limit! You can add as many requests as you’d like to your queue — I’ll work on one at a time.'); ?></p>
+      </details>
+      <details class="faq-item">
+        <summary><?php echo pll__('How does the pause feature work?'); ?></summary>
+        <p><?php echo pll__('You can pause your subscription anytime. This stops billing and lets you resume later without losing progress.'); ?></p>
+      </details>
+      <details class="faq-item">
+        <summary><?php echo pll__('How do you handle large or complex projects?'); ?></summary>
+        <p><?php echo pll__('For larger scopes, I break them down into manageable chunks and work through them request by request.'); ?></p>
+      </details>
+      <details class="faq-item">
+        <summary><?php echo pll__('What tools do you use for design and development?'); ?></summary>
+        <p><?php echo pll__('I mainly use Figma for design and Webflow or custom code (HTML/CSS/JS) for development tasks.'); ?></p>
+      </details>
+      <details class="faq-item">
+        <summary><?php echo pll__('How do I send you requests?'); ?></summary>
+        <p><?php echo pll__('Use the Notion board to add detailed descriptions, links, or references for each request.'); ?></p>
+      </details>
+      <details class="faq-item">
+        <summary><?php echo pll__('What if I’m not happy with the result?'); ?></summary>
+        <p><?php echo pll__('No worries — I’ll keep improving it until you’re satisfied. Unlimited revisions are included.'); ?></p>
+      </details>
+      <details class="faq-item">
+        <summary><?php echo pll__('Are there any services you don’t offer?'); ?></summary>
+        <p><?php echo pll__('Yes. I don’t offer video editing, 3D work, or long-term maintenance contracts.'); ?></p>
+      </details>
+      <details class="faq-item">
+        <summary><?php echo pll__('Can I sign up for just one task?'); ?></summary>
+        <p><?php echo pll__('Sure! Subscribe for a month, send your request, and pause or cancel anytime after.'); ?></p>
+      </details>
+      <details class="faq-item">
+        <summary><?php echo pll__('Do you offer refunds?'); ?></summary>
+        <p><?php echo pll__('Because this is a service-based model, I don’t offer refunds once work begins.'); ?></p>
+      </details>
+      <details class="faq-item">
+        <summary><?php echo pll__('Can I try it just for a month?'); ?></summary>
+        <p><?php echo pll__('Definitely. Many clients start with a single month — you’re free to pause or cancel whenever you like.'); ?></p>
+      </details>
+    </section>
   </div><!-- end of content -->
 </div><!-- end of container -->
 

@@ -167,13 +167,15 @@ header {
   position: absolute;
   background: #fff;
   list-style: none;
-  padding: 10px;
+  padding: 16px 12px;
   margin: 0;
-  border: 1px solid #ccc;
+  border-radius: 8px;
   z-index: 999;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 
   li {
 	margin: 0;
+	padding: 5px 0;
   }
 }
 
@@ -1535,7 +1537,6 @@ footer {
 		color: #fff;
 		display: flex;
    		flex-direction: column;
-		height: 100vh;
 
 		.container {
 			flex: 1;
@@ -1649,6 +1650,8 @@ footer {
 
 // Hire me page
 
+//FAQ
+
 /* Hire Me Page Pricing Section */
 .pricing-tiers {
 	display: flex;
@@ -1658,7 +1661,7 @@ footer {
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
-	margin-bottom: 40px;
+	margin-bottom: 120px;
 
 	h2 {
 		font-size: 2.25rem;
@@ -1802,3 +1805,51 @@ footer {
   }
 }
 
+
+
+// FAQ Section Styles
+.faq {
+  margin: 80px;
+}
+
+.faq h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.faq-item {
+  border-bottom: 1px solid #e0e0e0;
+  padding: 1rem 1rem 1rem 0;
+  transition: all 0.3s ease;
+}
+
+.faq-item summary {
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+  padding-right: 20px;
+}
+
+.faq-item[open] {
+  background: #fff;
+  border-color: #ccc;
+}
+
+.faq-item summary::after {
+  content: "›";
+  position: absolute;
+  right: 0;
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+}
+
+.faq-item[open] summary::after {
+  transform: rotate(90deg);
+}
+
+.faq-item p {
+  margin-top: 0.75rem;
+  line-height: 1.5;
+}

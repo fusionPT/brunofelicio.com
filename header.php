@@ -79,17 +79,21 @@
             ?>
             <li><a class="contact" href="<?php echo esc_url($contact_url); ?>"><?php echo pll__('lets_talk_menu'); ?></a></li>
             <?php
-              $hireme_page = get_page_by_path('hire-me');
-              $hireme_link = $hireme_page ? get_permalink($hireme_page->ID) : '#';
+              $hireme_page = get_page_by_path('hire-me', OBJECT, 'page');
+              $translated_hireme_id = $hireme_page ? pll_get_post($hireme_page->ID, pll_current_language()) : null;
+
+              if ($translated_hireme_id) {
+                $hireme_link = get_permalink($translated_hireme_id);
+                echo '<li><a class="cta hireme" href="' . esc_url($hireme_link) . '">' . pll__('hire_me') . '</a></li>';
+              }
             ?>
-            <li><a class="cta hireme" href="<?php echo esc_url($hireme_link); ?>"><?php echo pll__('hire_me'); ?></a></li>
             <li class="lang-switcher dropdown">
-              <a href="#"><?php echo esc_html(pll_current_language('name')); ?> <i class="fa fa-caret-down"></i></a>
+              <a href="#"><?php echo strtoupper(pll_current_language()); ?> <i class="fa fa-caret-down"></i></a>
               <ul class="submenu">
                 <?php
                 $languages = pll_the_languages(array('raw' => 1));
                 foreach ($languages as $lang) {
-                  echo '<li><a href="' . esc_url($lang['url']) . '">' . esc_html($lang['name']) . '</a></li>';
+                  echo '<li><a href="' . esc_url($lang['url']) . '">' . esc_html(strtoupper($lang['slug'])) . '</a></li>';
                 }
                 ?>
               </ul>
@@ -125,17 +129,21 @@
                       ?>
                       <li><a class="contact" href="<?php echo esc_url($contact_url); ?>"><?php echo pll__('lets_talk_menu'); ?></a></li>
                       <?php
-                        $hireme_page = get_page_by_path('hire-me');
-                        $hireme_link = $hireme_page ? get_permalink($hireme_page->ID) : '#';
+                        $hireme_page = get_page_by_path('hire-me', OBJECT, 'page');
+                        $translated_hireme_id = $hireme_page ? pll_get_post($hireme_page->ID, pll_current_language()) : null;
+
+                        if ($translated_hireme_id) {
+                          $hireme_link = get_permalink($translated_hireme_id);
+                          echo '<li><a class="cta hireme" href="' . esc_url($hireme_link) . '">' . pll__('hire_me') . '</a></li>';
+                        }
                       ?>
-                      <li><a class="cta hireme" href="<?php echo esc_url($hireme_link); ?>"><?php echo pll__('hire_me'); ?></a></li>
                       <li class="lang-switcher dropdown">
-                        <a href="#"><?php echo esc_html(pll_current_language('name')); ?> <i class="fa fa-caret-down"></i></a>
+                        <a href="#"><?php echo strtoupper(pll_current_language()); ?> <i class="fa fa-caret-down"></i></a>
                         <ul class="submenu">
                           <?php
                           $languages = pll_the_languages(array('raw' => 1));
                           foreach ($languages as $lang) {
-                            echo '<li><a href="' . esc_url($lang['url']) . '">' . esc_html($lang['name']) . '</a></li>';
+                            echo '<li><a href="' . esc_url($lang['url']) . '">' . esc_html(strtoupper($lang['slug'])) . '</a></li>';
                           }
                           ?>
                         </ul>
