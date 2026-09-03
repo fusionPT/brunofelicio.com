@@ -3,7 +3,7 @@
 <div class="container">
   <div class="hero">
   <!--<h2><?php //echo pll__('hero_heading');?></h2>-->
-  <h2><?php echo decode_unicode_escape(pll__('hero_heading')); ?></h2>
+  <h1><?php echo decode_unicode_escape(pll__('hero_heading')); ?></h1>
   </div><!-- end of hero -->
 
   <?php if (have_posts()) : ?>

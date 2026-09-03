@@ -16,7 +16,7 @@ get_header();
       <div class="hero">
 
         <p class="title">Let's talk</p>
-        <h2><?php the_title(); ?></h2>
+        <h1><?php the_title(); ?></h1>
 
       </div><!-- hero -->
 

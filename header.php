@@ -1,30 +1,32 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" <?php language_attributes(); ?>>
 <head>
     <meta charset="<?php bloginfo('charset');?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title><?php wp_title('|', true, 'right'); ?><?php bloginfo ('name');?></title>
+    <?php // <title> comes from add_theme_support('title-tag') via wp_head(). ?>
 
-    <meta name="description" content="<?php bloginfo ('description');?>">
+    <?php $bf_seo = brunofelicio_seo_meta(); ?>
+    <meta name="description" content="<?php echo esc_attr($bf_seo['description']); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta property="og:title" content="Bruno Felicio - Product Designer" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.brunofelicio.com" />
-    <meta property="og:image" content="https://www.brunofelicio.com/wp-content/themes/brunofelicio/img/og-brunofelicio.png" />
-    <meta property="og:description" content="I turn ideas into beautiful, user-friendly designs. Check out my portfolio to see how I can help bring your vision to life!" />
-    <meta property="og:site_name" content="Bruno Felicio" />
+    <meta property="og:title" content="<?php echo esc_attr($bf_seo['title']); ?>" />
+    <meta property="og:type" content="<?php echo is_singular() ? 'article' : 'website'; ?>" />
+    <meta property="og:url" content="<?php echo esc_url($bf_seo['url']); ?>" />
+    <meta property="og:image" content="<?php echo esc_url($bf_seo['image']); ?>" />
+    <meta property="og:description" content="<?php echo esc_attr($bf_seo['description']); ?>" />
+    <meta property="og:locale" content="<?php echo esc_attr(get_locale()); ?>" />
+    <meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Bruno Felicio - Product Designer" />
-    <meta name="twitter:description" content="I turn ideas into beautiful, user-friendly designs. Check out my portfolio to see how I can help bring your vision to life!" />
-    <meta name="twitter:image" content="https://www.brunofelicio.com/wp-content/themes/brunofelicio/img/og-brunofelicio.png" />
+    <meta name="twitter:title" content="<?php echo esc_attr($bf_seo['title']); ?>" />
+    <meta name="twitter:description" content="<?php echo esc_attr($bf_seo['description']); ?>" />
+    <meta name="twitter:image" content="<?php echo esc_url($bf_seo['image']); ?>" />
 
     <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/img/favicon.png" sizes="32x32" />
     
-    <link rel="stylesheet" href="<?php echo THEMEROOT; ?>/css/normalize.css">
-    <link rel="stylesheet" href="<?php echo THEMEROOT; ?>/css/style.css">
-    <link rel="stylesheet" href="<?php echo THEMEROOT; ?>/css/jquery.fancybox.css">
+    <link rel="stylesheet" href="<?php echo esc_url(bf_asset('css/normalize.css')); ?>">
+    <link rel="stylesheet" href="<?php echo esc_url(bf_asset('css/style.css')); ?>">
+    <link rel="stylesheet" href="<?php echo esc_url(bf_asset('css/jquery.fancybox.css')); ?>">
     <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -47,7 +49,7 @@
     <!--<script src="<?php echo THEME_JS; ?>/vendor/jquery.lazyload.min.js"></script>-->
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.plugins.min.js"></script>
-    <script src="<?php echo THEME_JS; ?>/main.js"></script>
+    <script src="<?php echo esc_url(bf_asset('js/main.js')); ?>"></script>
     <script type="text/javascript">
       (function(c,l,a,r,i,t,y){
           c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -63,7 +65,7 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <div class="menu-overlay">
-          <a class="logo" href="<?php bloginfo('url'); ?>"><h1>Bruno Felicio</h1></a>
+          <a class="logo" href="<?php bloginfo('url'); ?>"><span class="logo-mark">Bruno Felicio</span></a>
           <a href="#" class="close-btn">close</a>
           <ul class="mobile-menu-overlay">
             <li><a class="works" href="<?php bloginfo('url'); ?>"><?php echo pll__('works_menu');?></a></li>
@@ -108,7 +110,7 @@
 
 
                   <header>
-                    <a class="logo" href="<?php bloginfo('url'); ?>"><h1>Bruno Felicio</h1></a>
+                    <a class="logo" href="<?php bloginfo('url'); ?>"><span class="logo-mark">Bruno Felicio</span></a>
 
                     <!-- Burguer menu -->
                     <a href="#" class="mobile-menu-toggle">

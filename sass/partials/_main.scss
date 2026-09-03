@@ -56,7 +56,7 @@ body {
 	opacity: 0;
 	@include transition(all 0.3s ease-in-out);
 
-	h1 {
+	.logo-mark {
 
     background: url("../img/logo-small-white.svg") no-repeat 0 0;
     position: absolute;
@@ -176,6 +176,15 @@ header {
   li {
 	margin: 0;
 	padding: 5px 0;
+
+	a {
+	  color: $font-color;
+	  font-size: 1em;
+
+	  &:hover {
+		color: $link-color;
+	  }
+	}
   }
 }
 
@@ -283,7 +292,10 @@ a.logo {
 }
 
 
-h1 {
+// The logo is an image-replaced wordmark, not a heading — the page title owns the
+// <h1> so each URL has one, and it describes the page rather than the site.
+.logo-mark {
+	display: block;
 	text-indent: -9999px;
 	background: url("../img/bruno-logo-small.svg") no-repeat 0 0;
 	width: 63px;
@@ -292,7 +304,8 @@ h1 {
 	float: left;
 }
 
-h2 {
+h2,
+.hero h1 {
 	text-align: center;
 	font-size: 56px;
 	color: #14243c;
@@ -323,7 +336,8 @@ h2 {
 			transform: translateY(0);
 }
 
-.wf-loading h2 {
+.wf-loading h2,
+.wf-loading .hero h1 {
   opacity: 0;
   -webkit-transform: translateY(-20px);
       -ms-transform: translateY(-20px);
@@ -848,7 +862,8 @@ footer {
 		margin: 0 auto;
 	}
 
-	h2 {
+	h2,
+	.hero h1 {
 		background: -webkit-linear-gradient($font-color-dark, $font-color-dark);
   		-webkit-background-clip: text;
   		-webkit-text-fill-color: transparent;
@@ -1515,11 +1530,12 @@ footer {
 		}
 	}
 
-	h1 {
+	.logo-mark {
 		background: url("../img/bruno-logo-white.svg") no-repeat 0 0;
 	}
 
-	h2 {
+	h2,
+	.hero h1 {
 		color: #fff !important;
 		background: -webkit-linear-gradient(#fff, #fff);
   		-webkit-background-clip: text;

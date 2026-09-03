@@ -13,7 +13,7 @@ get_header();
 
         <div class="title-wrapper">
             <p class="title"><?php the_field('title'); ?></p>
-            <h2><?php the_field('subtitle'); ?></h2>
+            <h1><?php the_field('subtitle'); ?></h1>
         </div>
 
         <div class="top-image" style="background:<?php the_field('bg_color'); ?>">

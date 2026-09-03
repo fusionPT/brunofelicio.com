@@ -5,6 +5,22 @@
 /************************************************/
 
 define ('THEMEROOT', get_stylesheet_directory_uri());
+
+/**
+ * Theme asset URL stamped with the file's modification time.
+ *
+ * The theme hardcodes its <link>/<script> tags rather than enqueueing them, so
+ * nothing ever varied the URL between deploys. A browser holding an old
+ * style.css against new markup renders a broken page, so every deploy that
+ * changes both CSS and templates needs this stamp to invalidate the cache.
+ */
+function bf_asset($path) {
+    $path = ltrim($path, '/');
+    $file = get_stylesheet_directory() . '/' . $path;
+    $url  = THEMEROOT . '/' . $path;
+
+    return file_exists($file) ? $url . '?v=' . filemtime($file) : $url;
+}
 define ('THEME_IMAGES', THEMEROOT.'/img');
 define ('THEME_JS', THEMEROOT.'/js');
 
@@ -230,6 +246,12 @@ add_action('wp', function () {
     }
 });
 
+// Default meta descriptions. The literals are the Polylang source strings, so they
+// serve as the English copy AND as the lookup key for the /es/ and /pt/ versions.
+// Translate them under Languages -> Translations, group "brunofelicio".
+define('BF_SITE_META_DESCRIPTION', 'I turn ideas into beautiful, user-friendly designs. Check out my portfolio to see how I can help bring your vision to life!');
+define('BF_HIRE_ME_META_DESCRIPTION', 'A design subscription: unlimited design and development requests for one flat monthly fee. One active request at a time, next-day turnaround, pause or cancel anytime.');
+
 add_action('after_setup_theme', 'register_polylang_strings');
 function register_polylang_strings() {
     if (function_exists('pll_register_string')) {
@@ -238,6 +260,10 @@ function register_polylang_strings() {
         pll_register_string('About', 'about_menu', 'brunofelicio');
         pll_register_string('Let\'s Talk', 'lets_talk_menu', 'brunofelicio');
         pll_register_string('Hire Me', 'hire_me', 'brunofelicio');
+
+        // SEO meta descriptions
+        pll_register_string('Site meta description', BF_SITE_META_DESCRIPTION, 'brunofelicio', true);
+        pll_register_string('Hire me meta description', BF_HIRE_ME_META_DESCRIPTION, 'brunofelicio', true);
 
         pll_register_string('Design Subscription', 'Design Subscription', 'brunofelicio');
         pll_register_string('Subscribe to your team', 'Subscribe to your team', 'brunofelicio');
@@ -304,6 +330,67 @@ function decode_unicode_escape($string) {
     return preg_replace_callback('/u\{([0-9A-Fa-f]+)\}/', function ($matches) {
         return mb_convert_encoding(pack('H*', str_pad($matches[1], 8, '0', STR_PAD_LEFT)), 'UTF-8', 'UCS-4BE');
     }, $string);
+}
+
+/**
+ * Per-page metadata for the <head>.
+ *
+ * The theme has no SEO plugin, so title/description/Open Graph were hardcoded to
+ * the English homepage on every URL. This resolves them per request instead, and
+ * runs the copy through Polylang so /es/ and /pt/ get their own text.
+ *
+ * Description precedence: page excerpt -> page content -> per-template default.
+ */
+function brunofelicio_seo_meta() {
+    $image = get_template_directory_uri() . '/img/og-brunofelicio.png';
+    $name  = get_bloginfo('name');
+
+    $title = $name;
+    $desc  = pll__(BF_SITE_META_DESCRIPTION);
+    $url   = function_exists('pll_home_url') ? pll_home_url() : home_url('/');
+
+    if (is_singular()) {
+        $post  = get_queried_object();
+        $title = get_the_title($post) . ' | ' . $name;
+        $url   = get_permalink($post);
+
+        if (has_post_thumbnail($post)) {
+            $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($post), 'large');
+            if ($thumb) {
+                $image = $thumb[0];
+            }
+        }
+
+        // These pages build their copy in the template, so post_content is empty.
+        if (is_page_template('page-hire-me.php')) {
+            $desc = pll__(BF_HIRE_ME_META_DESCRIPTION);
+        }
+
+        if (has_excerpt($post)) {
+            $desc = get_the_excerpt($post);
+        } elseif (!empty($post->post_content)) {
+            // A page whose content is only a shortcode (the contact form) strips
+            // down to nothing, so keep the default rather than emitting an empty tag.
+            $stripped = trim(wp_strip_all_tags(strip_shortcodes($post->post_content), true));
+
+            if ('' !== $stripped) {
+                $desc = $stripped;
+            }
+        }
+    }
+
+    $desc = trim(preg_replace('/\s+/', ' ', $desc));
+
+    if (mb_strlen($desc) > 160) {
+        $desc = rtrim(mb_substr($desc, 0, 157), " ,.;:-") . '...';
+    }
+
+    return array(
+        'title'       => $title,
+        'description' => $desc,
+        'url'         => $url,
+        'image'       => $image,
+    );
 }
 
 ?>

@@ -8,7 +8,7 @@ get_header();
      <div class="hero">
 
         <p class="title"><?php echo pll__('Design Subscription'); ?></p>
-        <h2><?php the_title(); ?></h2>
+        <h1><?php the_title(); ?></h1>
 
       </div><!-- hero -->
 
