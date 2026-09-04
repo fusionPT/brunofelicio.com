@@ -1738,6 +1738,21 @@ footer {
         background-color: #1662c4;
       }
     }
+
+    // Secondary path to the contact form. Deliberately lighter than .btn so the
+    // paid action stays the primary one.
+    .btn-secondary {
+      display: block;
+      margin-top: 14px;
+      color: $link-color;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.88em;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 
   .featured {

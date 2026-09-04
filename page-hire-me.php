@@ -44,6 +44,15 @@ get_header();
           <li><?php echo pll__('Pause or cancel anytime'); ?></li>
         </ul>
         <a class="btn" href="https://buy.stripe.com/8x200kc3bdqKelP14m4AU00" target="_blank" rel="noopener"><?php echo pll__('Start with Starter'); ?></a>
+        <?php
+          // Secondary, lower-commitment path for visitors not ready to commit to
+          // EUR 1.990/mo outright - without it the page can only convert instant
+          // buyers and everyone else leaves no trace.
+          $bf_contact = bf_contact_url();
+          if ($bf_contact) :
+        ?>
+          <a class="btn-secondary" href="<?php echo esc_url($bf_contact); ?>"><?php echo pll__('Have a question? Get in touch'); ?></a>
+        <?php endif; ?>
       </div>
     </section>
 

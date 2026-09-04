@@ -45,6 +45,26 @@ add_filter('pre_handle_404', function ($preempt, $query) {
 define('BF_SITE_TAGLINE', 'Product Designer');
 
 /**
+ * Permalink of the contact page in the current language.
+ *
+ * The header resolves this inline in two places; the subscription page needs it
+ * too, so it lives here once. Returns '' if the page is missing, letting callers
+ * skip rendering rather than emitting a dead link.
+ */
+function bf_contact_url() {
+    $contact_page = get_page_by_path('contact', OBJECT, 'page');
+    if (!$contact_page) {
+        return '';
+    }
+
+    $translated_id = function_exists('pll_get_post')
+        ? pll_get_post($contact_page->ID, pll_current_language())
+        : $contact_page->ID;
+
+    return $translated_id ? get_permalink($translated_id) : '';
+}
+
+/**
  * The site tagline (Settings > General) is a single WP option, not translated
  * per language, so the front page's <title> tag - which WP core builds from
  * site name + tagline via title-tag support - rendered identically on /,
@@ -296,6 +316,7 @@ function register_polylang_strings() {
         pll_register_string('Let\'s Talk', 'lets_talk_menu', 'brunofelicio');
         pll_register_string('Hire Me', 'hire_me', 'brunofelicio');
         pll_register_string('Site tagline', BF_SITE_TAGLINE, 'brunofelicio');
+        pll_register_string('Contact CTA', 'Have a question? Get in touch', 'brunofelicio');
 
         // SEO meta descriptions
         pll_register_string('Site meta description', BF_SITE_META_DESCRIPTION, 'brunofelicio', true);
